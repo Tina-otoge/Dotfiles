@@ -3,7 +3,6 @@
 
 ## execute on start
 exec_always "setxkbmap -layout fr,us"
-exec_always "sh ~/.config/fehbg"
 exec "sh ~/.config/polybar/launch.sh"
 
 ## set special keys
