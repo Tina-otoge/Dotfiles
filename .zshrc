@@ -1,0 +1,1 @@
+./zsh+bash/.zshrc
