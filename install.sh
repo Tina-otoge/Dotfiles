@@ -36,6 +36,7 @@ fi
 if ask_folder i3+polybar; then
     SRC="i3+polybar"
     sym "$SRC/.config/myfehbg" "$HOME/.config/"
+    sym "$SRC/.config/myinitfehbg" "$HOME/.config/"
     sym "$SRC/.config/wallpaper.png" "$HOME/.config/"
     sym "$SRC/.config/i3" "$HOME/.config/"
     sym "$SRC/.config/polybar" "$HOME/.config/"

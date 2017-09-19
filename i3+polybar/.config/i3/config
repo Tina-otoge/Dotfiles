@@ -4,8 +4,7 @@
 
 ## execute on start
 exec_always "setxkbmap -layout fr,us"
-exec_always "pkill -f ~/.config/myfehbg"
-exec_always "~/.config/myfehbg"
+exec_always "sh ~/.config/myinitfehbg"
 # exec "sh ~/.config/polybar/launch.sh"
 
 ## set special keys
@@ -173,6 +172,7 @@ mode "resize" {
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -184,4 +184,6 @@ bar {
         #status_command i3status
         i3bar_command ~/.config/polybar/launch.sh
 }
+
+## Late executions
 

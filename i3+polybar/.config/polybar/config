@@ -20,7 +20,7 @@ alert = #bd2c40
 [bar/base]
 monitor = eDP-1
 width = 100%
-height = 30
+height = 24
 padding = 2
 
 fixed-center = true
@@ -47,6 +47,8 @@ modules-right = battery battery2 temp powermenu
 inherit = bar/base
 bottom = true
 
+height = 40
+
 offset-bottom = 3
 
 tray-position = right
@@ -59,7 +61,8 @@ modules-right = cpu memory volume backlight
 [bar/hdmi2]
 inherit = bar/bottom
 monitor = HDMI-2
-modules-right = date 
+
+modules-right = battery battery2 date 
 
 [settings]
 format-padding = 1

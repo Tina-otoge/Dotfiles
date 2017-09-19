@@ -2,7 +2,8 @@ chromium_browser=$(which vivaldi)
 
 alias discord="nohup /opt/discord/DiscordCanary &>/dev/null &"
 alias 420="$chromium_browser --fast-start --app='http://420.mon.im' </dev/null &>/dev/null &"
-alias cls=clear
+alias cls='clear'
+alias motd='fortune -s osfortune computers linux kernelnewbies | cowsay'
 
 chgsize() {
 	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
