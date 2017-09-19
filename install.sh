@@ -35,16 +35,17 @@ fi
 
 if ask_folder i3+polybar; then
     SRC="i3+polybar"
-    sym "$SRC/.config/fehbg" "$HOME/.config/"
+    sym "$SRC/.config/myfehbg" "$HOME/.config/"
     sym "$SRC/.config/wallpaper.png" "$HOME/.config/"
-    sym "$SRC/.config/i3" "$HOME/.config"
-    sym "$SRC/.config/polybar" "$HOME/.config"
+    sym "$SRC/.config/i3" "$HOME/.config/"
+    sym "$SRC/.config/polybar" "$HOME/.config/"
 fi
 
 if ask_folder zsh+bash; then
     SRC="zsh+bash"
     sym "$SRC/.bashrc" "$HOME/"
     sym "$SRC/.zshrc" "$HOME/"
+    sym "$SRC/.config/shell_profile" "$HOME/.config/"
     sym "$SRC/.config/aliases" "$HOME/.config/"
 fi
 
@@ -56,6 +57,16 @@ fi
 if ask_folder Xresources; then
     SRC="Xresources"
     sym "$SRC/.Xresources" "$HOME/"
+fi
+
+if ask_folder vis; then
+    SRC="vis"
+    sym "$SRC/.config/vis" "$HOME/.config/"
+fi
+
+if ask_folder user-dirs; then
+    SRC="user-dirs"
+    sym "$SRC/.config/user-dirs.dirs" "$HOME/.config/"
 fi
 
 echo

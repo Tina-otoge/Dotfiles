@@ -1,0 +1,11 @@
+function include_exists() {
+    if [ -f $1 ]; then       
+        . $1
+    fi
+}
+
+include_exists ~/.config/aliases
+
+ttyctl -f
+
+# vim:ft=sh 

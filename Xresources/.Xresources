@@ -36,9 +36,26 @@
 *.color15:      #f9f8f5
 
 
+# == Urxvt ==
+
+# Transparency
 urxvt*transparent: true
 urxvt*shading: 15
 
+# Font
 URxvt.font: xft:Monaco:size=12
+
+# Disable scrollbar
 URxvt.scrollBar: false
-URxvt.internalBorder: 8
+
+# Padding
+URxvt.internalBorder: 12
+
+# Extensions
+URxvt.perl-ext-common: default,matcher,resize-font
+
+# Clickable URLs (Extension)
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+
