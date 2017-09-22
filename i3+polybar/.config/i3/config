@@ -1,41 +1,45 @@
-## test
 ## Original comments from sample config file are marked with a #, my personal comments
 ## are marked with a ##
 
 ## execute on start
 exec_always "setxkbmap -layout fr,us"
-exec_always "sh ~/.config/myinitfehbg"
-# exec "sh ~/.config/polybar/launch.sh"
+exec_always "sh ~/.config/initbg.sh"
 
 ## set special keys
 set $mod Mod4
 set $alt Mod1
 set $win Mod4
-
-## font
-font pango:Monaco 10
+set $ctrl Control
 
 ## gaps
 gaps outer 10
 gaps inner 20
 
 ## workspaces gaps
-## (10 for code, 9 for games)
-workspace 10 gaps inner 45
-workspace 9 gaps inner 4
-workspace 9 gaps outer 2
+workspace 10 gaps inner 4
+workspace 10 gaps outer 2
 
-## disable window title (who cares anyway)
-new_window 1pixel
+## colors
+client.focused #000000 #600099 #000000
+client.unfocused #000000 #300066 #000000
+
+## borders and disable window title (who cares anyway)
+new_window pixel 3
+font pango:DejaVu Sans Mono 0
+
+## htop
+bindsym $mod+p exec i3-sensible-terminal -e htop
+bindsym $ctrl+Shift+Escape exec i3-sensible-terminal -e htop
+bindsym $alt+$ctrl+Delete exec i3-sensible-terminal -e htop
 
 ## Screenshot 
-bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots/'
-
+bindsym Print exec "scrot -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'"
+bindsym --release $ctrl+Print exec "scrot -s -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'" 
 ## Lock
 bindsym $mod+l exec sh ~/.config/i3/lock.sh
 
 ## Rename workspace
-# bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 ## Change brightness
 bindsym XF86MonBrightnessUp exec light -A 10
@@ -176,6 +180,21 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+## gaps mode
+
+mode "gaps" {
+    bindsym Left gaps inner current minus 10
+    bindsym Down gaps outer current minus 10
+    bindsym Up gaps outer current plus 10
+    bindsym Right gaps inner current plus 10
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+g mode "default"
+}
+
+bindsym $mod+g mode "gaps"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

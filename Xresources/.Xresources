@@ -37,6 +37,7 @@
 
 
 # == Urxvt ==
+#URxvt*termName: rvxt-unicode
 
 # Transparency
 urxvt*transparent: true

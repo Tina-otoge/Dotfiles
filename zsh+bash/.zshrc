@@ -9,3 +9,8 @@ PROMPT='%f[%F{cyan}Tina%F{gray}@%F{blue}%m%f] %# '
 RPROMPT='%F{green}%~%f'
 
 . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+
+# vim:ft=sh

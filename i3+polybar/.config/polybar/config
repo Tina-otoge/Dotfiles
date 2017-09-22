@@ -25,6 +25,10 @@ padding = 2
 
 fixed-center = true
 
+wm-restack = i3
+# draw over windows
+# override-redirect = true
+
 background = ${colors.bg}
 foreground = ${colors.fg}
 
