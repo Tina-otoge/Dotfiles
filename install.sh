@@ -21,7 +21,7 @@ function sym() {
         BACKUP_DESTDIR=$BACKUP_DIR"$(dirname "$1")"
         echo Destination already exists! Backuping to "$BACKUP_DESTDIR/$DEST_FILE"
         mkdir -p "$BACKUP_DESTDIR"
-        mv "$DEST" "$BACKUP_DESTDIR/$DEST_FILE"
+        mv "$DEST" "$BACKUP_DESTDIR/"
     fi
     ln -s $HERESRC $DEST
     echo Symlink: done.
@@ -52,6 +52,7 @@ fi
 if ask_folder vim; then
     SRC="vim"
     sym "$SRC/.vimrc" "$HOME/"
+    sym "$SRC/.vim" "$HOME/"
 fi
 
 if ask_folder Xresources; then
