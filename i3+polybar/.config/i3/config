@@ -15,10 +15,6 @@ set $ctrl Control
 gaps outer 10
 gaps inner 20
 
-## workspaces gaps
-workspace 10 gaps inner 4
-workspace 10 gaps outer 2
-
 ## colors
 client.focused #000000 #600099 #000000
 client.unfocused #000000 #300066 #000000
