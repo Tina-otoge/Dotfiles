@@ -16,7 +16,7 @@ Everything to reproduce my setup should be included with this repo except:
 ## Dependencies
 - i3-gaps (i3+polybar)
 - polybar (i3+polybar)
-- feh (i3+polybar)
+- feh (i3+polybar wallpaper)
 - ImageMagick (i3+polybar lock.sh)
 - i3lock (i3+polybar lock.sh)
 - scrot (i3+polybar lock.sh and bindings)
