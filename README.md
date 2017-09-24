@@ -25,6 +25,8 @@ Everything to reproduce my setup should be included with this repo except:
 - htop (i3+polybar bindings)
 
 ## My packages
+Packages listed here are softwares I use.  
+Some of them have configurations included in this repo. Some have not.
 - zsh (main shell)
 - zsh-syntax-highlighting
 - fish (alternative shell)
