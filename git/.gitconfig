@@ -1,0 +1,4 @@
+[user]
+	email = skielred@gmail.com
+[credential]
+	helper = libsecret
