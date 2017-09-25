@@ -1,6 +1,13 @@
 # Dotfiles
 my dot files
 
+## KEEPING THE OS BLINUX FRIENDLY
+My configuration tries to keep the OS behavior similar to blinux for compiling / rendering solutions.  
+Since I have not yet fiddled with blinux, it is not currently the case.  
+However here are 2 important RPM-based distributions commands that might help :  
+- `$ dnf install package-v.e.r-sion.fcXX`: installs specific version of package
+- `exclude=package_name package_pattern-*` in `/etc/dnf/dnf.conf`: exclude packages from updating
+
 ## My setup (Fedora 26)
 ![preview](https://cdn.discordapp.com/attachments/356776538584121347/359519874961244160/2017-09-19-040325_1920x1080_scrot.png)
 - Bars: polybar
