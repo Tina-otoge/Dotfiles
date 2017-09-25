@@ -31,6 +31,7 @@ bindsym $alt+$ctrl+Delete exec i3-sensible-terminal -e htop
 ## Screenshot 
 bindsym Print exec "scrot -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'"
 bindsym --release $ctrl+Print exec "scrot -s -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'" 
+
 ## Lock
 bindsym $mod+l exec sh ~/.config/i3/lock.sh
 
@@ -174,11 +175,9 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 ## gaps mode
-
 mode "gaps" {
     bindsym Left gaps inner current minus 10
     bindsym Down gaps outer current minus 10
@@ -189,7 +188,6 @@ mode "gaps" {
     bindsym Escape mode "default"
     bindsym $mod+g mode "default"
 }
-
 bindsym $mod+g mode "gaps"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -199,6 +197,3 @@ bar {
         #status_command i3status
         i3bar_command ~/.config/polybar/launch.sh
 }
-
-## Late executions
-

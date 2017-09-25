@@ -8,11 +8,13 @@ chrome-gnome-shell-9-1.fc26.x86_64
 chromium-libs-media-freeworld-60.0.3112.113-1.fc26.x86_64
 clang-4.0.1-4.fc26.x86_64
 cmake-3.9.1-1.fc26.x86_64
+cmatrix-1.2a-319.1.x86_64
 cmus-2.8.0-0.4.rc0.fc26.x86_64
 conky-1.10.6-1.fc26.x86_64
 cowsay-3.04-5.fc26.noarch
 discord-0.0.24-canary.fc26.x86_64
 dmenu-4.7-1.fc26.x86_64
+dolphin-emu-5.0-14.fc26.x86_64
 dracut-live-046-2.git20170811.fc26.x86_64
 feh-2.19.3-1.fc26.x86_64
 fftw-devel-3.3.5-4.fc26.x86_64
@@ -104,8 +106,8 @@ vim-enhanced-2:8.0.1097-1.fc26.x86_64
 vivaldi-stable-1.11.917.43-1.x86_64
 vlc-3.0.0-0.34.git20170823.fc26.x86_64
 wine-2.16-1.fc26.x86_64
+winetricks-20170731-1.fc26.noarch
 wireless-tools-devel-1:29-15.1.fc26.x86_64
-x264-0.148-20.20170519gitd32d7bf.fc26.x86_64
 xbacklight-1.2.1-4.fc26.x86_64
 xcb-proto-1.12-3.fc26.noarch
 xcb-util-cursor-devel-0.1.3-2.fc26.x86_64
