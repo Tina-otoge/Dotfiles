@@ -1,6 +1,46 @@
 # Dotfiles
 my dot files
 
+# INSTALLATION (Fedora 26 XFCE, adapt for other distros)
+- polybar (bars):
+    - Dependencies:  
+        `$ sudo dnf install cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm`
+    - Modules dependencies:  
+        `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel clang`
+    - `$ mkdir ~/repos`
+    - `$ git clone https://github.com/jaagr/polybar ~/repos/polybar && cd ~/repos/polybar`
+    - `$ ./build.sh -f`
+    - Press y, again, again and again...
+- i3-gaps (Window Manager / Desktop Environment):
+    - `$ sudo dnf install i3`
+    - Dependencies:  
+        `$ sudo dnf install libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`  
+(i3-gaps dependencies)
+    - `$ mkdir ~/repos`
+    - `$ git clone https://github.com/Airblader/i3 ~/repos/i3-gaps && $ cd ~/repos/i3-gaps`
+    - `$ autoreconf --force --install`
+    - `$ mkdir build && rm -rf build/* && cd build`
+    - `$ ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers`
+    - `$ make`
+    - `$ sudo make install`
+- GDM (Desktop Manager, login screen):
+    - `$ sudo dnf install gdm`
+    - `$ sudo systemctl disable lightdm`
+    - `$ sudo systemctl enable gdm`
+- Vivaldi (browser):
+    - Visit https://vivaldi.com/download/ and download the RPM file
+    - `$ sudo dnf install /path/to/the/vivaldi/rpm/file.rpm`
+    - H.264 videos support:  
+        `$ cd /tmp`  
+        `$ wget https://gist.githubusercontent.com/ruario/bec42d156d30affef655/raw/554c4d81d269137cb008f56dcbd9bfab6a225ba5/latest-proprietary-media.sh`  
+        `$ sh latest-proprietary-media.sh`
+    - Adobe Flash:  
+        Visit https://get.adobe.com/flashplayer/  
+        "Select version to download": .rpm for Linux  
+        `$ sudo dnf install /path/to/the/flash/rpm/file.rpm`
+    
+
+
 ## KEEPING THE OS BLINUX FRIENDLY
 My configuration tries to keep the OS behavior similar to blinux for compiling / rendering solutions.  
 Since I have not yet fiddled with blinux, it is not currently the case.  
