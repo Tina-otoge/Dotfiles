@@ -10,19 +10,33 @@ RPROMPT='%F{green}%~%f'
 
 autoload -U compinit
 compinit
-
-setopt COMPLETE_IN_WORD
-
-# keep background process at full speed
-setopt NOBGNICE
-# history
-setopt APPEND_HISTORY
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-
 # colors
 autoload -U colors
 colors
+
+
+
+# in word completion
+setopt complete_in_word
+
+# keep background process at full speed
+setopt no_bg_nice
+
+# history
+HISTFILE='~/.bash_history'
+setopt append_history
+setopt inc_append_history
+setopt share_history
+
+# can omit cd
+setopt auto_cd
+
+# cd to missing folder search for ~/<folder>
+setopt cdable_vars
+
+# add / when autocompleting a directory name
+setopt auto_param_slash
+
 
 . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
