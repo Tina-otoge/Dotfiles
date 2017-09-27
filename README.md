@@ -1,7 +1,22 @@
 # Dotfiles
 my dot files
 
+## My setup (Fedora 26)
+![preview](https://cdn.discordapp.com/attachments/356776538584121347/359519874961244160/2017-09-19-040325_1920x1080_scrot.png)
+- Bars: polybar
+- WM: i3(-gaps)
+- Editors: vim, atom
+- Music player: cmus
+- Visualizer: cli-visualizer
+
+Everything to reproduce my setup should be included with this repo except:
+- Packages (see `Repos.md` and `packages.txt`)
+- Wallpapers (:warning:: background script still try to set background from ~/Pictures/Wallpapers/.../\*, see `i3+polybar/.config/bgloop.sh`
+
 # INSTALLATION (Fedora 26 XFCE, adapt for other distros)
+
+This is a guide to install all the packages I installed on the distribution Fedora 26 + XFCE, distributed by EPITECH in September 2017.
+
 - polybar (bars):
     - Dependencies:  
         `$ sudo dnf install cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm`
@@ -26,6 +41,11 @@ my dot files
     - `$ sudo dnf install gdm`
     - `$ sudo systemctl disable lightdm`
     - `$ sudo systemctl enable gdm`
+- zsh (shell):
+    - `$ sudo dnf install zsh`
+    - `$ chsh -s /bin/zsh`
+    - zsh syntax highlighting :  
+        `$ sudo dnf install zsh-syntax-highlighting`
 - Vivaldi (browser):
     - Visit https://vivaldi.com/download/ and download the RPM file
     - `$ sudo dnf install /path/to/the/vivaldi/rpm/file.rpm`
@@ -37,36 +57,40 @@ my dot files
         Visit https://get.adobe.com/flashplayer/  
         "Select version to download": .rpm for Linux  
         `$ sudo dnf install /path/to/the/flash/rpm/file.rpm`
+- feh (image viewer, wallpaper utility):
+    - `$ sudo dnf install feh`
+- ImageMagick (CLI image editor/converter):
+    - `$ sudo dnf install ImageMagick`
+- i3lock (screen saver, lock utility):
+    - `$ sudo dnf install i3lock`
+- scrot (CLI screenshot tool):
+    - `$ sudo dnf install scrot`
+- light (CLI backlight utility **that works on ThinkPad T470s**)
+    - `$ sudo copr enable frostyx/light`
+    - `$ sudo dnf install light`
+- Discord
+    - `$ mkdir ~/repos`
+    - `$ git clone https://github.com/RPM-Outpost/discord ~/repos/RPM-discord && cd ~/repos/RPM-discord`
+    - `$ ./create-package.sh canary`
+- htop (Task manager):
+    - `$ sudo dnf install htop`
+- neofetch (dickwagging utility):
+    - `$ sudo dnf copr enable konimex/neofetch`
+    - `$ sudo dnf install neofetch`
+- cmus (music player):
+    - `$ sudo dnf install cmus`
     
-
-
-## KEEPING THE OS BLINUX FRIENDLY
-My configuration tries to keep the OS behavior similar to blinux for compiling / rendering solutions.  
-Since I have not yet fiddled with blinux, it is not currently the case.  
-However here are 2 important RPM-based distributions commands that might help :  
-- `$ dnf install package-v.e.r-sion.fcXX`: installs specific version of package
-- `exclude=package_name package_pattern-*` in `/etc/dnf/dnf.conf`: exclude packages from updating
-
-## My setup (Fedora 26)
-![preview](https://cdn.discordapp.com/attachments/356776538584121347/359519874961244160/2017-09-19-040325_1920x1080_scrot.png)
-- Bars: polybar
-- WM: i3(-gaps)
-- Editors: vim, atom
-- Music player: cmus
-- Visualizer: cli-visualizer
-
-Everything to reproduce my setup should be included with this repo except:
-- Packages (see `Repos.md` and `packages.txt`)
-- Wallpapers (:warning:: background script still try to set background from ~/Pictures/Wallpapers/.../\*, see `i3+polybar/.config/bgloop.sh`
-
 ## Dependencies
+
+This is the packages my configuration files require to work
+
 - i3-gaps (i3+polybar)
 - polybar (i3+polybar)
 - feh (i3+polybar wallpaper)
 - ImageMagick (i3+polybar lock.sh)
 - i3lock (i3+polybar lock.sh)
 - scrot (i3+polybar lock.sh and bindings)
-- light (i3+polybar bindings)
+- frostyx/light (i3+polybar bindings)
 - rxvt-unicode (i3+polybar bindings)
 - htop (i3+polybar bindings)
 
