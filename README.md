@@ -19,17 +19,16 @@ This is a guide to install all the packages I installed on the distribution Fedo
 
 - polybar (bars):
     - Dependencies:  
-        `$ sudo dnf install cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm`
+        `$ sudo dnf install cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm clang`
     - Modules dependencies:  
-        `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel clang`
+        `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel`
     - `$ mkdir ~/repos`
     - `$ git clone https://github.com/jaagr/polybar ~/repos/polybar && cd ~/repos/polybar`
     - `$ ./build.sh -f`
     - Press y, again, again and again...
 - i3-gaps (Window Manager / Desktop Environment):
-    - `$ sudo dnf install i3`
     - Dependencies:  
-        `$ sudo dnf install libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`
+        `$ sudo dnf install i3 libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`
     - `$ mkdir ~/repos`
     - `$ git clone https://github.com/Airblader/i3 ~/repos/i3-gaps && cd ~/repos/i3-gaps`
     - `$ autoreconf --force --install`
