@@ -85,7 +85,7 @@ visualizer.spectrum.smoothing.mode=monstercat
 
 
 ##Turns off overriding the user's terminal colors. This is true by default.
-#colors.override.terminal=false
+colors.override.terminal=false
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
 #colors.scheme=rainbow
