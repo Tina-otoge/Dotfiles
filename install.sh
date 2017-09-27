@@ -75,6 +75,11 @@ if ask_folder git; then
     sym "$SRC/.gitconfig" "$HOME/"
 fi
 
+if ask_folder neofetch; then
+    SRC="neofetch"
+    sym "$SRC/.config/neofetch/neofetch.conf" "$HOME/.config/neofetch/"
+fi
+
 echo
 echo Done importing Dotfiles!
 echo
