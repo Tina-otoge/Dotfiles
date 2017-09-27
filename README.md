@@ -14,8 +14,7 @@ my dot files
 - i3-gaps (Window Manager / Desktop Environment):
     - `$ sudo dnf install i3`
     - Dependencies:  
-        `$ sudo dnf install libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`  
-(i3-gaps dependencies)
+        `$ sudo dnf install libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`
     - `$ mkdir ~/repos`
     - `$ git clone https://github.com/Airblader/i3 ~/repos/i3-gaps && $ cd ~/repos/i3-gaps`
     - `$ autoreconf --force --install`
