@@ -77,7 +77,7 @@ fi
 
 if ask_folder neofetch; then
     SRC="neofetch"
-    sym "$SRC/.config/neofetch/neofetch.conf" "$HOME/.config/neofetch/"
+    sym "$SRC/.config/neofetch/config.conf" "$HOME/.config/neofetch/"
 fi
 
 echo
