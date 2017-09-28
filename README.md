@@ -19,7 +19,7 @@ This is a guide to install all the packages I installed on the distribution Fedo
 
 - polybar (bars):
     - Dependencies:  
-        `$ sudo dnf install cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm clang`
+        `$ sudo dnf install cairo-devel libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm clang`
     - Modules dependencies:  
         `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel`
     - `$ mkdir ~/repos`
@@ -45,17 +45,9 @@ This is a guide to install all the packages I installed on the distribution Fedo
     - `$ chsh -s /bin/zsh`
     - zsh syntax highlighting :  
         `$ sudo dnf install zsh-syntax-highlighting`
-- Vivaldi (browser):
+- ~~Vivaldi (browser)~~ not recommended yet (no H.264 videos support and no Flash support):
     - Visit https://vivaldi.com/download/ and download the RPM file
     - `$ sudo dnf install /path/to/the/vivaldi/rpm/file.rpm`
-    - H.264 videos support:  
-        `$ cd /tmp`  
-        `$ wget https://gist.githubusercontent.com/ruario/bec42d156d30affef655/raw/554c4d81d269137cb008f56dcbd9bfab6a225ba5/latest-proprietary-media.sh`  
-        `$ sh latest-proprietary-media.sh`
-    - Adobe Flash:  
-        Visit https://get.adobe.com/flashplayer/  
-        "Select version to download": .rpm for Linux  
-        `$ sudo dnf install /path/to/the/flash/rpm/file.rpm`
 - feh (image viewer, wallpaper utility):
     - `$ sudo dnf install feh`
 - ImageMagick (CLI image editor/converter):
