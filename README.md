@@ -19,7 +19,7 @@ This is a guide to install all the packages I installed on the distribution Fedo
 
 - polybar (bars):
     - Dependencies:  
-        `$ sudo dnf install cairo-devel libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm clang`
+        `$ sudo dnf install cairo-devel libxcb python2 xcb-proto xcb-util-image xcb-util-wm-devel xcb-util-xrm xcb-image-devel xcb-util-devel clang`
     - Modules dependencies:  
         `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel`
     - `$ mkdir ~/repos`
