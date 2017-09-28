@@ -23,7 +23,7 @@ This is a guide to install all the packages I installed on the distribution Fedo
     - Modules dependencies:  
         `$ sudo dnf install i3 wireless-tools-devel alsa-lib libmpdclient-devel libcurl-devel`
     - `$ mkdir ~/repos`
-    - `$ git clone https://github.com/jaagr/polybar ~/repos/polybar && cd ~/repos/polybar`
+    - `$ git clone --branch 3.0.5 --recursive https://github.com/jaagr/polybar ~/repos/polybar && cd ~/repos/polybar`
     - `$ ./build.sh -f`
     - Press y, again, again and again...
 - i3-gaps (Window Manager / Desktop Environment):
