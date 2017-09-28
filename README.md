@@ -54,6 +54,8 @@ This is a guide to install all the packages I installed on the distribution Fedo
     - `$ sudo dnf install ImageMagick`
 - i3lock (screen saver, lock utility):
     - `$ sudo dnf install i3lock`
+- xclip (clipboard utility):
+    - `$ sudo dnf install xclip`
 - scrot (CLI screenshot tool):
     - `$ sudo dnf install scrot`
 - light (CLI backlight utility **that works on ThinkPad T470s**)
