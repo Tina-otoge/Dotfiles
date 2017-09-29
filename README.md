@@ -59,7 +59,7 @@ This is a guide to install all the packages I installed on the distribution Fedo
 - scrot (CLI screenshot tool):
     - `$ sudo dnf install scrot`
 - light (CLI backlight utility **that works on ThinkPad T470s**)
-    - `$ sudo copr enable frostyx/light`
+    - `$ sudo dnf copr enable frostyx/light`
     - `$ sudo dnf install light`
 - Discord
     - `$ mkdir ~/repos`
