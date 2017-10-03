@@ -45,7 +45,7 @@ inherit = bar/base
 
 modules-left = wlan eth
 modules-center = date
-modules-right = battery battery2 temp powermenu
+modules-right = battery battery2 temp
 
 [bar/bottom]
 inherit = bar/base

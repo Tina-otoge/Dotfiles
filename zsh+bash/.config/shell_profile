@@ -5,7 +5,12 @@ function include_exists() {
 }
 
 include_exists ~/.config/aliases
+include_exists ~/.cargo/env
 
-ttyctl -f
+export ACADEMICYEAR=2017
+
+# neofetch --disable title distro model kernel cpu gpu gpu_driver install_date locale --backend w3m --size 220px
+motd
+chgsize 16
 
 # vim:ft=sh 

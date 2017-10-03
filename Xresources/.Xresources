@@ -38,7 +38,7 @@
 urxvt*transparent: true
 urxvt*shading: 15
 
-URxvt.font: xft:Monaco:size=12
+Urxvt.font: xft:Monaco:pixelsize=16
 
 URxvt.scrollBar: false
 
@@ -49,4 +49,6 @@ URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+Urxvt.resize-font.smaller: C-Down
+Urxvt.resize-font-bigger: C-Up
 

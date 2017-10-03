@@ -1,4 +1,5 @@
 [user]
-	email = shookaite@gmail.com
+	email = damien.savatier@epitech.eu
+	name = Damien Savatier
 [credential]
 	helper = libsecret

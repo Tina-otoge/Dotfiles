@@ -5,8 +5,19 @@ alias cls='clear'
 alias motd='fortune -s osfortune computers linux kernelnewbies | cowsay -d '
 alias nyan='telnet nyancat.dankko.us'
 alias gay='lolcat -a -d 3'
-alias ll='ls -1sh'
-alias lll='ls -gh --time-style=long-iso'
+alias l='ls -1sh'
+alias ll='ls -gh --time-style=long-iso'
+alias ne='emacs -nw'
+alias emacs=vim
+alias py=python3
+alias wifi='gnome-control-center network'
+alias blihu='blih -u damien.savatier@epitech.eu'
+alias blihc='blihu repository create'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+blihr() {
+    blihu repository setacl "$1" ramassage-tek r
+}
 
 chgsize() {
 	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
