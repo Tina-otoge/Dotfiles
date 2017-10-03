@@ -2,7 +2,7 @@ chromium_browser=$(which vivaldi)
 
 alias 420="$chromium_browser --fast-start --app='http://420.mon.im' </dev/null &>/dev/null &"
 alias cls='clear'
-alias motd='fortune -s osfortune computers linux kernelnewbies | cowsay -d '
+alias motd='fortune osfortune computers linux kernelnewbies magic definitions pets linuxcookie wisdom knghtbrd hitchhiker'
 alias nyan='telnet nyancat.dankko.us'
 alias gay='lolcat -a -d 3'
 alias l='ls -1sh'

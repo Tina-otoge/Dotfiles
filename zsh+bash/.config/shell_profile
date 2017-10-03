@@ -10,7 +10,7 @@ include_exists ~/.cargo/env
 export ACADEMICYEAR=2017
 
 # neofetch --disable title distro model kernel cpu gpu gpu_driver install_date locale --backend w3m --size 220px
-motd
-chgsize 16
+neofetch --config $HOME/.config/neofetch/welcome.conf && echo Message of the day:"\n"$(motd)"\n"
+# chgsize 16
 
 # vim:ft=sh 
