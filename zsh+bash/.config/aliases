@@ -7,13 +7,16 @@ alias nyan='telnet nyancat.dankko.us'
 alias gay='lolcat -a -d 3'
 alias l='ls -1sh'
 alias ll='ls -gh --time-style=long-iso'
-alias ne='emacs -nw'
-alias emacs=vim
-alias py=python3
+alias ne='vim'
+alias emacs='vim'
+alias py='python3'
 alias wifi='gnome-control-center network'
 alias blihu='blih -u damien.savatier@epitech.eu'
 alias blihc='blihu repository create'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias vime='/usr/bin/emacs -nw'
+alias biggcc='gcc -Wall -Wextra'
+alias gcca='gcc $(find . -name "*.c")'
 
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
