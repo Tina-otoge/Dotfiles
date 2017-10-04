@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+path='/tmp/bg.png'
+over_path='/tmp/bg-over.png'
+overdir_path="$HOME"'/Pictures/Wallpapers/transparent-waifus/'
+
+over=$(find "$overdir_path" | shuf -n 1)
+    
+scrot -e 'mv $f '"$path"
+height=$(identify -format '%H' "$path")
+
+convert "$over" -resize "x$height>" "$over_path"
+
+convert "$path" -scale 10% -scale 1000% "$path"
+
+composite "$over_path" -gravity SouthWest "$path" "$path"
+
+i3lock -n -f -i "$path"
+
