@@ -17,9 +17,16 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias vime='/usr/bin/emacs -nw'
 alias biggcc='gcc -Wall -Wextra'
 alias gcca='gcc $(find . -name "*.c")'
+alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
 
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
+}
+blihclone() {
+    if [ -Z $2 ]; then
+        2="$1";
+    fi
+    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" "$2"
 }
 
 chgsize() {
