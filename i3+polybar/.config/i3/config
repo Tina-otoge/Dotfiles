@@ -21,7 +21,7 @@ client.unfocused #000000 #300066 #000000
 
 ## borders and disable window title (who cares anyway)
 new_window pixel 3
-font pango:DejaVu Sans Mono 0
+font pango:DejaVu Sans Mono 12
 
 ## htop
 bindsym $mod+p exec i3-sensible-terminal -e htop
