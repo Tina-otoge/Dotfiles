@@ -38,7 +38,7 @@
 urxvt*transparent: true
 urxvt*shading: 15
 
-urxvt.font: xft:Monaco:pixelsize=16
+urxvt.font: xft:Monaco:size=21
 
 URxvt.scrollBar: false
 

@@ -11,6 +11,6 @@ export ACADEMICYEAR=2017
 
 # neofetch --disable title distro model kernel cpu gpu gpu_driver install_date locale --backend w3m --size 220px
 neofetch --config $HOME/.config/neofetch/welcome.conf && echo Message of the day:"\n"$(motd)"\n"
-# chgsize 16
+chgsize 21
 
 # vim:ft=sh 
