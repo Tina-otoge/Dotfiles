@@ -9,8 +9,14 @@ fi
 # export SYSTEMD_PAGER=
 
 if [ -f ~/.config/shell_profile ]; then
-	. ~/.config/shell_profile
+
+
+
+
+    . ~/.config/shell_profile
 fi
+
+setxkbmap fr
 
 # only bash specific commands here, general commands
 # should be included in shell_profile file

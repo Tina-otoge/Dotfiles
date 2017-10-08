@@ -1,19 +1,16 @@
 chromium_browser=$(which vivaldi)
 
-alias 420="$chromium_browser --fast-start --app='http://420.mon.im' </dev/null &>/dev/null &"
 alias cls='clear'
 alias motd='fortune osfortune computers linux kernelnewbies magic definitions pets linuxcookie wisdom knghtbrd hitchhiker'
 alias nyan='telnet nyancat.dankko.us'
 alias gay='lolcat -a -d 3'
 alias l='ls -1sh'
 alias ll='ls -gh --time-style=long-iso'
-alias ne='vim'
-alias emacs='vim'
 alias py='python3'
 alias wifi='gnome-control-center network'
 alias blihu='blih -u damien.savatier@epitech.eu'
 alias blihc='blihu repository create'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit"
 alias vime='/usr/bin/emacs -nw'
 alias biggcc='gcc -Wall -Wextra'
 alias gcca='gcc $(find . -name "*.c")'
@@ -22,12 +19,20 @@ alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
 }
+
 blihclone() {
     if [ -Z $2 ]; then
         2="$1";
     fi
     git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" "$2"
 }
+
+lock() {
+    sh ~/.config/i3/lock.sh
+}
+setxkbmap() {lock}
+emacs() {lock}
+ne() {lock}
 
 chgsize() {
 	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
