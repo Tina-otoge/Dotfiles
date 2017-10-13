@@ -4,6 +4,8 @@
 ## execute on start
 exec_always "setxkbmap fr"
 exec_always "sh ~/.config/initbg.sh"
+# exec_always "sh ~/.config/i3/sakura.sh"
+# exec_always "guake"
 
 ## set special keys
 set $mod Mod4
@@ -98,7 +100,7 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-bindsym F11 fullscreen toggle
+#bindsym F11 fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -128,8 +130,8 @@ bindsym $mod+5 workspace number 5
 bindsym $mod+6 workspace number 6
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9 games
-bindsym $mod+0 workspace number 10 code
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1

@@ -6,8 +6,14 @@ function include_exists() {
 
 include_exists ~/.config/aliases
 include_exists ~/.cargo/env
+include_exists ~/.config/block.sh
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        include_exists /etc/profile.d/vte.sh
+fi
+
 
 export ACADEMICYEAR=2017
+export ENV=~/.config/shell_profile
 
 # neofetch --disable title distro model kernel cpu gpu gpu_driver install_date locale --backend w3m --size 220px
 neofetch --config $HOME/.config/neofetch/welcome.conf && echo Message of the day:"\n"$(motd)"\n"

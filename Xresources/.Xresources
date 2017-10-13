@@ -52,3 +52,4 @@ URxvt.matcher.button: 1
 Urxvt.resize-font.smaller: C-Down
 Urxvt.resize-font-bigger: C-Up
 
+:q

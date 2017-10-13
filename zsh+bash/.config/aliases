@@ -15,25 +15,16 @@ alias vime='/usr/bin/emacs -nw'
 alias biggcc='gcc -Wall -Wextra'
 alias gcca='gcc $(find . -name "*.c")'
 alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
+alias v='/usr/bin/vim'
+alias c='/bin/cat'
 
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
 }
 
 blihclone() {
-    if [ -Z $2 ]; then
-        2="$1";
-    fi
     git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" "$2"
 }
-
-lock() {
-    sh ~/.config/i3/lock.sh
-}
-setxkbmap() {lock}
-emacs() {lock}
-ne() {lock}
-
 chgsize() {
 	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
 }
