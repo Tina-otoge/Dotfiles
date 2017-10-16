@@ -12,11 +12,12 @@ alias blihu='blih -u damien.savatier@epitech.eu'
 alias blihc='blihu repository create'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit"
 alias vime='/usr/bin/emacs -nw'
-alias biggcc='gcc -Wall -Wextra'
-alias gcca='gcc $(find . -name "*.c")'
+alias gccw='gcc -Wall -Wextra'
+alias gcca='gccw $(find . -name "*.c")'
 alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
 alias v='/usr/bin/vim'
 alias c='/bin/cat'
+alias ch='/usr/bin/chmod'
 
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
