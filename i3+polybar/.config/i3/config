@@ -3,9 +3,9 @@
 
 ## execute on start
 exec_always "setxkbmap fr"
-exec_always "sh ~/.config/initbg.sh"
-# exec_always "sh ~/.config/i3/sakura.sh"
-# exec_always "guake"
+# exec_always "sh ~/.config/initbg.sh"
+exec_always "sh ~/.config/i3/sakura.sh"
+exec_always "guake --hide"
 
 ## set special keys
 set $mod Mod4
@@ -67,6 +67,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 ## This, for example, can find Discord while regular dmenu can not
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+## rofi
+bindsym $mod+i exec rofi -show run
+bindsym $mod+space exec rofi -show run
 
 # change focus
 # bindsym $mod+j focus left
@@ -112,7 +115,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+## bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
