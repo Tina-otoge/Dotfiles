@@ -47,6 +47,7 @@ if ask_folder zsh+bash; then
     sym "$SRC/.zshrc" "$HOME/"
     sym "$SRC/.config/shell_profile" "$HOME/.config/"
     sym "$SRC/.config/aliases" "$HOME/.config/"
+    sym "$SRC/.config/block.sh" "$HOME/.config/"
 fi
 
 if ask_folder vim; then
