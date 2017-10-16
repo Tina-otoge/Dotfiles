@@ -38,7 +38,7 @@
 urxvt*transparent: true
 urxvt*shading: 15
 
-urxvt.font: xft:Monaco:size=21
+urxvt.font: xft:Monaco:pixelsize=21
 
 URxvt.scrollBar: false
 
@@ -52,4 +52,4 @@ URxvt.matcher.button: 1
 Urxvt.resize-font.smaller: C-Down
 Urxvt.resize-font-bigger: C-Up
 
-:q
+
