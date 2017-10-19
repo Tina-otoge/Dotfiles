@@ -19,7 +19,7 @@ stty -ixon
 
 export ACADEMICYEAR=2017
 export ENV=~/.config/shell_profile
-explort EDITOR=vim
+export EDITOR=vim
 
 # CHROMIUM BROWSER
 # chromium browser for browser commands
