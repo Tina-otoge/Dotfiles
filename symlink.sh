@@ -1,4 +1,16 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+echo Welcome to Tina\'s dotfiles linking script.
+echo
+echo This script\'s purpose is to help you installing my config files \(dotfiles\) to
+echo the corresponding folder without moving them.
+echo
+echo When entering \"y\" to install the files for a specific software \(i.e.: vim\) it
+echo will symink the file from the current folder to the appropriate place in your
+echo file system. \(i.e.: ./vim/.vimrc ==\> ~/.vimrc\)
+echo
+echo Entering \"y\" will NOT install the corresponding packages. See install.sh for
+echo this.
 
 HERE="$(pwd)/$(dirname "$0")"
 BACKUP_DIR="$HERE/backups/"
@@ -27,18 +39,17 @@ function sym() {
     echo Symlink: done.
 }
 
-if [ -d $BACKUP_DIR ]; then
-    echo Backup directory already exists, not creating one...
-else
-    mkdir $BACKUP_DIR
-fi
+mkdir -p $BACKUP_DIR
+mkdir -p "$HOME/.config"
 
-if ask_folder i3+polybar; then
+if ask_folder "i3+polybar(&rofi&compton)"; then
     SRC="i3+polybar"
     sym "$SRC/.config/initbg.sh" "$HOME/.config/"
     sym "$SRC/.config/bgloop.sh" "$HOME/.config/"
     sym "$SRC/.config/i3" "$HOME/.config/"
     sym "$SRC/.config/polybar" "$HOME/.config/"
+    sym "$SRC/.config/rofi" "$HOME/.config/"
+    sym "$SRC/.config/compton.conf" "$HOME/.config/"
 fi
 
 if ask_folder zsh+bash; then
@@ -48,6 +59,7 @@ if ask_folder zsh+bash; then
     sym "$SRC/.config/shell_profile" "$HOME/.config/"
     sym "$SRC/.config/aliases" "$HOME/.config/"
     sym "$SRC/.config/block.sh" "$HOME/.config/"
+    sym "$SRC/.config/welcome" "$HOME/.config/"
 fi
 
 if ask_folder vim; then
