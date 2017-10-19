@@ -3,9 +3,10 @@
 
 ## execute on start
 exec_always "setxkbmap fr"
-# exec_always "sh ~/.config/initbg.sh"
+exec_always "sh ~/.config/initbg.sh"
 exec_always "sh ~/.config/i3/sakura.sh"
 exec_always "guake --hide"
+exec_always compton
 
 ## set special keys
 set $mod Mod4
@@ -22,7 +23,7 @@ client.focused #000000 #600099 #000000
 client.unfocused #000000 #300066 #000000
 
 ## borders and disable window title (who cares anyway)
-new_window pixel 3
+new_window pixel 0
 font pango:DejaVu Sans Mono 12
 
 ## htop
@@ -69,7 +70,7 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 ## rofi
 bindsym $mod+i exec rofi -show run
-bindsym $mod+space exec rofi -show run
+bindsym $mod+space exec sh ~/.config/rofi/launch.sh
 
 # change focus
 # bindsym $mod+j focus left
@@ -204,3 +205,4 @@ bar {
         #status_command i3status
         i3bar_command ~/.config/polybar/launch.sh
 }
+
