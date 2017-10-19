@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+neofetch --config $HOME/.config/neofetch/welcome.conf
+echo Message of the day:
+motd

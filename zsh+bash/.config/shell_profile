@@ -1,8 +1,41 @@
+# # # # # # #
+# Functions #
+# # # # # # #
+
+# Helper function to include other files
 function include_exists() {
     if [ -f $1 ]; then       
         . $1
     fi
 }
+
+# No Software Flow Control in terminals : don't send C-q C-s
+# Allows using Ctrl + S in vim for example
+stty -ixon
+
+# # # # # # # # # # #
+# Global veriables  #
+# # # # # # # # # # #
+
+export ACADEMICYEAR=2017
+export ENV=~/.config/shell_profile
+explort EDITOR=vim
+
+# CHROMIUM BROWSER
+# chromium browser for browser commands
+# useful for fullscreen applications, you may want to
+# use an alternative browser profile or not your main
+# chromium based browser
+export CHROMIUM_BROWSER=$(which google-chrome)
+# alternatives :
+# export CHROMIUM_BROWSER=$(which chromium)
+# export CHROMIUM_BROWSER=$(which vivaldi)
+
+# # # # # # # # # # #
+# Files inclusions  #
+# # # # # # # # # # #
+
+# These are called everytime a shell is loaded
 
 include_exists ~/.config/aliases
 include_exists ~/.cargo/env
@@ -10,14 +43,6 @@ include_exists ~/.cargo/env
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         include_exists /etc/profile.d/vte.sh
 fi
-
-# no Software Flow Control in terminals : don't send C-q C-s
-stty -ixon
-
-export ACADEMICYEAR=2017
-export ENV=~/.config/shell_profile
-
-# neofetch --disable title distro model kernel cpu gpu gpu_driver install_date locale --backend w3m --size 220px
-neofetch --config $HOME/.config/neofetch/welcome.conf && echo Message of the day:"\n"$(motd)"\n"
+include_exists ~/.config/welcome
 
 # vim:ft=sh 

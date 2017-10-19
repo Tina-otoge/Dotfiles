@@ -1,5 +1,3 @@
-chromium_browser=$(which vivaldi)
-
 alias cls='clear'
 alias motd='fortune osfortune computers linux kernelnewbies magic definitions pets linuxcookie wisdom knghtbrd hitchhiker'
 alias nyan='telnet nyancat.dankko.us'
@@ -7,6 +5,7 @@ alias gay='lolcat -a -d 3'
 alias l='ls -1sh'
 alias ll='ls -gh --time-style=long-iso'
 alias py='python3'
+alias py2='python2'
 alias wifi='gnome-control-center network'
 alias blihu='blih -u damien.savatier@epitech.eu'
 alias blihc='blihu repository create'
@@ -18,16 +17,30 @@ alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
 alias v='/usr/bin/vim'
 alias c='/bin/cat'
 alias ch='/usr/bin/chmod'
+alias svp='sudo'
+alias stp='sudo'
+alias please='sudo'
+alias fucking='sudo'
 
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
 }
+blihcr() {
+    blihc $1
+    blihr $1
+}
 
 blihclone() {
+    if [ !$2 ]; then
+        $2=$1
+    fi
     git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" "$2"
 }
+alias bliclone=blihclone
+
 chgsize() {
 	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
 }
+alias cz=chgsize
 
 # vim:ft=sh

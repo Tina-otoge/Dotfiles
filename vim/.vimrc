@@ -31,6 +31,7 @@ map - dd
 map  <F9>  <Esc>:NERDTreeToggle<CR>
 " ctrl s, z, y, c, v, x
 imap <C-s> <Esc>:w<CR>a
+imap <C-a> <Esc>ggvG$
 vmap <C-c> y
 vmap <C-x> x
 imap <C-v> <Esc>gPa
