@@ -35,10 +35,10 @@
 *.color7:       #f8f8f2
 *.color15:      #f9f8f5
 
-urxvt*transparent: true
-urxvt*shading: 15
+! urxvt*transparent: true
+! urxvt*shading: 10
 
-urxvt.font: xft:Monaco:pixelsize=21
+urxvt.font: xft:Monaco:pixelsize=21, xft:FontAwesome:pixelsize=19
 
 URxvt.scrollBar: false
 
@@ -51,5 +51,3 @@ URxvt.matcher.button: 1
 
 Urxvt.resize-font.smaller: C-Down
 Urxvt.resize-font-bigger: C-Up
-
-
