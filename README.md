@@ -2,16 +2,18 @@
 my dot files
 
 ## My setup (Fedora 26)
-![preview](https://cdn.discordapp.com/attachments/356776538584121347/359519874961244160/2017-09-19-040325_1920x1080_scrot.png)
+![preview-clean](https://cdn.discordapp.com/attachments/356776538584121347/370714657515896856/2017-10-20-012454_1920x1080_scrot.png)
+![preview-work](https://cdn.discordapp.com/attachments/356776538584121347/370714885484576778/2017-10-20-012324_1920x1080_scrot.png)
+![preview-music](https://cdn.discordapp.com/attachments/356776538584121347/370715088903995392/2017-10-20-012612_1920x1080_scrot.png)
 - Bars: polybar
 - WM: i3(-gaps)
-- Editors: vim, atom
+- Term: URxvt
+- Editor: vim
 - Music player: cmus
 - Visualizer: cli-visualizer
 
-Everything to reproduce my setup should be included with this repo except:
-- Packages (see `Repos.md` and `packages.txt`)
-- Wallpapers (:warning:: background script still try to set background from ~/Pictures/Wallpapers/.../\*, see `i3+polybar/.config/bgloop.sh`
+This repo includes everything to reproduce my setup, except:
+- Wallpapers (:warning:: background script still try to set background from ~/Pictures/Wallpapers/.../\*, see `i3+polybar/.config/bgloop.sh` and modify it to your convenience !!)
 
 # INSTALLATION (Fedora 26 XFCE, adapt for other distros)
 
@@ -26,7 +28,7 @@ This is a guide to install all the packages I installed on the distribution Fedo
     - `$ git clone --branch 3.0.5 --recursive https://github.com/jaagr/polybar ~/repos/polybar && cd ~/repos/polybar`
     - `$ ./build.sh -f`
     - Press y, again, again and again...
-- i3-gaps (Window Manager / Desktop Environment):
+- i3-gaps (Window Manager as a Desktop Environment):
     - Dependencies:  
         `$ sudo dnf install i3 libxcb-devel xcb-util-keysyms-devel xcb-util-devel xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel yajl-devel libXrandr-devel startup-notification-devel libev-devel xcb-util-cursor-devel libXinerama-devel libxkbcommon-devel libxkbcommon-x11-devel pcre-devel pango-devel git gcc automake`
     - `$ mkdir ~/repos`
@@ -93,7 +95,7 @@ Some of them have configurations included in this repo. Some have not.
 - zsh (main shell)
 - zsh-syntax-highlighting
 - fish (alternative shell)
-- ahoviewer (booru browser)
+- ~~ahoviewer (booru browser)~~ (now investigating grabber)
 - discord-canary
 - vivaldi (main browser)
 - vim (main editor)
@@ -108,4 +110,4 @@ Some of them have configurations included in this repo. Some have not.
 - ocaml (alternative scripting)
 - nodejs (alternative scripting)
 - mame, wine, mono, rubygems, vlc, lightspark (just in case)
-- fortune, lolcat, cowsay, sl (fun)
+- fortune, lolcat, cowsay, sl, oneko (fun)
