@@ -83,11 +83,6 @@ if ask_folder user-dirs; then
     sym "$SRC/.config/user-dirs.dirs" "$HOME/.config/"
 fi
 
-if ask_folder git; then
-    SRC="git"
-    sym "$SRC/.gitconfig" "$HOME/"
-fi
-
 if ask_folder neofetch; then
     SRC="neofetch"
     sym "$SRC/.config/neofetch" "$HOME/.config/"
