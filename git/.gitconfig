@@ -1,5 +1,0 @@
-[user]
-	email = damien.savatier@epitech.eu
-	name = Damien Savatier
-[credential]
-	helper = libsecret
