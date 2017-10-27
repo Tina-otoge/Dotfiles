@@ -12,8 +12,6 @@ set listchars=tab:\·\ ,trail:.,extends:#,nbsp:.
 
 set mouse=a
 
-set cc=80
-
 set showcmd
 set ruler
 
