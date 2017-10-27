@@ -1,5 +1,5 @@
 alias cls='clear'
-alias motd='fortune osfortune computers linux kernelnewbies magic definitions pets linuxcookie wisdom knghtbrd hitchhiker'
+alias motd='fortune'
 alias nyan='telnet nyancat.dankko.us'
 alias gay='lolcat -a -d 3'
 alias l='ls -1sh'
@@ -22,6 +22,14 @@ alias stp='sudo'
 alias please='sudo'
 alias fucking='sudo'
 
+arbo() {
+    mkdir -p include
+    mkdir -p src
+    mkdir -p lib
+    echo "*.o\n#*#\n*~\n*.swp" >> .gitignore
+    touch src/main.c
+}
+
 blihr() {
     blihu repository setacl "$1" ramassage-tek r
 }
@@ -31,10 +39,7 @@ blihcr() {
 }
 
 blihclone() {
-    if [ !$2 ]; then
-        $2=$1
-    fi
-    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" "$2"
+    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1"
 }
 alias bliclone=blihclone
 

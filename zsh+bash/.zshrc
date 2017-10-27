@@ -6,7 +6,7 @@ fi
 # should be included in shell_profile
 
 # PROMPT='%f[%F{cyan}Tina%F{gray}@%F{blue}%m%f] %# '
-PROMPT='%F{cyan}%n%F{red}%#%F{green}>>> %f'
+PROMPT='%F{cyan}%n@%m%F{red}%#%F{green}>>> %f'
 RPROMPT='%F{green}%~%f'
 
 autoload -U compinit
