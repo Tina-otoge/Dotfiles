@@ -135,7 +135,7 @@ format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.fg-alt}
 format-connected-underline = ${colors.white}
-label-connected = %essid% %local_ip%
+label-connected = %essid% %local_ip% | %downspeed%
 format-disconnected = 
 
 [module/eth]

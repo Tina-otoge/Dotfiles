@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder="${HOME}"'/Pictures/Wallpapers/Space/'
+folder="${HOME}"'/Pictures/Wallpapers/tokyo drifts/'
 pause=1000
 while true; do
     pic=$(find "$folder"* | shuf -n 1)

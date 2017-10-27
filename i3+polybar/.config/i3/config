@@ -4,9 +4,9 @@
 ## execute on start
 exec_always "setxkbmap fr"
 exec_always "sh ~/.config/initbg.sh"
-exec_always "sh ~/.config/i3/sakura.sh"
+# exec_always "sh ~/.config/i3/sakura.sh"
 exec_always "guake --hide"
-exec_always compton
+# exec_always compton
 
 ## set special keys
 set $mod Mod4
@@ -60,6 +60,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
 
+## start Explorer
+bindsym $win+e exec Thunar
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -110,7 +112,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 #bindsym $mod+d layout tabbed
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+## bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
