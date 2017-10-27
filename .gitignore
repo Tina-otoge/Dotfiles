@@ -1,5 +1,6 @@
 *.swp
 *~
+*.log
 /vim/.vim/bundle
 /vim/.vim/.netrwhist
 /backups
