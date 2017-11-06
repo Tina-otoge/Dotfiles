@@ -39,10 +39,13 @@ export CHROMIUM_BROWSER=$(which google-chrome)
 
 include_exists ~/.config/aliases
 include_exists ~/.cargo/env
-include_exists ~/.config/block.sh
+# include_exists ~/.config/block.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         include_exists /etc/profile.d/vte.sh
 fi
 include_exists ~/.config/welcome
+
+# Enable The Fuck
+eval $(thefuck --alias)
 
 # vim:ft=sh 
