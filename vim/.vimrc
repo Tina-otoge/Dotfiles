@@ -14,8 +14,15 @@ set mouse=a
 
 set showcmd
 set ruler
+set cursorline
 
 syntax on
+
+colorscheme molokai
+let g:molokai_original = 1
+hi Normal ctermbg=0
+hi Visual ctermbg=238
+
 
 execute pathogen#infect()
 autocmd StdinReadPre * let s:std_in=1
