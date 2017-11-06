@@ -5,8 +5,14 @@ fi
 # only zsh exclusive commands here, general commands
 # should be included in shell_profile
 
-# PROMPT='%f[%F{cyan}Tina%F{gray}@%F{blue}%m%f] %# '
-PROMPT='%F{cyan}%n@%m%F{red}%#%F{green}>>> %f'
+if [ -f ~/repos/zsh-git-prompt/zshrc.sh ]; then
+    . ~/repos/zsh-git-prompt/zshrc.sh
+fi
+
+## Debian-like prompt
+PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f]$(git_super_status) %F{red}%#%f '
+## Fish-like prompt
+# PROMPT='%F{cyan}%n%F{gray}@%F{blue}%m%F{red}%#%F{green}>>> %f'
 RPROMPT='%F{green}%~%f'
 
 autoload -U compinit
@@ -24,10 +30,11 @@ setopt complete_in_word
 setopt no_bg_nice
 
 # history
-HISTFILE='~/.bash_history'
+HISTFILE=.bash_history
+SAVEHIST=9000
 setopt append_history
-setopt inc_append_history
-setopt share_history
+#setopt inc_append_history
+#setopt share_history
 
 # can omit cd
 setopt auto_cd
