@@ -6,7 +6,7 @@ exec_always "setxkbmap fr"
 exec_always "sh ~/.config/initbg.sh"
 # exec_always "sh ~/.config/i3/sakura.sh"
 exec_always "guake --hide"
-# exec_always compton
+exec_always compton
 
 ## set special keys
 set $mod Mod4
@@ -14,22 +14,30 @@ set $alt Mod1
 set $win Mod4
 set $ctrl Control
 
+## set default apps
+set $term urxvt256c
+
 ## gaps
-gaps outer 10
+gaps outer 35
 gaps inner 20
 
 ## colors
 client.focused #000000 #600099 #000000
 client.unfocused #000000 #300066 #000000
 
+## skra
+bindsym $mod+k exec skra
+## wp
+bindsym $mod+b exec sh ~/.config/initbg.sh
+
 ## borders and disable window title (who cares anyway)
 new_window pixel 0
 font pango:DejaVu Sans Mono 12
 
 ## htop
-bindsym $mod+p exec i3-sensible-terminal -e htop
-bindsym $ctrl+Shift+Escape exec i3-sensible-terminal -e htop
-bindsym $alt+$ctrl+Delete exec i3-sensible-terminal -e htop
+bindsym $mod+p exec $term -e htop
+bindsym $ctrl+Shift+Escape exec $term -e htop
+bindsym $alt+$ctrl+Delete exec $term -e htop
 
 ## Screenshot 
 bindsym Print exec "scrot -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/Screenshots/'"
@@ -54,7 +62,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -111,8 +119,9 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 #bindsym $mod+d layout tabbed
-bindsym $mod+t layout tabbed
+bindsym $mod+t layout  tabbed
 ## bindsym $mod+e layout toggle split
+bindsym $mod+y layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

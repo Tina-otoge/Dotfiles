@@ -29,7 +29,7 @@ fixed-center = true
 
 wm-restack = i3
 # draw over windows
-# override-redirect = true
+override-redirect = true
 
 background = #AF222222
 foreground = ${colors.fg}
@@ -135,7 +135,7 @@ format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.fg-alt}
 format-connected-underline = ${colors.white}
-label-connected = %essid% %local_ip% | %downspeed%
+label-connected = %essid% %local_ip% |  %downspeed%
 format-disconnected = 
 
 [module/eth]
