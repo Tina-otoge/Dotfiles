@@ -21,6 +21,8 @@ alias svp='sudo'
 alias stp='sudo'
 alias please='sudo'
 alias fucking='sudo'
+alias blog='cd ~/repos/skielred/blog'
+alias vis='cz 4 && /usr/bin/vis && cz 15'
 
 arbo() {
     mkdir -p include
@@ -44,8 +46,13 @@ blihclone() {
 alias bliclone=blihclone
 
 chgsize() {
-	printf '\33]50;%s\007' "xft:Monaco:pixelsize=$1"
+	printf '\33]50;%s\007' "xft:Monaco:size=$1"
 }
 alias cz=chgsize
+
+mkcd() {
+    mkdir -p $1
+    cd $1
+}
 
 # vim:ft=sh
