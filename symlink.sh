@@ -73,11 +73,6 @@ if ask_folder Xresources; then
     sym "$SRC/.Xresources" "$HOME/"
 fi
 
-if ask_folder vis; then
-    SRC="vis"
-    sym "$SRC/.config/vis" "$HOME/.config/"
-fi
-
 if ask_folder user-dirs; then
     SRC="user-dirs"
     sym "$SRC/.config/user-dirs.dirs" "$HOME/.config/"
