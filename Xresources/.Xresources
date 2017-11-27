@@ -38,13 +38,13 @@
 ! urxvt*transparent: true
 ! urxvt*shading: 10
 
-URxvt.font: xft:Monaco:size=16, xft:SauceCodePro Nerd Font:size=16
+*.font: xft:Monaco:size=16:style=Book, xft:SauceCodePro Nerd Font:size=16:style=Book
 
 URxvt.scrollBar: false
 
 URxvt.internalBorder: 12
 
-URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.perl-ext-common: default,matcher
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
