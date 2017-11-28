@@ -30,26 +30,18 @@ setopt complete_in_word
 setopt no_bg_nice
 
 # history
-HISTFILE=.bash_history
+HISTFILE='~/.bash_history'
 SAVEHIST=9000
 setopt append_history
-#setopt inc_append_history
-#setopt share_history
+setopt inc_append_history
+setopt share_history
 
 # can omit cd
 setopt auto_cd
-
-# cd to missing folder search for ~/<folder>
-setopt cdable_vars
-
-# add / when autocompleting a directory name
-setopt auto_param_slash
-
 
 . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 bindkey "${terminfo[kdch1]}" delete-char
-
 # vim:ft=sh

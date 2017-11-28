@@ -1,29 +1,41 @@
+# alternatives
+alias v='vim'
+alias ne='/usr/bin/emacs -nw'
+alias e='edit'
+alias c='cat'
+alias vime='ne'
+alias emacs='ne'
 alias cls='clear'
 alias motd='fortune'
-alias nyan='telnet nyancat.dankko.us'
-alias gay='lolcat -a -d 3'
-alias l='ls -1sh'
-alias ll='ls -gh --time-style=long-iso'
+alias nyan='nyancat'
 alias py='python3'
 alias py2='python2'
-alias wifi='gnome-control-center network'
-alias blihu='blih -u damien.savatier@epitech.eu'
-alias blihc='blihu repository create'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit"
-alias vime='/usr/bin/emacs -nw'
-alias gccw='gcc -Wall -Wextra'
-alias gcca='gccw $(find . -name "*.c")'
-alias bigcca='gcc -Wall -Wextra $(find . -name "*.c")'
-alias v='/usr/bin/vim'
-alias c='/bin/cat'
-alias ch='/usr/bin/chmod'
+alias blic='blihc'
+alias ch='chmod'
 alias svp='sudo'
 alias stp='sudo'
 alias please='sudo'
 alias fucking='sudo'
-alias blog='cd ~/repos/skielred/blog'
-alias vis='cz 4 && /usr/bin/vis && cz 15'
+alias bliclone='blihclone'
+alias blido='blihdo'
+alias cz='chgsize'
 
+# options shorteners
+alias l='ls -1'
+alias ll='ls -gh --time-style=long-iso'
+alias wifi='gnome-control-center network'
+alias sound='gnome-control-center sound'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit"
+alias gay='lolcat -a -d 3'
+
+# commands shorteners
+alias blog='cd ~/repos/skielred/blog'
+alias uu='dnf upgrade --refresh'
+alias blihu='blih -u damien.savatier@epitech.eu'
+alias blihc='blihu repository create'
+alias nyancat='telnet nyancat.dankko.us'
+
+# functions
 arbo() {
     mkdir -p include
     mkdir -p src
@@ -41,14 +53,38 @@ blihcr() {
 }
 
 blihclone() {
-    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1"
+    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" >/dev/null
+    if [ "$2" != '' ]; then
+        echo "$1" -\> "$2"
+        mv "$1" "$2"
+    fi
 }
-alias bliclone=blihclone
+
+blihdo() {
+    blihc $1
+    blihr $1
+    blihclone $1 $2
+}
 
 chgsize() {
+    if [ $(($1%2)) -eq 1 ]; then
+        echo You must input an even number
+        return
+    fi
 	printf '\33]50;%s\007' "xft:Monaco:size=$1"
 }
-alias cz=chgsize
+
+edit() {
+    $EDITOR $1
+}
+
+ghclone() {
+	if [ -z $2 ]; then
+		git clone git@github.com:"$1"
+	else
+		git clone git@github.com:"$1" "$2"
+	fi
+}
 
 mkcd() {
     mkdir -p $1
