@@ -1,6 +1,8 @@
 set encoding=utf-8 fileencodings=utf-8
 
 set tabstop=8
+set nocompatible
+syntax on
 filetype plugin indent on
 
 set number relativenumber
@@ -40,4 +42,4 @@ imap <C-v> <Esc>gPa
 imap <C-z> <Esc>ua
 imap <C-y> <Esc><C-r>a
 " header
-imap <C-h> <Esc>:0r !tekhgen %<CR>0kwv$
+imap <C-h> <Esc>:0r !tekhgen %<CR>0kwv$h
