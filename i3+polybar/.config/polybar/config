@@ -66,6 +66,8 @@ modules-right = cpu memory volume backlight
 inherit = bar/bottom
 monitor = HDMI-2
 
+modules-left  = i3
+modules-center =
 modules-right = battery battery2 date 
 
 [settings]
@@ -136,7 +138,8 @@ format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.fg-alt}
 format-connected-underline = ${colors.white}
 label-connected = %essid% %local_ip% |  %downspeed%
-format-disconnected = 
+format-disconnected = DISCONNECTED !!!!
+format-disconnected-foreground = #FF0000
 
 [module/eth]
 type = internal/network
