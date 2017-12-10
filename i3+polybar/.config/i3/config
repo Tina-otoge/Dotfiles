@@ -6,7 +6,7 @@ exec_always "setxkbmap fr"
 exec_always "sh ~/.config/initbg.sh"
 # exec_always "sh ~/.config/i3/sakura.sh"
 exec_always "guake --hide"
-exec_always compton
+# exec_always compton
 
 ## set special keys
 set $mod Mod4
