@@ -7,10 +7,12 @@ fi
 
 if [ -f ~/repos/zsh-git-prompt/zshrc.sh ]; then
     . ~/repos/zsh-git-prompt/zshrc.sh
+    PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f]$(git_super_status) %F{red}%#%f '
+else
+    PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f] %F{red}%#%f '
 fi
 
 ## Debian-like prompt
-PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f]$(git_super_status) %F{red}%#%f '
 ## Fish-like prompt
 # PROMPT='%F{cyan}%n%F{gray}@%F{blue}%m%F{red}%#%F{green}>>> %f'
 RPROMPT='%F{green}%~%f'
@@ -30,11 +32,12 @@ setopt complete_in_word
 setopt no_bg_nice
 
 # history
-HISTFILE='~/.bash_history'
+HISTFILE=~/.bash_history
+HISTSIZE=90000
 SAVEHIST=9000
-setopt append_history
-setopt inc_append_history
-setopt share_history
+#setopt append_history
+#setopt inc_append_history
+#setopt share_history
 
 # can omit cd
 setopt auto_cd
