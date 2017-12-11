@@ -106,7 +106,11 @@ echo GDM is the default display manager for the current main Fedora release.
 echo \(LightDM is the default display manager for the 2017 EPITECH dump\)
 echo
 if $(confirm); then
-	sudo dnf install gdm && bash "$SCRIPTS/enable_gdm.sh"
+	sudo dnf install gdm
+	if $(confirm "Replace current display manager by gdm?"); then
+		sudo systemctl disable display-manager
+		sudo systemctl enable gdm
+	fi
 	press_any_key
 fi
 
