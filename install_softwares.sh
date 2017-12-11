@@ -3,7 +3,7 @@
 CURDIR=$(dirname $(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null||echo $0))
 SCRIPTS="$CURDIR/_scripts"
 
-. "$CURDIR/$SCRIPTS/_functions.sh"
+. "$SCRIPTS/_functions.sh"
 
 clear
 echo CAUTION:
