@@ -177,7 +177,7 @@ echo "  /var/www/tina immediately, awesome!"
 echo
 if $(confirm); then
 	sudo dnf install zsh
-	$(confirm "Makes zsh your default shell ?") && sudo chsh -s /usr/bin/zsh "$USER"
+	$(confirm "Makes zsh your default shell ?") && sudo dnf install util-linux-user && chsh -s /usr/bin/zsh
 	$(confirm "Installs sqlite ? (Allows for using zsh TAB completion in commands like dnf install)") && sudo dnf install sqlite
 	press_any_key
 fi
