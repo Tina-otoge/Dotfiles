@@ -45,8 +45,9 @@ echo Other popular desktop environments are GNOME, KDE, XFCE \(default on the
 echo 2017 EPITECH dump\). Each of them use their own window manager internally.
 echo
 if $(confirm); then
+	sudo dnf install i3
 	sudo dnf copr enable gregw/i3desktop
-	sudo dnf install i3-gaps || sudo dnf copr disable gregw/i3desktop
+	sudo dnf install i3-gaps --allowerasing || sudo dnf copr disable gregw/i3desktop
 	press_any_key
 fi
 
