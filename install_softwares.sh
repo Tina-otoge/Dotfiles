@@ -46,7 +46,7 @@ echo 2017 EPITECH dump\). Each of them use their own window manager internally.
 echo
 if $(confirm); then
 	sudo dnf copr enable gregw/i3desktop
-	sudo dnf install i3-gaps || sudo dnf copr disable gregw/i3desktop && bash "$SCRIPTS/install_i3-gaps.sh"
+	sudo dnf install i3-gaps || sudo dnf copr disable gregw/i3desktop
 	press_any_key
 fi
 
@@ -89,7 +89,7 @@ echo your own scripts and easily display their outputs in your bar.
 echo
 if $(confirm); then
 	sudo dnf copr enable ghorhe/polybar
-	sudo dnf install polybar || sudo dnf copr disable ghorhe/polybar && bash "$SCRIPTS/install_polybar.sh"
+	sudo dnf install polybar || sudo dnf copr disable ghorhe/polybar
 	press_any_key
 fi
 
@@ -329,7 +329,7 @@ echo specs without asking you.
 echo
 if $(confirm); then
 	sudo dnf copr enable konimex/neofetch
-	sudo dnf install neofetch || sudo dnf copr disable konmix/neofetch && bash $SCRIPTS/install_neofetch.sh
+	sudo dnf install neofetch || sudo dnf copr disable konmix/neofetch
 	press_any_key
 fi
 
