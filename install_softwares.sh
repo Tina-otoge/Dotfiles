@@ -175,13 +175,10 @@ echo "  \"cd site1 site2\" you will move to /var/www/site2/access/log, awesome!"
 echo "- cd expansion(part.2): if you enter \"cd /v/w/t\" you will move to"
 echo "  /var/www/tina immediately, awesome!"
 echo
-echo zsh is already installed in Fedora Linux. However it is not the default
-echo shell.
-echo
-$(confirm "Makes zsh your default shell ?") && chsh -s /usr/bin/zsh
-echo
-if $(confirm "Installs sqlite ? (Allows for using zsh TAB completion in commands like dnf install)"); then
-	sudo dnf install sqlite
+if $(confirm); then
+	sudo dnf install zsh
+	$(confirm "Makes zsh your default shell ?") && x-terminal-emulator -e chsh -s /usr/bin/zsh
+	$(confirm "Installs sqlite ? (Allows for using zsh TAB completion in commands like dnf install)") && sudo dnf install sqlite
 	press_any_key
 fi
 
