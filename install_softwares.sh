@@ -326,7 +326,7 @@ echo specs without asking you.
 echo
 if $(confirm); then
 	sudo dnf copr enable konimex/neofetch
-	sudo dnf install neofetch || sudo dnf copr disable konmix/neofetch
+	sudo dnf install neofetch || sudo dnf copr disable konimex/neofetch
 	press_any_key
 fi
 
