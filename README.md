@@ -1,7 +1,7 @@
 # Dotfiles
 my dot files
 
-## My setup (Fedora 26)
+## My setup (Fedora ~~26~~ 27)
 ![preview-clean](https://cdn.discordapp.com/attachments/356776538584121347/370714657515896856/2017-10-20-012454_1920x1080_scrot.png)
 ![preview-work](https://cdn.discordapp.com/attachments/356776538584121347/370714885484576778/2017-10-20-012324_1920x1080_scrot.png)
 ![preview-music](https://cdn.discordapp.com/attachments/356776538584121347/370715088903995392/2017-10-20-012612_1920x1080_scrot.png)
