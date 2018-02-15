@@ -1,5 +1,11 @@
 # alternatives
 alias v='vim'
+TERMEMU=$(ps -p $(ps -p $$ -o ppid=) o args=)
+if [ "$TERMEMU" != "cool-retro-term" ]; then
+unalias v
+alias v='nvim'
+alias vim='nvim'
+fi
 alias ne='/usr/bin/emacs -nw'
 alias e='edit'
 alias c='cat'
@@ -21,51 +27,27 @@ alias blido='blihdo'
 alias cz='chgsize'
 
 # options shorteners
-alias l='ls -1'
-alias ll='ls -gh --time-style=long-iso'
-alias wifi='gnome-control-center network'
+alias l='ls -1 '
+alias ll='ls -l '
+alias wifi='gnome-control-center network '
 alias sound='gnome-control-center sound'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit"
-alias gay='lolcat -a -d 3'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit "
+alias gs='git status --short '
+alias gd='git diff '
+alias gay='lolcat -a -d 3 '
 
 # commands shorteners
-alias blog='cd ~/repos/skielred/blog'
-alias uu='dnf upgrade --refresh'
-alias blihu='blih -u damien.savatier@epitech.eu'
-alias blihc='blihu repository create'
-alias nyancat='telnet nyancat.dankko.us'
+alias sudo='sudo '
+alias blog='cd ~/repos/skielred/blog '
+alias uu='dnf upgrade --refresh '
+alias nyancat='telnet nyancat.dakko.us '
+alias pip3uu='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
+
+# replacements
+alias ls='exa '
+alias tree='exa -T '
 
 # functions
-arbo() {
-    mkdir -p include
-    mkdir -p src
-    mkdir -p lib
-    echo "*.o\n#*#\n*~\n*.swp" >> .gitignore
-    touch src/main.c
-}
-
-blihr() {
-    blihu repository setacl "$1" ramassage-tek r
-}
-blihcr() {
-    blihc $1
-    blihr $1
-}
-
-blihclone() {
-    git clone git@git.epitech.eu:/damien.savatier@epitech.eu/"$1" >/dev/null
-    if [ "$2" != '' ]; then
-        echo "$1" -\> "$2"
-        mv "$1" "$2"
-    fi
-}
-
-blihdo() {
-    blihc $1
-    blihr $1
-    blihclone $1 $2
-}
-
 chgsize() {
     if [ $(($1%2)) -eq 1 ]; then
         echo You must input an even number
