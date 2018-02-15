@@ -75,12 +75,19 @@ fi
 
 if ask_folder user-dirs; then
     SRC="user-dirs"
-    sym "$SRC/.config/user-dirs.dirs" "$HOME/.config/"
+    sym "$SRC/user-dirs.dirs" "$HOME/.config/"
+	sym "$SRC/user-dirs.locale" "$HOME/.config/"
 fi
 
 if ask_folder neofetch; then
     SRC="neofetch"
-    sym "$SRC/.config/neofetch" "$HOME/.config/"
+    sym "$SRC" "$HOME/.config/"
+fi
+
+if ask_folder ranger; then
+	SRC="ranger"
+	mkdir -p "$HOME/.config/ranger"
+	sym "$SRC/rc.conf" "$HOME/.config/ranger/"
 fi
 
 echo
