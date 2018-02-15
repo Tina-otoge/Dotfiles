@@ -4,6 +4,7 @@
 - OS: [Fedora Linux](https://getfedora.org/) [27](https://fedoramagazine.org/announcing-fedora-27/), upgraded from Fedora Linux [26](https://fedoramagazine.org/fedora-26-is-here/) ([Xfce Spin](https://spins.fedoraproject.org/en/xfce/)) :cd:
 - WM/DE: [i3](https://i3wm.org/) :computer:
 - Terminal: [URxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (256 colors) :arrow_forward:
+- Font: [Monaco](https://github.com/todylu/monaco.ttf) :capital_abcd:
 - Color scheme: Generally monokai or colors from current wallpaper provided by [pywal](https://github.com/dylanaraps/pywal)
 - Bars: [polybar](https://github.com/jaagr/polybar) :bar_chart:
 - File manager(s): [ranger](https://ranger.github.io/), [Thunar](https://docs.xfce.org/xfce/thunar/start) and [Nautilus](https://wiki.gnome.org/action/show/Apps/Files?action=show&redirect=Apps%2FNautilus) :file_folder:
