@@ -26,6 +26,7 @@ export CHROMIUM_BROWSER=$(which google-chrome)
 # export CHROMIUM_BROWSER=$(which chromium)
 # export CHROMIUM_BROWSER=$(which vivaldi)
 export DEFAULT_TERM=$(which urxvt256c)
+export RANGER_LOAD_DEFAULT_RC=false
 
 # # # # # # # # # # #
 # Files inclusions  #
@@ -36,12 +37,18 @@ export DEFAULT_TERM=$(which urxvt256c)
 include_exists ~/.config/aliases
 include_exists ~/.cargo/env
 #include_exists ~/.config/block.sh
+include_exists ~/.config/epitech
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         include_exists /etc/profile.d/vte.sh
 fi
 include_exists ~/.config/welcome
 
+#BASE16_SHELL=$HOME/.config/base16-shell/
+#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # Enable The Fuck
-thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias)
+# thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias --enable-experimental-instant-mode)
+
+unset command_not_found_handle
 
 # vim:ft=sh 

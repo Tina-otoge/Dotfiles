@@ -32,7 +32,7 @@ setopt complete_in_word
 setopt no_bg_nice
 
 # history
-HISTFILE=~/.bash_history
+HISTFILE=~/.zhistory
 HISTSIZE=90000
 SAVEHIST=9000
 #setopt append_history
