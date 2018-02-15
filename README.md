@@ -56,7 +56,7 @@ dnf copr enable frostyx/light && sudo dnf install light
 ```
 
 ---
-### How do I install copr ?
+### How do I install compton ?
 I recommend [this copr repository](https://copr.fedorainfracloud.org/coprs/mrbloups/compton/)
 ```bash
 dnf copr enable mrbloups/compton
