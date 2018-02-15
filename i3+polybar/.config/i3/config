@@ -16,6 +16,7 @@ set $ctrl Control
 
 ## set default apps
 set $term urxvt256c
+set $filemanager nautilus -w
 
 ## gaps
 gaps outer 35
@@ -69,7 +70,7 @@ bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
 
 ## start Explorer
-bindsym $win+e exec Thunar
+bindsym $win+e exec $filemanager
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -81,6 +82,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 ## rofi
 bindsym $mod+i exec rofi -show run
 bindsym $mod+space exec sh ~/.config/rofi/launch.sh
+# bindsym Super_L exec sh ~/.config/rofi/launch.sh
 
 # change focus
 # bindsym $mod+j focus left
