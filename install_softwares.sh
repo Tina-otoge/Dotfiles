@@ -276,8 +276,7 @@ clear
 echo The following softwares are no longer part of my environment but are part
 echo of what I often use. If you only wanted to copy my environment and then
 echo start modifying it to make your own and do not care about what I use and
-echo how, then I\'d suggest quitting this script and running the
-echo setup_dotfiles.sh one.
+echo how, then I\'d suggest quitting this script and running the symlink.sh.
 echo
 $(confirm "Exit the script now ?") && exit
 
