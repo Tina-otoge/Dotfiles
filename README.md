@@ -79,4 +79,17 @@ systemctl enable gdm
 ```
 
 ---
+### How do I install Discord
+I recommend using this script from [RPM-Outpost](https://github.com/RPM-Outpost): [discord](https://github.com/RPM-Outpost/discord)
+
+```bash
+dnf install rpm-build
+
+git clone https://github.com/RPM-Outpost/discord && cd discord
+./create-package.sh canary
+
+# continually answer "y" to all questions
+```
+
+---
 More questions? Please [submit an issue](https://github.com/skielred/Dotfiles/issues/new)!
