@@ -1,5 +1,1 @@
-*.log
-/vim/.vim/bundle
-/vim/.vim/bundle-disabled
-/vim/.vim/.netrwhist
-/backups
+/git/identity
