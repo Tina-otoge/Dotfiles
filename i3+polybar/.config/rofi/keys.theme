@@ -1,6 +1,0 @@
-! "Switch to the next mode."
-rofi.kb-mode-next:                   Shift+Right,Control+Right,Control+Tab
-! "Switch to the previous mode."
-rofi.kb-mode-previous:               Shift+Left,Control+Left,Control+Shift+Tab,Control+Shift+ISO_Left_Tab,Control+Shift_L+ISO_Left_Tab
-! "Select previous entry" Set from: Default
-rofi.kb-row-up:                      Up,Control+p,,Shift+Tab,Shift+ISO_Left_Tab,Shift_L+ISO_Left_Tab
