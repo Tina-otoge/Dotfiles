@@ -11,6 +11,6 @@
 	default = simple
 
 [core]
+	editor = vim
 
 # vim: ft=gitconfig
-	editor = vim
