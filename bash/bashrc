@@ -1,0 +1,15 @@
+include() {
+	[ -f "$1" ] && source "$1"
+}
+
+cfg="$HOME"'/.config'
+init_files=(
+	'/etc/skel/.bashrc'
+	"$cfg"'/bash/aliases'
+	"$cfg"'/bash/functions'
+	"$cfg"'/bash/prompt'
+)
+for file in "${init_files[@]}"; do
+	include "$file"
+done
+unset cfg init_files

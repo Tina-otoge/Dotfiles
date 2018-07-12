@@ -1,0 +1,11 @@
+[include]
+	path = identity
+
+[alias]
+	news = log -p @{1}..
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[core]
+	editor = vim
