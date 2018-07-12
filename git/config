@@ -7,5 +7,10 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
+[push]
+	default = simple
+
 [core]
+
+# vim: ft=gitconfig
 	editor = vim
