@@ -25,7 +25,11 @@ let g:rehash256 = 1
 let base16colorspace=256
 colorscheme molokai
 hi Normal ctermbg=0
+hi LineNr ctermbg=0
+hi CursorLineNr ctermbg=0
 hi Visual ctermbg=238
+" hi Visual ctermbg=3
+" hi ColorColumn ctermbg=1
 set cursorline
 
 " Current line displays line number and other lines display distance to
@@ -49,9 +53,17 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+" Disable Arrow keys in Escape mode
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+
 " Remapping
 " TODO: clean up, use no* when necessary, etc
-map - dd
+" Shift+TAB
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
 " Move cursor to other windows
 noremap <S-Left>  <C-W>h
 noremap <S-Down>  <C-W>j
@@ -68,7 +80,7 @@ inoremap <A-Down> <Esc>:m .+1<CR>==gi
 inoremap <A-Up> <Esc>:m .-2<CR>==gi
 vnoremap <A-Down> :m '>+1<CR>gv=gv
 vnoremap <A-Up> :m '<-2<CR>gv=gv
-" F9 to toggle Tree 
+" F9 to toggle Tree
 map <F9> <Esc>:NERDTreeToggle<CR>
 " ctrl s, z, y, c, v, x
 imap <C-s> <Esc>:w<CR>a

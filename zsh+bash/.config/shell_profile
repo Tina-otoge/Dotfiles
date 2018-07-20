@@ -21,6 +21,8 @@ export ACADEMICYEAR=2017
 export ENV=~/.config/shell_profile
 export EDITOR=vim
 export GOPATH=~/.go
+export LESS=-XR
+export LESSOPEN='|pygmentize -g %s'
 export CHROMIUM_BROWSER=$(which google-chrome)
 # alternatives :
 # export CHROMIUM_BROWSER=$(which chromium)
@@ -36,7 +38,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 include_exists ~/.config/aliases
 include_exists ~/.cargo/env
-#include_exists ~/.config/block.sh
+# include_exists ~/.config/block.sh
 include_exists ~/.config/epitech
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         include_exists /etc/profile.d/vte.sh

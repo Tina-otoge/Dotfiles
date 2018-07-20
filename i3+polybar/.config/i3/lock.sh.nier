@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+path='/tmp/bg.png'
+over_path="$HOME"'/.config/i3/nierlocked.png'
+
+scrot -e 'mv $f '"$path"
+height=$(identify -format '%H' "$path")
+width=$(identify -format '%W' "$path")
+
+convert "$over" -resize "$width"x"$height" "$over_path"
+
+convert "$path" -scale 10% -scale 1000% "$path"
+
+composite "$over_path" -gravity Center "$path" "$path"
+
+i3lock -n -f -i "$path"

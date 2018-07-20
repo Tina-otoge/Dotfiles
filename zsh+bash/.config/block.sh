@@ -6,6 +6,9 @@ lock() {
 setxkbmap() {
     lock
 }
+unalias emacs
+unalias ne
+unalias vim
 emacs() {
     lock
 }

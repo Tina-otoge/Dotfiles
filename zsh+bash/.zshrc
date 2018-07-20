@@ -5,8 +5,8 @@ fi
 # only zsh exclusive commands here, general commands
 # should be included in shell_profile
 
-if [ -f ~/repos/zsh-git-prompt/zshrc.sh ]; then
-    . ~/repos/zsh-git-prompt/zshrc.sh
+if [ -f ~/repos/olivierverdier/zsh-git-prompt/zshrc.sh ]; then
+    . ~/repos/olivierverdier/zsh-git-prompt/zshrc.sh
     PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f]$(git_super_status) %F{red}%#%f '
 else
     PROMPT='%f[%F{cyan}%n%F{gray}@%F{blue}%m%f] %F{red}%#%f '

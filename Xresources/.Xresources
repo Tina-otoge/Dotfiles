@@ -1,10 +1,10 @@
 ! special
 *.foreground:   #f8f8f2
-*.background:   #272822
+*.background:   #272729
 *.cursorColor:  #f8f8f2
 
 ! black
-*.color0:       #272822
+*.color0:       #272729
 *.color8:       #75715e
 
 ! red
@@ -38,7 +38,7 @@
 ! urxvt*transparent: true
 ! urxvt*shading: 10
 
-*.font: xft:Monaco:size=16:style=Book, xft:SauceCodePro Nerd Font:size=16:style=Book, xft:Emoji One:size=16:style=Regular, PowerlineSymbols:pixelsize=16
+*.font: xft:Monaco:size=16, xft:SauceCodePro Nerd Font:size=16:style=Book, xft:Emoji One:size=16:style=Regular, PowerlineSymbols:pixelsize=16
 ! *font: xft:Terminux:pixelsize=16,xft:PowerlineSymbols:pixelsize=16
 
 URxvt.scrollBar: false

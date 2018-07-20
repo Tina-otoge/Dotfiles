@@ -1,4 +1,6 @@
-c() {
+#!/usr/bin/env bash
+
+function c() {
     git clone $1 ~/.vim/bundle/$2
 }
 

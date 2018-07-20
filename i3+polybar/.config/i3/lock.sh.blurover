@@ -20,6 +20,4 @@ if [ -f $logo ]; then
     composite "$logo" -gravity NorthEast "$path" "$path"
 fi
 
-
 i3lock -n -f -i "$path"
-

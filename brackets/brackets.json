@@ -9,6 +9,13 @@
             "text": "<!DOCTYPE html>\n<html>\n\n<meta charset=\"utf-8\">\n<title>${1}</title>\n<link rel=\"stylesheet\" href=\"${2:style.css}\">\n\n<body>\n\n${3}\n\n</body>\n\n</html>",
             "scope": "html",
             "mTime": 1519163435088
+        },
+        {
+            "trigger": "css",
+            "description": "Link css",
+            "scope": "html",
+            "text": "<link rel=\"stylesheet\" href=\"${1:style.css}\">${2}",
+            "mTime": 1523158566650
         }
     ],
     "useTabChar": false,
@@ -21,7 +28,6 @@
             "aside",
             "audio",
             "blockquote",
-            "body",
             "canvas",
             "div",
             "dl",
@@ -72,10 +78,6 @@
         }
     },
     "styleActiveLine": true,
-    "brackets-ruler.guideEnabled": false,
-    "brackets-ruler.rulerEnabled": false,
     "hirse.print-margin.column": 80,
-    "wordWrap": false,
-    "brackets-indent-guides.enabled": true,
-    "mikaeljorhult.bracketsTodo.enabled": false
+    "wordWrap": true
 }

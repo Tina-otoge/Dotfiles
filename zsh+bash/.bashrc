@@ -18,3 +18,17 @@ fi
 # should be included in shell_profile file
 
 # setxkbmap fr
+
+function rm() {
+	if [ "$#" -gt 1 ]; then
+		read -r -p "Sure ?? [y/N] " response
+		case "$response" in
+			[yY][eE][sS]|[yY])
+				;;
+			*)
+				return 0
+				;;
+		esac
+	fi
+	env rm $*
+}
