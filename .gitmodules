@@ -7,3 +7,12 @@
 [submodule "vim/bundle/hardmode"]
 	path = vim/bundle/hardmode
 	url = https://github.com/wikitopian/hardmode
+[submodule "vim/bundle/lightline"]
+	path = vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/bundle/gitbranch"]
+	path = vim/bundle/gitbranch
+	url = https://github.com/itchyny/vim-gitbranch
+[submodule "vim/bundle/cursorword"]
+	path = vim/bundle/cursorword
+	url = https://github.com/itchyny/vim-cursorword
