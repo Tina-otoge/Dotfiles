@@ -1,0 +1,24 @@
+" Execute pathogen
+" Requires pathogen script in ./autoload/
+execute pathogen#infect()
+
+" Load ./ftplugin/*
+" cf. https://vi.stackexchange.com/a/10125
+filetype plugin indent on
+
+"  Change viminfo path (stop poluting my home folder!!)
+set viminfo+=n~/.vim/viminfo
+
+" Enable modelines
+" cf. http://vim.wikia.com/wiki/Modeline_magic
+set modeline
+set modelines=5
+
+" Indentation set to use smart tabs
+" cf. http://vim.wikia.com/wiki/Indent_with_tabs,_align_with_spaces
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=8
+set tabstop=8
