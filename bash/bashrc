@@ -8,6 +8,7 @@ init_files=(
 	"$cfg"'/bash/aliases'
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/prompt'
+	"$cfg"'/bash/custom'
 )
 for file in "${init_files[@]}"; do
 	include "$file"

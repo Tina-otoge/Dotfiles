@@ -1,5 +1,6 @@
 [include]
 	path = identity
+	path = custom
 
 [alias]
 	news = log -p @{1}..
