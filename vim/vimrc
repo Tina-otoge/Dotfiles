@@ -1,8 +1,9 @@
 " Execute pathogen
 " Requires pathogen script in ./autoload/
+" cf. https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-" Load ./ftplugin/*
+" Load ./ftplugin/*, ./indent/* and tries to detect filetype
 " cf. https://vi.stackexchange.com/a/10125
 filetype plugin indent on
 
@@ -22,3 +23,40 @@ set preserveindent
 set softtabstop=0
 set shiftwidth=8
 set tabstop=8
+
+" This function will be called on VimEnter event, which occurs after all
+" initial configuration files (vimrc, ...) are loaded
+autocmd VimEnter * call VimEnterCommands()
+function VimEnterCommands()
+	" If lightline.vim is present, change status line options, use
+	" defaults otherwise
+	if exists('g:loaded_lightline')
+		" Always display statusline
+		set laststatus=2
+		" Don't display mode under statusline (lightline already
+		" displays mode)
+		set noshowmode
+	endif
+endfunction
+
+""""""""""""""""""""""""""""""""""""""
+" lightline.vim-specific configuration
+""""""""""""""""""""""""""""""""""""""
+" TODO: move this part in its own file
+let g:lightline = {
+\ 'active': {
+\	'left': [['mode'],
+\	         ['readonly', 'filename', 'gitbranch']]
+\ },
+\ 'component_function': {
+\	'filename': 'LightlineFilename',
+\	'gitbranch': 'gitbranch#name'
+\ },
+\ }
+" Replace default filename component with a combined filename + modified
+" component, append * to filename if current file has been modified
+function! LightlineFilename()
+	let filename = expand('%:t') !=# '' ? expand('%:t') : '[No name]'
+	let modified = &modified ? '*' : ''
+	return filename . modified
+endfunction
