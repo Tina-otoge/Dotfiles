@@ -1,0 +1,9 @@
+[submodule "vim/autoload/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "vim/bundle/commentaru"]
+	path = vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "vim/bundle/hardmode"]
+	path = vim/bundle/hardmode
+	url = https://github.com/wikitopian/hardmode
