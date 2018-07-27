@@ -15,3 +15,6 @@ for file in "${init_files[@]}"; do
 	include "$file"
 done
 unset cfg init_files
+
+# Aliases overrides
+alias refresh='source ~/.zshrc'
