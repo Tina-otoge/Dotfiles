@@ -3,4 +3,4 @@
 # ZSH OPTIONS #
 ###############
 
-setopt MENU_COMPLETE
+zstyle ':completion:*' menu select
