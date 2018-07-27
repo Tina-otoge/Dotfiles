@@ -16,3 +16,9 @@
 [submodule "vim/bundle/cursorword"]
 	path = vim/bundle/cursorword
 	url = https://github.com/itchyny/vim-cursorword
+[submodule "vim/bundle/molokai"]
+	path = vim/bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "vim/bundle/vimsence"]
+	path = vim/bundle/vimsence
+	url = https://github.com/MisterPeModder/vimsence
