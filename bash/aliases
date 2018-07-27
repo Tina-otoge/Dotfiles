@@ -3,10 +3,9 @@
 # SH ALIASES #
 ##############
 
-# $BUILTINS
-alias cls='clear '
 
 # $SHORTCUTS
+alias cls='clear '
 alias v='vim '
 
 # $LONG COMMANDS
