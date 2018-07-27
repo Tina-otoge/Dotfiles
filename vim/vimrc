@@ -1,6 +1,15 @@
-" Execute pathogen
-" Requires pathogen script in ./autoload/
+" Requires pathogen plugin
 " cf. https://github.com/tpope/vim-pathogen
+"
+" Conditional plugin excludes
+let g:pathogen_disabled = []
+if !has('python3')
+	call extend(g:pathogen_disabled, ['vimsence'])
+endif
+if has('win32') || has('win64')
+	call extend(g:pathogen_disabled, ['cursorword'])
+endif
+" Execute pathogen
 execute pathogen#infect()
 
 " Load ./ftplugin/*, ./indent/* and tries to detect filetype
