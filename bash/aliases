@@ -8,11 +8,13 @@
 alias cls='clear '
 alias v='vim '
 
-# $LONG COMMANDS
-alias uu='sudo apt-get update && sudo apt-get upgrade '
-alias refresh='source ~/.bashrc'
+# $OVERRIDES
+alias ls='ls --color=auto '
 
-# $GIT
-alias glog='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --abbrev-commit '
+# $OPTIONS AND ARGUMENTS SHORTCUTS
+alias refresh='source ~/.bashrc'
+alias ll='ls -l '
+alias l='ls -1 '
 alias gd='git diff '
 alias gs='git status '
+alias glog='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --abbrev-commit '
