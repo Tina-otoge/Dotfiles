@@ -9,6 +9,7 @@ init_files=(
 	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/options'
+	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 )
 for file in "${init_files[@]}"; do
 	include "$file"
