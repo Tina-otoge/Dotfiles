@@ -24,6 +24,11 @@ set softtabstop=0
 set shiftwidth=8
 set tabstop=8
 
+let g:molokai_original=1
+colorscheme molokai
+hi Normal ctermbg=0
+hi Visual ctermbg=8
+
 " This function will be called on VimEnter event, which occurs after all
 " initial configuration files (vimrc, ...) are loaded
 autocmd VimEnter * call VimEnterCommands()
