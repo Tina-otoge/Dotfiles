@@ -10,6 +10,7 @@ alias v='vim '
 
 # $OVERRIDES
 alias ls='ls --color=auto '
+alias grep='grep --color=auto '
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
 alias refresh='source ~/.bashrc'
