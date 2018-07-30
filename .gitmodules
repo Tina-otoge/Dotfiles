@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vimsence"]
 	path = vim/bundle/vimsence
 	url = https://github.com/MisterPeModder/vimsence
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
