@@ -5,6 +5,7 @@ include() {
 cfg="$HOME"'/.config'
 init_files=(
 	'/etc/skel/.bashrc'
+	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/prompt'
@@ -14,3 +15,6 @@ for file in "${init_files[@]}"; do
 	include "$file"
 done
 unset cfg init_files
+
+# Disable history file
+unset HISTFILE
