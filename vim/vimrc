@@ -24,6 +24,12 @@ set viminfo+=n~/.vim/viminfo
 set modeline
 set modelines=5
 
+" Persistent undo
+set undofile
+set undodir='~/.vim/undo'
+set undolevels=1000
+set undoreload=10000
+
 " Indentation set to use smart tabs
 " cf. http://vim.wikia.com/wiki/Indent_with_tabs,_align_with_spaces
 set noexpandtab
