@@ -25,3 +25,9 @@
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
+[submodule "vim/bundle/NERDTree"]
+	path = vim/bundle/NERDTree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/bundle/goyo"]
+	path = vim/bundle/goyo
+	url = https://github.com/junegunn/goyo.vim
