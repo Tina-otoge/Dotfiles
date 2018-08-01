@@ -1,7 +1,7 @@
 " Conditional plugin excludes
 let g:pathogen_disabled = []
 if !has('python3')
-	call extend(g:pathogen_disabled, ['vimsence'])
+	call extend(g:pathogen_disabled, ['vimsence', 'YouCompleteMe'])
 endif
 if has('win32') || has('win64')
 	call extend(g:pathogen_disabled, ['cursorword'])
