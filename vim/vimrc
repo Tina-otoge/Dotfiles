@@ -36,6 +36,7 @@ set softtabstop=0
 set shiftwidth=8
 set tabstop=8
 
+syntax on
 let g:molokai_original=1
 colorscheme molokai
 hi Normal ctermbg=0
