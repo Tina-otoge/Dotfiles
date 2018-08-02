@@ -4,7 +4,7 @@
 #########################
 
 pathmunge () { 
-	if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+	if ! echo $PATH | "$(which egrep)" -q "(^|:)$1($|:)" ; then
 		if [ "$2" = "after" ] ; then
 			PATH=$PATH:$1
 		else
@@ -15,7 +15,7 @@ pathmunge () {
 
 pathmunge "$HOME"'/.local/bin'
 
-unset pathmunge
+unset pathmunge grep_cmd
 
 # Page format for man(1)
 export MANWIDTH=80
