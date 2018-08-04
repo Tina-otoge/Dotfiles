@@ -6,6 +6,7 @@
 
 # $SHORTCUTS
 alias cls='clear '
+alias ch='chmod '
 alias v='vim '
 
 # $OVERRIDES
