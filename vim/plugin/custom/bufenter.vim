@@ -1,0 +1,9 @@
+autocmd BufEnter * call BufEnterCommands()
+function BufEnterCommands()
+
+	" When last buffer is NERDTree
+	if (exists('b:NERDTree') && winnr('$') == 1 && b:NERDTree.isTabTree())
+		q
+	endif
+
+endfunction
