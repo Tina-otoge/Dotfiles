@@ -5,6 +5,7 @@
 
 
 # $SHORTCUTS
+alias ch='chmod '
 alias cls='clear '
 alias v='vim '
 
