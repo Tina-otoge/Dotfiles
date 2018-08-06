@@ -5,19 +5,19 @@
 
 
 # $SHORTCUTS
-alias ch='chmod '
-alias cls='clear '
-alias v='vim '
+alias ch='chmod'
+alias cls='clear'
+alias v='vim'
 
 # $OVERRIDES
 alias sudo='sudo '
-alias ls='ls --color=auto '
-alias grep='grep --color=auto '
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
 alias refresh='source ~/.bashrc'
-alias ll='ls -l '
-alias l='ls -1 '
-alias gd='git diff '
-alias gs='git status '
+alias ll='ls -l'
+alias l='ls -1'
+alias gd='git diff'
+alias gs='git status'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --abbrev-commit '
