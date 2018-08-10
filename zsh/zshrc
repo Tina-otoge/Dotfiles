@@ -18,10 +18,6 @@ for file in "${init_files[@]}"; do
 done
 unset init_files
 
-zstyle :compinstall filename "$cfg"'/zsh/zshrc'
-autoload -Uz compinit
-rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
-
 # Aliases overrides
 alias refresh='source ~/.zshrc'
 
