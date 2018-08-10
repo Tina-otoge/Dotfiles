@@ -21,4 +21,7 @@ unset init_files
 # Aliases overrides
 alias refresh='source ~/.zshrc'
 
+# Environment overrides
+export SHELL="$(which zsh)"
+
 unset cfg
