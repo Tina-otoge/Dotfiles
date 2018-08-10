@@ -31,3 +31,6 @@
 [submodule "vim/bundle/goyo"]
 	path = vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim
+[submodule "vim/bundle/easy-align"]
+	path = vim/bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align
