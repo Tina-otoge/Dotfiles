@@ -13,6 +13,7 @@
 [submodule "vim/bundle/gitbranch"]
 	path = vim/bundle/gitbranch
 	url = https://github.com/itchyny/vim-gitbranch
+	ignore = untracked
 [submodule "vim/bundle/cursorword"]
 	path = vim/bundle/cursorword
 	url = https://github.com/itchyny/vim-cursorword
