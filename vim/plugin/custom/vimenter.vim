@@ -10,7 +10,7 @@ function VimEnterCommands()
 		if argc() == 1 && isdirectory(argv()[0]) && !exists('g:std_in')
 			" Open an empty buffer
 			exe 'enew'
-			exe 'NERDTreeToggle'
+			exe 'NERDTree' argv()[0]
 		endif
 	endif
 
