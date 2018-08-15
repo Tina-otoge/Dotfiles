@@ -1,5 +1,10 @@
+" System specific configuration
+runtime custom.vim
+
 " Conditional plugin excludes
-let g:pathogen_disabled = []
+if !exists('g:pathogen_disabled')
+	let g:pathogen_disabled = []
+endif
 if !has('python3')
 	call extend(g:pathogen_disabled, ['vimsence', 'YouCompleteMe'])
 endif
@@ -51,4 +56,3 @@ hi LineNr      ctermfg=8
 hi LineNr      ctermbg=0
 hi Visual      ctermbg=8
 
-source custom.vim
