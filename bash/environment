@@ -15,7 +15,7 @@ pathmunge () {
 
 pathmunge "$HOME"'/.local/bin'
 
-unset pathmunge grep_cmd
+unset pathmunge
 
 # Page format for man(1)
 export MANWIDTH=80
