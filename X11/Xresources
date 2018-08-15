@@ -39,12 +39,15 @@ URxvt*termName: rxvt-unicode-256color
 *.color7:       #f8f8f2
 *.color15:      #f9f8f5
 
-!*.font: xft:Nimbus Mono:size=12
 
 ! rxvt-unicode settings
 
-URxvt.scrollBar: false
+URxvt.font: xft:Monaco:size=16
 
+! compositer transparency (useful to get transparency everywhere but in vim)
+! URxvt.depth: 32
+! URxvt.background: [85]#222222
+URxvt.scrollBar: false
 URxvt.internalBorder: 12
 
 URxvt.perl-ext-common: default,matcher,tabbedex
