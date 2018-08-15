@@ -3,6 +3,7 @@
 # ENVIRONMENT VARIABLES #
 #########################
 
+alias egrep >/dev/null && unalias egrep
 pathmunge () { 
 	if ! echo $PATH | "$(which egrep)" -q "(^|:)$1($|:)" ; then
 		if [ "$2" = "after" ] ; then
