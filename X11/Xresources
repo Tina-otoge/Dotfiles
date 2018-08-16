@@ -42,7 +42,7 @@ URxvt*termName: rxvt-unicode-256color
 
 ! rxvt-unicode settings
 
-URxvt.font: xft:Monaco:size=16
+URxvt.font: xft:Monaco:pixelsize=17
 
 ! compositer transparency (useful to get transparency everywhere but in vim)
 ! URxvt.depth: 32
@@ -50,7 +50,7 @@ URxvt.font: xft:Monaco:size=16
 URxvt.scrollBar: false
 URxvt.internalBorder: 12
 
-URxvt.perl-ext-common: default,matcher,tabbedex
+URxvt.perl-ext-common: default,matcher,tabbedex,font-size
 URxvt.perl-lib: .config/urxvt/lib
 
 URxvt.url-launcher: /usr/bin/xdg-open
@@ -63,3 +63,9 @@ URxvt.tabbed.tab-bg: 0
 URxvt.tabbed.new-button: false
 URxvt.tabbed.autohide: true
 URxvt.tabbed.title: false
+
+URxvt.keysym.C-minus:
+URxvt.keysym.C-plus:
+URxvt.keysym.C-equal:      font-size:increase
+URxvt.keysym.C-parenright: font-size:decrease
+URxvt.keysym.C-agrave:     font-size:reset
