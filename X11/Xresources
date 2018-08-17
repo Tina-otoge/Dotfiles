@@ -1,4 +1,4 @@
-! Setting TERM environment variable accordingly
+/* Sets TERM environment variable accordingly */
 XTerm*termName: xterm-256color
 URxvt*termName: rxvt-unicode-256color
 
