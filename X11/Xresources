@@ -2,70 +2,10 @@
 XTerm*termName: xterm-256color
 URxvt*termName: rxvt-unicode-256color
 
-! special
-*.foreground:   #f8f8f2
-*.background:   #222222
-*.cursorColor:  #f8f8f2
+#include ".config/X11/colors"
 
-! black
-*.color0:       #222222
-*.color8:       #75715e
+#include ".config/X11/urxvt"
 
-! red
-*.color1:       #f92672
-*.color9:       #f92672
-
-! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
-
-! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
-
-! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
-
-! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
-
-! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
-
-! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
-
-
-! rxvt-unicode settings
-
-URxvt.font: xft:Monaco:pixelsize=17
-
-! compositer transparency (useful to get transparency everywhere but in vim)
-! URxvt.depth: 32
-! URxvt.background: [85]#222222
-URxvt.scrollBar: false
-URxvt.internalBorder: 12
-
-URxvt.perl-ext-common: default,matcher,tabbedex,font-size
-URxvt.perl-lib: .config/urxvt/lib
-
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 3
-URxvt.tabbed.tab-bg: 0
-URxvt.tabbed.new-button: false
-URxvt.tabbed.autohide: true
-URxvt.tabbed.title: false
-
-URxvt.keysym.C-minus:
-URxvt.keysym.C-plus:
-URxvt.keysym.C-equal:      font-size:increase
-URxvt.keysym.C-parenright: font-size:decrease
-URxvt.keysym.C-agrave:     font-size:reset
+#if __has_include(".config/X11/custom")
+#	include ".config/X11/custom"
+#endif
