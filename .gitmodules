@@ -38,6 +38,9 @@
 [submodule "urxvt/bundle/tabbedex"]
 	path = urxvt/bundle/tabbedex
 	url = https://github.com/shaggytwodope/tabbedex-urxvt
-[submodule "urxvt/bundle/font-size"]
-	path = urxvt/bundle/font-size
-	url = https://github.com/majutsushi/urxvt-font-size
+[submodule "urxvt/bundle/resize-font"]
+	path = urxvt/bundle/resize-font
+	url = https://github.com/simmel/urxvt-resize-font
+[submodule "urxvt/bundle/matcher-linelimit"]
+	path = urxvt/bundle/matcher-linelimit
+	url = https://github.com/skielred/urxvt-matcher-linelimit
