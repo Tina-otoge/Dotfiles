@@ -2,10 +2,10 @@
 XTerm*termName: xterm-256color
 URxvt*termName: rxvt-unicode-256color
 
-#include ".config/X11/colors"
+#include ".config/x11/colors"
 
-#include ".config/X11/urxvt"
+#include ".config/x11/urxvt"
 
-#if __has_include(".config/X11/custom")
-#	include ".config/X11/custom"
+#if __has_include(".config/x11/custom")
+#	include ".config/x11/custom"
 #endif
