@@ -44,3 +44,6 @@
 [submodule "urxvt/bundle/matcher-linelimit"]
 	path = urxvt/bundle/matcher-linelimit
 	url = https://github.com/skielred/urxvt-matcher-linelimit
+[submodule "vim/bundle/editorconfig"]
+	path = vim/bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
