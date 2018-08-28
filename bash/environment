@@ -14,9 +14,20 @@ pathmunge () {
 	fi
 }
 
+# Add paths to PATH here
 pathmunge "$HOME"'/.local/bin'
 
 unset pathmunge
+
+
+# USER VARIABLES
+# Use lowercase here
+
+export config="$HOME"'/.config'
+export vimhome="$config"'/vim'
+
+## SYSTEM VARIABLES
+## Use uppercase here
 
 # Page format for man(1)
 export MANWIDTH=80
