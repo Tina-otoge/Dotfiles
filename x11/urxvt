@@ -25,7 +25,7 @@ URxvt.perl-ext-common: default,matcher,tabbedex,resize-font
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline fg4
+URxvt.matcher.rend.0: Uline fg10
 URxvt.matcher.rowLimit: 100
 URxvt.matcher.lengthLimit: 240
 
