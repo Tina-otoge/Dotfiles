@@ -9,7 +9,7 @@
 	insteadOf = https://github.com/
 
 [push]
-	default = simple
+	default = upstream
 
 [core]
 	editor = vim
