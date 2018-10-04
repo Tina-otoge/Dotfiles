@@ -33,3 +33,5 @@ export vimhome="$config"'/vim'
 export MANWIDTH=80
 # Avoid creating an history file when using less(1)
 export LESSHISTFILE=-
+# Colors for ls(1)
+export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
