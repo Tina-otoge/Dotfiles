@@ -16,8 +16,10 @@ alias grep='grep --color=auto'
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
 alias refresh='source ~/.bashrc'
+alias ssh='ssh -t'
 alias ll='ls -l'
 alias l='ls -1'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gs='git status'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --abbrev-commit '
