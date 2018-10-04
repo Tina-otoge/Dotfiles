@@ -9,9 +9,12 @@
 	insteadOf = https://github.com/
 
 [push]
-	default = upstream
+	default = current
 
 [core]
 	editor = vim
+
+[diff]
+	tool = vimdiff
 
 # vim: ft=gitconfig
