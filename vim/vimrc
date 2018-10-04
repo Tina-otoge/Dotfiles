@@ -47,6 +47,10 @@ set relativenumber
 set number
 set numberwidth=1
 
+" Display invisible characters. Tabs and trailing space.
+set list
+set listchars=tab:\·\ ,trail:.,extends:#,nbsp:.
+
 syntax on
 let g:molokai_original=1
 colorscheme molokai
