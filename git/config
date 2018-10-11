@@ -17,4 +17,6 @@
 [diff]
 	tool = vimdiff
 
+[merge]
+	ff = false
 # vim: ft=gitconfig
