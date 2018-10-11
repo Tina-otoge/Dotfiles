@@ -1,3 +1,11 @@
+## :warning: Currently undergoing a complete rewrite. You can check it out (or should I say, *you can checkout it*) at the [rewrite branch](https://github.com/skielred/Dotfiles/tree/rewrite) :warning:
+
+The new rewritten configuration will be more customizable, portable, and usable by everyone. It leaves out most of what I consider "personal" configuration and focus on usablitiy. It has the goal of being cross-OS compatible, I currently use it on Fedora, Windows' WSL and Android's Termux.
+
+The rewritten configuration will overwrite the master branch once it is 100% usable.
+
+You can check out the [issues tagged with the "rewrite" milestone](https://github.com/skielred/Dotfiles/issues?q=is%3Aopen+is%3Aissue+milestone%3Arewrite) to get an idea of what's keeping me from publishing the new configuration to master right now. The issues are for personal project tracking and are not meant to ask for contributions.
+
 # My Linux Rice :rice_ball:
 
 ## TL;DR
