@@ -1,6 +1,16 @@
 " System specific configuration
 runtime custom.vim
 
+" noremap <up> <nop>
+" noremap <up> <nop>
+" noremap <down> <nop>
+" noremap <down> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
+" B-A-<start>
+
 " Conditional plugin excludes
 if !exists('g:pathogen_disabled')
 	let g:pathogen_disabled = []
@@ -43,7 +53,6 @@ set tabstop=8
 
 set mouse=a
 
-set relativenumber
 set number
 set numberwidth=1
 
