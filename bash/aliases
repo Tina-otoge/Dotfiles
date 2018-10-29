@@ -10,6 +10,7 @@ alias cls='clear'
 alias v='vim'
 
 # $OVERRIDES
+alias ssh='ssh -t'
 alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
