@@ -47,3 +47,12 @@
 [submodule "vim/bundle/editorconfig"]
 	path = vim/bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "vim/bundle/hilinks"]
+	path = vim/bundle/hilinks
+	url = https://github.com/kergoth/vim-hilinks
+[submodule "vim/bundle/go"]
+	path = vim/bundle/go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/bundle/phpcomplete"]
+	path = vim/bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim

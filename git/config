@@ -3,15 +3,24 @@
 	path = identity
 
 [alias]
-	news = log -p @{1}..
+	news    = log -p @{1}..
+	oops    = reset HEAD~
+	uu      = submodule foreach git pull origin master --ff
+	unstage = reset --
+	unadd   = unstage
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
 [push]
-	default = upstream
+	default = current
 
 [core]
 	editor = vim
 
+[diff]
+	tool = vimdiff
+
+[merge]
+	ff = false
 # vim: ft=gitconfig

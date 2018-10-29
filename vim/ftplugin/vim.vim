@@ -1,2 +1,2 @@
-set cc=80
+set cc=81
 setlocal commentstring=\"\ %s

@@ -1,6 +1,16 @@
 " System specific configuration
 runtime custom.vim
 
+" noremap <up> <nop>
+" noremap <up> <nop>
+" noremap <down> <nop>
+" noremap <down> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
+" B-A-<start>
+
 " Conditional plugin excludes
 if !exists('g:pathogen_disabled')
 	let g:pathogen_disabled = []
@@ -43,7 +53,6 @@ set tabstop=8
 
 set mouse=a
 
-set relativenumber
 set number
 set numberwidth=1
 
@@ -53,11 +62,6 @@ set listchars=tab:\·\ ,trail:.,extends:#,nbsp:.
 
 syntax on
 let g:molokai_original=1
+autocmd! ColorScheme molokai call custom#patch_colors#patch_molokai()
 colorscheme molokai
-hi Normal      ctermbg=0
-hi Identifier  ctermfg=7
-hi ColorColumn ctermbg=1
-hi LineNr      ctermfg=8
-hi LineNr      ctermbg=0
-hi Visual      ctermbg=8
 
