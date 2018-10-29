@@ -25,6 +25,7 @@ unset pathmunge
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
+export editor=vim
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
