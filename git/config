@@ -5,6 +5,7 @@
 [alias]
 	news = log -p @{1}..
 	oops = reset HEAD~
+	uu   = submodule foreach git pull origin master --ff
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
