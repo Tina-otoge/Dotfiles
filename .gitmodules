@@ -20,9 +20,6 @@
 [submodule "vim/bundle/molokai"]
 	path = vim/bundle/molokai
 	url = https://github.com/tomasr/molokai
-[submodule "vim/bundle/vimsence"]
-	path = vim/bundle/vimsence
-	url = https://github.com/MisterPeModder/vimsence
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
