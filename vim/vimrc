@@ -36,6 +36,9 @@ set viminfo+=n~/.vim/viminfo
 set modeline
 set modelines=5
 
+" Remove annoying key sequences delays
+set ttimeoutlen=100
+
 " Persistent undo
 set undofile
 set undodir='~/.vim/undo'
