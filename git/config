@@ -7,7 +7,7 @@
 	oops    = reset HEAD~
 	uu      = submodule foreach git pull origin master --ff
 	unstage = reset --
-	unadd   = unstage
+	unadd   = reset
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
