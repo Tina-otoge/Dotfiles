@@ -19,6 +19,10 @@ for file in "${init_files[@]}"; do
 done
 unset init_files
 
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
+
 # Aliases overrides
 alias refresh='source ~/.zshrc'
 
