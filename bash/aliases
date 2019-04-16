@@ -11,7 +11,7 @@ alias v='vim'
 
 # $OVERRIDES
 alias ssh='ssh -t'
-alias sudo='sudo '
+alias sudo='sudo -E '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ld64='ld -dynamic-linker /lib64/ld-linux-x86-64.so.2'
