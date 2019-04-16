@@ -10,6 +10,7 @@ init_files=(
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
+	"$cfg"'/zsh/bindings'
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
