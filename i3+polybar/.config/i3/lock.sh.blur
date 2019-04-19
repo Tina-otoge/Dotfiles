@@ -1,7 +1,0 @@
-#!/bin/bash
-
-path='/tmp/bg.png'
-
-scrot -e 'mv $f '"$path"
-convert "$path" -scale 10% -scale 1000% "$path"
-i3lock -n -f -i "$path"

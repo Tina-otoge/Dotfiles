@@ -1,0 +1,11 @@
+/* Sets TERM environment variable accordingly */
+XTerm*termName: xterm-256color
+URxvt*termName: rxvt-unicode-256color
+
+#include ".config/x11/colors"
+
+#include ".config/x11/urxvt"
+
+#if __has_include(".config/x11/custom")
+#	include ".config/x11/custom"
+#endif

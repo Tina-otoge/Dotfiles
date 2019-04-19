@@ -1,0 +1,55 @@
+[submodule "vim/autoload/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "vim/bundle/commentaru"]
+	path = vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "vim/bundle/hardmode"]
+	path = vim/bundle/hardmode
+	url = https://github.com/wikitopian/hardmode
+[submodule "vim/bundle/lightline"]
+	path = vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/bundle/gitbranch"]
+	path = vim/bundle/gitbranch
+	url = https://github.com/itchyny/vim-gitbranch
+	ignore = untracked
+[submodule "vim/bundle/cursorword"]
+	path = vim/bundle/cursorword
+	url = https://github.com/itchyny/vim-cursorword
+[submodule "vim/bundle/molokai"]
+	path = vim/bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "vim/bundle/NERDTree"]
+	path = vim/bundle/NERDTree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/bundle/goyo"]
+	path = vim/bundle/goyo
+	url = https://github.com/junegunn/goyo.vim
+[submodule "vim/bundle/easy-align"]
+	path = vim/bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align
+[submodule "urxvt/bundle/tabbedex"]
+	path = urxvt/bundle/tabbedex
+	url = https://github.com/shaggytwodope/tabbedex-urxvt
+[submodule "urxvt/bundle/resize-font"]
+	path = urxvt/bundle/resize-font
+	url = https://github.com/simmel/urxvt-resize-font
+[submodule "urxvt/bundle/matcher-linelimit"]
+	path = urxvt/bundle/matcher-linelimit
+	url = https://github.com/skielred/urxvt-matcher-linelimit
+[submodule "vim/bundle/editorconfig"]
+	path = vim/bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "vim/bundle/hilinks"]
+	path = vim/bundle/hilinks
+	url = https://github.com/kergoth/vim-hilinks
+[submodule "vim/bundle/go"]
+	path = vim/bundle/go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/bundle/phpcomplete"]
+	path = vim/bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim

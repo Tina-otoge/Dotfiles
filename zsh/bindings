@@ -1,0 +1,11 @@
+#!/bin/zsh
+###################
+# ZSH KEYBINDINGS #
+###################
+
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^H' backward-kill-dir

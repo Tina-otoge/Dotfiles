@@ -1,0 +1,26 @@
+[include]
+	path = custom
+	path = identity
+
+[alias]
+	news    = log -p @{1}..
+	oops    = reset HEAD~
+	uu      = submodule foreach git pull origin master --ff
+	unstage = reset --
+	unadd   = reset
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[push]
+	default = current
+
+[core]
+	editor = vim
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	ff = false
+# vim: ft=gitconfig

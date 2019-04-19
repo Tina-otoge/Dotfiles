@@ -1,0 +1,9 @@
+{
+	"Chromeapp": {
+		"Icon": "google-chrome",
+		"Terminal": false,
+		"templating": {
+			"Exec": "google-chrome --app='{url}'"
+		}
+	}
+}

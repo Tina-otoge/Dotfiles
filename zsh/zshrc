@@ -1,0 +1,33 @@
+include () {
+	[ -f "$1" ] && source "$1"
+}
+
+cfg="$HOME"'/.config'
+
+init_files=(
+	"$cfg"'/bash/environment'
+	"$cfg"'/bash/aliases'
+	"$cfg"'/bash/functions'
+	"$cfg"'/bash/custom'
+	"$cfg"'/zsh/prompt'
+	"$cfg"'/zsh/bindings'
+	"$cfg"'/zsh/options'
+	"$cfg"'/zsh/custom'
+	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+)
+for file in "${init_files[@]}"; do
+	include "$file"
+done
+unset init_files
+
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
+
+# Aliases overrides
+alias refresh='source ~/.zshrc'
+
+# Environment overrides
+export SHELL="$(which zsh)"
+
+unset cfg

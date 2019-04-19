@@ -1,0 +1,17 @@
+#!/bin/bash
+################
+# SH FUNCTIONS #
+################
+
+mkcd()
+{
+	mkdir -p "$*"
+	cd "$*"
+}
+
+casm()
+{
+	nasm -f elf64 "$1" -o /tmp/casm.o
+	ld -dynamic-linker /lib64/ld-linux-x86-64.so.2 /tmp/casm.o \
+		-o ${2:-a.out} -lc
+}

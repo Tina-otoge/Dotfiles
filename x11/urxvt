@@ -1,0 +1,40 @@
+/* rxvt-unicode settings */
+
+URxvt.font: xft:Monaco:size=16
+URxvt.internalBorder: 12
+
+/* Disable ISO 14755 and Picture Insert Modes (binded to Ctrl+Shift by default) */
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+/* native transparency (useful to get transparency everywhere but in vim) */
+/* Requires a compositor!! */
+! URxvt.depth: 32
+! URxvt.background: [85]#222222
+
+/* Disable UI scrollbar and enable scrolling for secondary screen apps like less(1) */
+URxvt.scrollBar: false
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+/* * * * * *
+ * PLUGINS *
+ * * * * * */
+URxvt.perl-lib: .config/urxvt/lib
+URxvt.perl-ext-common: default,matcher,tabbedex,resize-font
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline fg10
+URxvt.matcher.rowLimit: 100
+URxvt.matcher.lengthLimit: 240
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.new-button: false
+URxvt.tabbed.autohide: true
+URxvt.tabbed.title: false
+
+! vim: ft=xdefaults

@@ -1,7 +1,5 @@
-*.swp
-*~
-*.log
-/vim/.vim/bundle
-/vim/.vim/bundle-disabled
-/vim/.vim/.netrwhist
-/backups
+/bash/custom
+/vim/viminfo
+/vim/.netrwhist
+/zsh/zcompdump
+*.old
