@@ -1,0 +1,35 @@
+{
+	"TweetDeck": {
+		"Icon": "tweetdeck",
+		"template": "Chromeapp",
+		"templating": {
+			"url": "https://tweetdeck.twitter.com"
+		}
+	},
+	"Twitter": {
+		"Icon": "twitter",
+		"template": "Chromeapp",
+		"templating": {
+			"url": "https://twitter.com"
+		}
+	},
+	"Visual Art": {
+		"Icon": "twitter",
+		"template": "Chromeapp",
+		"templating": {
+			"url": "https://twitter.com/search?f=tweets&vertical=default&q=list%%3Ashookaite%%2Fvisual-artists%%20filter%%3Aimages&src=typd"
+		}
+	},
+	"Habitica": {
+		"template": "Chromeapp",
+		"templating": {
+			"url": "https://habitica.com"
+		}
+	},
+	"Twist": {
+		"template": "Chromeapp",
+		"templating": {
+			"url": "https://twist.moe"
+		}
+	}
+}
