@@ -16,8 +16,13 @@ pathmunge () {
 
 # Add paths to PATH here
 pathmunge "$HOME"'/.local/bin'
+pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
 unset pathmunge
+
+if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
+	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
+fi
 
 
 # USER VARIABLES
@@ -36,3 +41,13 @@ export MANWIDTH=80
 export LESSHISTFILE=-
 # Colors for ls(1)
 export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+
+
+settitle()
+{
+	printf "\033]0;%s\007" "$1"
+}
+
+settitle "$TERM"
+
+unset settitle
