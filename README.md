@@ -10,8 +10,7 @@ configuration files across devices, making me faster to use a new machine. It
 also serves as a back-up if anything goes wrong.
 2. **To share knowledge**: Sometimes manpages aren't enough. Seeing how other
 people use and configure their software can help you understand what are the
-possibile scenarios for a program, or help you learn stuff you didn't know about
-it.
+possible scenarios for a program, or help you learn stuff you didn't know.
 3. **To help beginners getting started**: My dotfiles are voluntarly
 unoponionated. Nothing in my dotfiles should reflect my personal use-case,
 nothing is tied to how or where I store files or to my personal habits. This
@@ -32,41 +31,6 @@ ln -s .config/zsh/zshrc .zshrc
 ln -s .config/x11/Xresources .Xresources
 # etc...
 ```
-
-## Softwares recommendation
-
-| Software | Purpose | Dotfile? | Do I use it? | Notes |
-| -------- | ------- | -------- | ------------ | ----- |
-| Bash     | Shell   | :white_check_mark: | :x: | You should learn it for scripting purpose though, as it is present in a lot of systems, it's a reliable way to write portable scripts. |
-| Zsh      | Shell   | :white_check_mark: | :white_check_mark: | Similar and compatible to Bash but with a lot of very useful improvements. |
-| [Git][git] | Version control software | :white_check_mark: | :white_check_mark: | I use Git to version control everything I do, from small coding projects to my phone's contacts address book. Way too powerful and simple to use. |
-| urxvt    | Terminal emulator | :white_check_mark: | :white_check_mark: | Fastest terminal emulator I've tried. Only emulator I know of which runs at this speed, noticeable on programs with lots of frame updates such as music visualizers. It can be configured through Perl extensions. It also hides very cool features such as being able to display images, faking transparency, or even tabs. |
-| [mpv][mpv] | Media player | :white_check_mark: | :white_check_mark: | Stupid and simple media player. No actual GUI. Just opens media in a window, controls can be done through keyboard |
-| [neofetch][neofetch] | Flexing tool | :white_check_mark: | :white_check_mark: | The mandatory script to run in a terminal window before taking a screenshot of your desktop. |
-| Vim | Text or code editor | :white_check_mark: | :white_check_mark: | I use it for everything. I live in Vim 24h/7j. Btw do `Escape` then type `:q!` to force quit it, hope I saved your day. |
-| ranger | CLI file browser | :white_check_mark: | :x: | Used to use it, but I started to do a lot of complicating file browsing tasks such as using network locations, I needed a GUI tool. Still dope and very sexy to browse from your terminal, I highly recommend giving it a try. |
-| Nemo | File browser | :x: | :white_check_mark: | Nemo is the file browser made for and by the guys of Linux Mint. It's a fork of the file browser called Nautilus, it's slightly prettier. |
-| htop | Process manager | :white_check_mark: | :white_check_mark: | Equivalent of Windows' Task Manager. Use it to track down which applications use a lot of resources with the ability to kill them from the manager. |
-| [Fusuma][fusuma] | Touchpad gestures | :white_check_mark: | :white_check_mark: | Must have if you use a laptop. Bind gestures such as swiping with 3 fingers to commands. Most common use case is previous/next page by swiping left/right. |
-| [i3][i3] | Tiling window manager | :white_check_mark: (i3-gaps) | :x: | The perfect window manager. Fast, simple to learn and configure. Lots of possibilities.
-| [i3-gaps][i3-gaps] | i3 fork | :white_check_mark: | :white_check_mark: | i3 but with the ability to configure gaps between windows. Makes everything 100 times sexier. |
-| [LightDM][lightdm] | Display manager | :white_check_mark: | :white_check_mark: | Lightweight display manager. The display manager is the program that greets you and ask you to log in, with the possibity to pick between the different desktop softwares installed. |
-| compton | Compositor | :white_check_mark: | :white_check_mark: | A compositor is a program that adds shadows, transparency and effects to the desktop windows. Think shader but for your desktop.
-| [Crescent][crescent] | Application entries generator | :white_check_mark: | :white_check_mark: | A program I made to generate [Desktrop Entries][desktop entries] easily. |
-| [GMusic Desktop Player][gpmdp] | Music player | :x: | :white_check_mark: | Google Play Music Desktop Player. A wrapper arround the Play Music website made in Electron with desktop integration in mind. |
-| [polybar][polybar] | Status bar | :x: | :white_check_mark: | Easy to configure and to make pretty status bar. |
-| i3blocks | Status bar | :x: | :white_check_mark: | i3's natively supported status bar. |
-| ImageMagick | Image editing library/CLI tool | | :white_check_mark: | You must learn to use it. It's very useful and powerful. The simplest tasks you'll want to learn is converting between formats. It's as simple as `convert from_image.png to_image.jpg`. |
-| ffmpeg | Video processing library/CLI tool | | :white_check_mark: | Same reasons. You'll be doing `ffmpeg -i from_video.flv to_video.mp4` quite often. |
-| youtube-dl | Websites wrapper/CLI tool | | :white_check_mark: | Download or stream media from almost any video service existing on Earth. From, of course, YouTube, to many less known sites and even music sites such as SoundCloud. `youtube-dl "$playlist_url" -x --audio-format=mp3`. |
-| maim | Screenshot tool | :white_check_mark: (i3 keybinds) | :white_check_mark: | Simple and efficient screenshot tool. I had less problems with it than with scrot. See [my i3 config](i3/config) to see how I use it (Print key and Shift+Print bindings). |
-| Firefox | Internet browser | :x: | :white_check_mark: | Fast. Containers support (separate history/data per site). Sync. Add-ons support on mobile. |
-| Chrome | Internet browser | :x: | :white_check_mark: | Smooth performances. Fake app mode (launch any website without titlebar/buttons), perfect to create pseudo-webapps for Twitter, TweetDeck, or other sites. |
-| [Ulauncher][ulauncher] | Application launcher | :x: | :white_check_mark: | Good looking application launcher with a web-based settings interface. [I wrote an extension to run terminal commands from it, with auto-complete support][ulauncher-shell]. |
-| feh | Image viewer | :x: | :white_check_mark: | Stupid and simple media player. No actual GUI. Just opens media in a window, controls can be done through keyboard. Can also be used to set a wallpaper. |
-
-The list will grow as more softwares that deserve to be recommended comes to my
-mind.
 
 ## Tips
 
@@ -100,6 +64,55 @@ dnf copr enable appelond/google-play-music-desktop-player # music player
 ```
 
 The list will grow as more useful tips comes to my mind.
+
+## Softwares recommendation
+
+### In the terminal
+
+| Software | Purpose | Dotfile? | Do I use it? | Notes |
+| -------- | ------- | -------- | ------------ | ----- |
+| urxvt    | Terminal emulator | ✔️  | ✔️  | Fastest terminal emulator I've tried. Only emulator I know of which runs at this speed, noticeable on programs with lots of frame updates such as music visualizers. It can be configured through Perl extensions. 
+| Bash     | Shell   | ✔️        | :x:          | You should learn it at least for scripting purpose, as it is present in a lot of systems, it's a reliable way to write portable scripts. |
+| Zsh      | Shell   | ✔️        | ✔️  | Similar and compatible to Bash but with a lot of very useful improvements. |
+| Vim | Text or code editor | ✔️  | ✔️  | I use it for everything. I live in Vim 24h/7j. Btw do `Escape` then type `:q!` to force quit it, hope I saved your day. |
+| [Git][git] | Version control software | ✔️  | ✔️  | I use Git to version control everything I do, from small coding projects to my phone's contacts address book. Way too powerful and simple to use. |It also hides very cool features such as being able to display images, faking transparency, or even tabs. |
+| [neofetch][neofetch] | Flexing tool | ✔️  | ✔️  | The mandatory script to run in a terminal window before taking a screenshot of your desktop. |
+| htop | Process manager | ✔️  | ✔️  | Equivalent of Windows' Task Manager. Use it to track down which applications use a lot of resources with the ability to kill them from the manager. |
+| ranger | CLI file browser | ✔️  | :x: | Used to use it, but I started to do a lot of complicating file browsing tasks such as using network locations, I needed a GUI tool. Still dope and very sexy to browse from your terminal, I highly recommend giving it a try. |
+
+### On the desktop
+| Software | Purpose | Dotfile? | Do I use it? | Notes |
+| -------- | ------- | -------- | ------------ | ----- |
+| [i3][i3] | Tiling window manager | ✔️  (i3-gaps) | :x: | The perfect window manager. Fast, simple to learn and configure. Lots of possibilities.
+| [i3-gaps][i3-gaps] | i3 fork | ✔️  | ✔️  | i3 but with the ability to configure gaps between windows. Makes everything 100 times sexier. |
+| [polybar][polybar] | Status bar | :x: | ✔️  | Easy to configure and to make pretty status bar. |
+| i3bar | Status bar | :x: | ✔️  | i3's natively supported status bar. |
+| [Ulauncher][ulauncher] | Application launcher | :x: | ✔️  | Good looking application launcher with a web-based settings interface. [I wrote an extension to run terminal commands from it, with auto-complete support][ulauncher-shell]. |
+| [LightDM][lightdm] | Display manager | ✔️  | ✔️  | Lightweight display manager. The display manager is the program that greets you and ask you to log in, with the possibity to pick between the different desktop softwares installed. |
+| compton | Compositor | ✔️  | ✔️  | A compositor is a program that adds shadows, transparency and effects to the desktop windows. Think shader but for your desktop.
+
+### Utilities
+| Software | Purpose | Dotfile? | Do I use it? | Notes |
+| -------- | ------- | -------- | ------------ | ----- |
+| maim | Screenshot tool | ✔️  (i3 keybinds) | ✔️  | Simple and efficient screenshot tool. I had less problems with it than with scrot. See [my i3 config](i3/config) to see how I use it (Print key and Shift+Print bindings). |
+| youtube-dl | Websites wrapper/CLI tool | | ✔️  | Download or stream media from almost any video service existing on Earth. From, of course, YouTube, to many less known sites and even music sites such as SoundCloud. `youtube-dl "$playlist_url" -x --audio-format=mp3`. |
+| [Fusuma][fusuma] | Touchpad gestures | ✔️  | ✔️  | Must have if you use a laptop. Bind gestures such as swiping with 3 fingers to commands. Most common use case is previous/next page by swiping left/right. |
+| [Crescent][crescent] | Application entries generator | ✔️  | ✔️  | A program I made to generate [Desktrop Entries][desktop entries] easily. |
+| ImageMagick | Image editing library/CLI tool | | ✔️  | You must learn to use it. It's very useful and powerful. The simplest tasks you'll want to learn is converting between formats. It's as simple as `convert from_image.png to_image.jpg`. |
+| ffmpeg | Video processing library/CLI tool | | ✔️  | Same reasons. You'll be doing `ffmpeg -i from_video.flv to_video.mp4` quite often. |
+
+### Applications
+| Software | Purpose | Dotfile? | Do I use it? | Notes |
+| -------- | ------- | -------- | ------------ | ----- |
+| feh | Image viewer | :x: | ✔️ | Stupid and simple image viewer. No actual GUI. Just opens media in a window, controls can be done through keyboard. Can also be used to set a wallpaper. |
+| [mpv][mpv] | Media player | ✔️  | ✔️  | Stupid and simple media player. No actual GUI. Just opens media in a window, controls can be done through keyboard |
+| Nemo | File browser | :x: | ✔️  | Nemo is the file browser made for and by the guys of Linux Mint. It's a fork of the file browser called Nautilus, it's slightly prettier. |
+| [GMusic Desktop Player][gpmdp] | Music player | :x: | ✔️  | Google Play Music Desktop Player. A wrapper arround the Play Music website made in Electron with desktop integration in mind. |
+| Firefox | Internet browser | :x: | ✔️  | Fast. Containers support (separate history/data per site). Sync. Add-ons support on mobile. |
+| Chrome | Internet browser | :x: | ✔️  | Smooth performances. Fake app mode (launch any website without titlebar/buttons), perfect to create pseudo-webapps for Twitter, TweetDeck, or other sites. |
+
+The list will grow as more softwares that deserve to be recommended comes to my
+mind.
 
 ## Need help?
 
