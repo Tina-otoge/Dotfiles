@@ -16,6 +16,20 @@ unoponionated. Nothing in my dotfiles should reflect my personal use-case,
 nothing is tied to how or where I store files or to my personal habits. This
 might help people not advanced enough getting a beautiful desktop base.
 
+## Screenshots showcase
+
+Nothing
+![Picture with just the wallpaper](.gh/nothing.png)
+
+Vim, Nemo and Neofetch
+![Picture with the code editor and file browser open](.gh/vim-and-nemo.png)
+
+Just Ulauncher
+![Picture with only the application launcher open](.gh/just-ulauncher.png)
+
+Twitter and MPV
+![Picture with Twitter and a video playing](.gh/twitter-and-mpv.png)
+
 ## Quick setup
 1. Clone this repository somewhere you won't move it. I store it in
 `~/Repositories/skielred/Dotfiles`.
