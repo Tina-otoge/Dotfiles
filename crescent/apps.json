@@ -1,4 +1,9 @@
 {
+	"Greeter Lock": {
+		"Icon": "system-lock-screen",
+		"Comment": "Return to greeter",
+		"Exec": "dm-tool switch-to-greeter"
+	},
 	"TweetDeck": {
 		"Icon": "tweetdeck",
 		"template": "Chromeapp",
