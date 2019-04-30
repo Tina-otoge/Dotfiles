@@ -9,8 +9,8 @@ URxvt.iso14755_52: false
 
 /* native transparency (useful to get transparency everywhere but in vim) */
 /* Requires a compositor!! */
-! URxvt.depth: 32
-! URxvt.background: [85]#222222
+URxvt.depth: 32
+URxvt.background: [90]#222222 
 
 /* Disable UI scrollbar and enable scrolling for secondary screen apps like less(1) */
 URxvt.scrollBar: false
