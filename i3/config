@@ -4,6 +4,7 @@
 
 # Startup script (an executable named "startup" must exist)
 exec --no-startup-id startup
+exec_always --no-startup-id eachstart
 # Set Windows key as the main mod key
 set $mod Mod4
 # Set terminal
@@ -25,6 +26,9 @@ default_border pixel 1
 # start a terminal
 bindsym $mod+Return exec $term
 
+bindsym $mod+p exec $term -e htop
+
+bindsym $mod+dollar exec rofimoji
 # screenshots
 bindsym Print exec eval $(xdotool getmouselocation --shell) && maim -x $DISPLAY.$SCREEN | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
 bindsym --release Control+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
@@ -39,6 +43,13 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # start file explorer
 bindsym $mod+e exec $explorer
+
+bindsym XF86AudioLowerVolume exec volume decrease
+bindsym XF86AudioRaiseVolume exec volume increase
+bindsym XF86AudioMute exec volume toggle
+
+bindsym XF86MonBrightnessDown exec light -U '5%'
+bindsym XF86MonBrightnessUp exec light -A '5%'
 
 # change focus
 bindsym $mod+h focus left
@@ -95,27 +106,37 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1  workspace $ws1
-bindsym $mod+2  workspace $ws2
-bindsym $mod+3  workspace $ws3
-bindsym $mod+4  workspace $ws4
-bindsym $mod+5  workspace $ws5
-bindsym $mod+6  workspace $ws6
-bindsym $mod+7  workspace $ws7
-bindsym $mod+8  workspace $ws8
-bindsym $mod+9  workspace $ws9
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1  move container to workspace $ws1; workspace $ws1
-bindsym $mod+Shift+2  move container to workspace $ws2; workspace $ws2
-bindsym $mod+Shift+3  move container to workspace $ws3; workspace $ws3
-bindsym $mod+Shift+4  move container to workspace $ws4; workspace $ws4
-bindsym $mod+Shift+5  move container to workspace $ws5; workspace $ws5
-bindsym $mod+Shift+6  move container to workspace $ws6; workspace $ws6
-bindsym $mod+Shift+7  move container to workspace $ws7; workspace $ws7
-bindsym $mod+Shift+8  move container to workspace $ws8; workspace $ws8
-bindsym $mod+Shift+9  move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+ampersand move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+eacute move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+quotedbl move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+apostrophe move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+parenleft move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+egrave move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+minus move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+underscore move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+ccedilla move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+agrave move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # reload the configuration file
@@ -185,7 +206,7 @@ bindsym $mod+g mode "gaps"
 # Toggle hiding bar
 bindsym $mod+Shift+b bar mode toggle
 
-bar {
-	tray_output none
-	status_command i3blocks
-}
+# bar {
+	# tray_output none
+	# status_command i3blocks
+# }
