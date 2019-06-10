@@ -30,11 +30,11 @@ fi
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
-export editor=vim
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
 
+export EDITOR=vim
 # Page format for man(1)
 export MANWIDTH=80
 # Avoid creating an history file when using less(1)
