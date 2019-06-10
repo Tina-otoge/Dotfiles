@@ -9,3 +9,8 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^H' backward-kill-dir
+
+# force set kitty keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[[3~' delete-char
