@@ -7,5 +7,10 @@ curpath="\[\033[01;32m\]\w\[\033[00m\]"
 user="\[\033[01;36m\]\u\[\033[00m\]"
 host="\[\033[01;34m\]\h\[\033[00m\]"
 char="\[\033[00m\]\$ "
-export PS1="\[\033[00m\]\n$curpath\n\[\033[01;90m\][$user\[\033[01;90m\]@$host\[\033[01;90m\]]$char\[\033[00m\]"
+if [ -d '/system/app' ]; then
+	prefix=''
+else
+	prefix="\[\033[01;90m\][$user\[\033[01;90m\]@$host\[\033[01;90m\]]"
+fi
+export PS1="\[\033[00m\]\n$curpath\n$prefix$char\[\033[00m\]"
 unset curpath user host char
