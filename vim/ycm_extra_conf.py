@@ -21,9 +21,9 @@ def Settings(**kwargs):
     settings = {
         'cfamily': {
             'flags': [
+                '-Wno-unknown-warning-option',
                 '-Wall',
                 '-Wextra',
-                '-Werror',
                 '-Wconversion',
                 '-Wdouble-promotion',
                 '-Wduplicated-branches',
