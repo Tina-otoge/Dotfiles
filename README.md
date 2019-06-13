@@ -18,17 +18,33 @@ might help people not advanced enough getting a beautiful desktop base.
 
 ## Screenshots showcase
 
+### Current
+
 Nothing
-![Picture with just the wallpaper](.gh/nothing.png)
+![Picture with just the wallpaper](.gh/2019-06-10/nothing.png)
+
+The application launcher: Rofi
+![Picture with rofi and other apps open in the background](.gh/2019-06-10/rofi-nemo-htop.png)
+
+The ubiquitous editor: Vim
+![Picture with only vim open, showcasing semantic completion](.gh/2019-06-10/vim.png)
+
+### Olders
+
+<details>
+<summary>2019-04-19</summary>
+Nothing
+![Picture with just the wallpaper](.gh/2019-04-19/nothing.png)
 
 Vim, Nemo and Neofetch
-![Picture with the code editor and file browser open](.gh/vim-and-nemo.png)
+![Picture with the code editor and file browser open](.gh/2019-04-19/vim-and-nemo.png)
 
 Just Ulauncher
-![Picture with only the application launcher open](.gh/just-ulauncher.png)
+![Picture with only the application launcher open](.gh/2019-04-19/just-ulauncher.png)
 
 Twitter and MPV
-![Picture with Twitter and a video playing](.gh/twitter-and-mpv.png)
+![Picture with Twitter and a video playing](.gh/2019-04-19/twitter-and-mpv.png)
+</details>
 
 ## Quick setup
 1. Clone this repository somewhere you won't move it. I store it in
@@ -50,8 +66,8 @@ ln -s .config/x11/Xresources .Xresources
 
 ### Extending the packages repositories on Fedora
 
-Default Fedora packages policy is to authorize stricly free software only. There
-are softwares which are free (doesn't cost money) but don't release all of their
+Default Fedora packages policy is to authorize strictly free software. There are 
+softwares which are free (doesn't cost money) but don't release all of their
 source code publicly. And you may want some of those softwares directly from
 your package manager.
 
