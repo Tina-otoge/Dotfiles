@@ -28,6 +28,8 @@ bindsym $mod+Return exec $term
 
 bindsym $mod+p exec $term -e htop
 
+bindsym $mod+space exec rofi -show drun
+
 bindsym $mod+dollar exec rofimoji
 # screenshots
 bindsym Print exec eval $(xdotool getmouselocation --shell) && maim -x $DISPLAY.$SCREEN | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
@@ -140,7 +142,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+i reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
