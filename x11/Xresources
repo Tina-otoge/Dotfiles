@@ -2,6 +2,10 @@
 XTerm*termName: xterm-256color
 URxvt*termName: rxvt-unicode-256color
 
+#ifndef HOME
+	#define HOME ''
+#endif
+
 #include ".config/x11/colors"
 
 #include ".config/x11/urxvt"

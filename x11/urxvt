@@ -20,7 +20,7 @@ URxvt.secondaryScroll: 0
 /* * * * * *
  * PLUGINS *
  * * * * * */
-URxvt.perl-lib: .config/urxvt/lib
+URxvt.perl-lib: HOME/.config/urxvt/lib
 URxvt.perl-ext-common: default,matcher,tabbedex,resize-font
 
 URxvt.url-launcher: /usr/bin/xdg-open
