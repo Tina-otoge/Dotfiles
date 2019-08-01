@@ -7,7 +7,13 @@ curpath="%F{green}%~%f"
 user="%F{cyan}%n%f"
 host="%F{blue}%m%f"
 char="%f%# "
+
 export PS1="%f"$'\n\e[90m'"[%f$user"$'\e[90m'"@%f$host"$'\e[90m'"]%f$char%f"
 export PS1="%f"$'\n'"[%f$user@%f$host]%f$char%f"
 export RPROMPT="$curpath"
+
+if [[ -d "/system/app/" && -d "/system/priv-app" ]]; then
+	export PS1="$char"
+fi
+
 unset curpath user host char
