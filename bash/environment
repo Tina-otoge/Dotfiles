@@ -16,6 +16,7 @@ pathmunge () {
 
 # Add paths to PATH here
 pathmunge "$HOME"'/.local/bin'
+pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
 unset pathmunge
@@ -41,6 +42,12 @@ export MANWIDTH=80
 export LESSHISTFILE=-
 # Colors for ls(1)
 export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+
+[[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
+
+if [ "$ANDROID" ]; then
+	export PREFIX="$(sh -c 'echo $PREFIX')"
+fi
 
 
 settitle()
