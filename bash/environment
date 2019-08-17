@@ -32,6 +32,7 @@ fi
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
+export dotfiles="$HOME"'/Repositories/skielred/Dotfiles'
 
 ## SYSTEM VARIABLES
 ## Use uppercase here

@@ -9,6 +9,11 @@ mkcd()
 	cd "$*"
 }
 
+vw()
+{
+	vim `which "$1"`
+}
+
 casm()
 {
 	nasm -f elf64 "$1" -o /tmp/casm.o
