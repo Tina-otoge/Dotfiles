@@ -15,8 +15,9 @@ pathmunge () {
 }
 
 # Add paths to PATH here
-pathmunge "$HOME"'/.local/bin'
+pathmunge '/var/lib/snapd/snap/bin'
 pathmunge "$HOME"'/.local/share/npm/bin'
+pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
 unset pathmunge
