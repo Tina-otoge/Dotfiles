@@ -8,7 +8,7 @@
 alias ch='chmod'
 alias cls='clear'
 alias v='vim'
-alias flex='clear && neofetch --backend off | lolcat'
+alias flex='clear && neofetch --backend off | lolcat && read'
 alias w='which'
 
 # $OVERRIDES
