@@ -25,6 +25,7 @@ default_border pixel 1
 ### BINDINGS ###
 # start a terminal
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec $term
 
 bindsym $mod+p exec $term -e htop
 
@@ -47,6 +48,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # start file explorer
 bindsym $mod+e exec $explorer
+bindsym $mod+Shift+e exec xdg-open "$(xcwd)"
 
 bindsym XF86AudioLowerVolume exec volume decrease
 bindsym XF86AudioRaiseVolume exec volume increase

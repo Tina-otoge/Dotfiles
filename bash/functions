@@ -14,6 +14,16 @@ vw()
 	vim `which "$1"`
 }
 
+uu() {
+	command -v apt && apt update && apt upgrade $* && return 0
+	command -v apt-get && apt-get update && apt-get upgrade $* && return 0
+	command -v dnf && dnf upgrade --refresh $* && return 0
+	command -v pacman && pacman -Syu $* && return 0
+
+	echo No known package manager found. Aborting. >2
+	exit 1
+}
+
 casm()
 {
 	nasm -f elf64 "$1" -o /tmp/casm.o
