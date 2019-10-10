@@ -10,6 +10,7 @@ alias cls='clear'
 alias v='vim'
 alias flex='clear && neofetch --backend off | lolcat && read'
 alias w='which'
+alias open='xdg-open'
 
 # $OVERRIDES
 alias ssh='ssh -t'
