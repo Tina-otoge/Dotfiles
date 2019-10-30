@@ -24,6 +24,10 @@ uu() {
 	exit 1
 }
 
+ud() {
+	(cd "$dotfiles" && git pull --ff)
+}
+
 casm()
 {
 	nasm -f elf64 "$1" -o /tmp/casm.o
