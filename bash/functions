@@ -14,14 +14,26 @@ vw()
 	vim `which "$1"`
 }
 
+cmd_exists() {
+	if command -v $1 >/dev/null 2>&1; then
+		return 0
+	fi
+	return 1
+}
+
 uu() {
-	command -v apt && apt update && apt upgrade $* && return 0
-	command -v apt-get && apt-get update && apt-get upgrade $* && return 0
-	command -v dnf && dnf upgrade --refresh $* && return 0
-	command -v pacman && pacman -Syu $* && return 0
+	if [ $(id -u) != 0 ] && cmd_exists sudo; then
+		prefix='sudo'
+	else
+		prefix=''
+	fi
+	cmd_exists apt && $prefix apt update && $prefix apt upgrade $* && return 0
+	cmd_exists  apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
+	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
+	cmd_exists pacman && $prefix pacman -Syu $* && return 0
 
 	echo No known package manager found. Aborting. >2
-	exit 1
+	return 1
 }
 
 ud() {
