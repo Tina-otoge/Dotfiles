@@ -3,6 +3,12 @@
 # ENVIRONMENT VARIABLES #
 #########################
 
+if [ -d ~/.secrets ]; then
+	for file in ~/.secrets/*; do
+		include "$file"
+	done
+fi
+
 alias egrep >/dev/null 2>&1 && unalias egrep
 pathmunge () { 
 	if ! echo $PATH | "$(which egrep)" -q "(^|:)$1($|:)" ; then
@@ -44,6 +50,8 @@ export MANWIDTH=80
 export LESSHISTFILE=-
 # Colors for ls(1)
 export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+# dotnet core telemetry optout
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
 
