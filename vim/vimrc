@@ -36,6 +36,14 @@ set modelines=5
 " Remove annoying key sequences delays
 set ttimeoutlen=100
 
+" Avoid default behavior of selecting first entry in completion menu
+set completeopt=longest,menuone
+
+" Default spell checking language to English
+set spelllang=en
+" Store custom spell checking dictionary in vim folder
+set spellfile=~/.vim/dictionary.utf-8.add
+
 " Persistent undo
 if has('persistent_undo')
 	let undo_path = $HOME . '/.local/share/vim/undo'
