@@ -40,6 +40,32 @@ ud() {
 	(cd "$dotfiles" && git pull --ff)
 }
 
+copy() {
+	echo "$1" | xclip -sel p -f | xclip -sel c
+}
+
+streamable() {
+	code=$(curl -# https://api.streamable.com/upload -u "$STREAMABLEUSER":"$STREAMABLEPASSWORD" -F file=@"$1")
+	echo $code
+	echo 'https://streamable.com/'$code | xclip -selection clipboard
+}
+
+transfer() {
+	ext="${1##*.}"
+	name="$(date +%s)".$ext
+	link="$(curl -# --upload-file "$1" 'https://transfer.sh/'"$name")"
+	echo "$link"
+	copy "$link"
+}
+
+uguu() {
+	name="$(basename "$1")"
+	link="$(curl -# -i -F name="$name" -F file=@"$1" 'https://uguu.se/api.php?d=upload-tool' | grep 'https://a.uguu.se/')"
+	echo "$link"
+	copy "$link"
+>>>>>>> 5af3e583ec1c92d64f66c2f8829df00263b90eed
+}
+
 casm()
 {
 	nasm -f elf64 "$1" -o /tmp/casm.o
