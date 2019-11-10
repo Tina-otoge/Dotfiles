@@ -50,8 +50,9 @@ copy() {
 
 streamable() {
 	code=$(curl -# https://api.streamable.com/upload -u "$STREAMABLEUSER":"$STREAMABLEPASSWORD" -F file=@"$1")
-	echo $code
-	echo 'https://streamable.com/'$code | xclip -selection clipboard
+	link='https://streamable.com/'$code
+	echo "$link"
+	copy "$link"
 }
 
 transfer() {
