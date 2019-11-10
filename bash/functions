@@ -41,7 +41,11 @@ ud() {
 }
 
 copy() {
-	echo "$1" | xclip -sel p -f | xclip -sel c
+	if cmd_exists termux-clipboard-set; then
+		echo "$1" | termux-clipboard-set
+	else
+		echo "$1" | xclip -sel p -f | xclip -sel c
+	fi
 }
 
 streamable() {
@@ -63,7 +67,6 @@ uguu() {
 	link="$(curl -# -i -F name="$name" -F file=@"$1" 'https://uguu.se/api.php?d=upload-tool' | grep 'https://a.uguu.se/')"
 	echo "$link"
 	copy "$link"
->>>>>>> 5af3e583ec1c92d64f66c2f8829df00263b90eed
 }
 
 casm()
