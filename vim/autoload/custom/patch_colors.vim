@@ -1,4 +1,5 @@
 function custom#patch_colors#patch_molokai()
+	hi SpellBad    cterm=underline ctermbg=NONE ctermfg=red
 	hi Normal      ctermbg=NONE
 	hi Identifier  ctermfg=7
 	hi ColorColumn ctermbg=1

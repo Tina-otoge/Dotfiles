@@ -3,6 +3,12 @@
 # ENVIRONMENT VARIABLES #
 #########################
 
+if [ -d ~/.secrets ]; then
+	for file in ~/.secrets/*; do
+		include "$file"
+	done
+fi
+
 alias egrep >/dev/null 2>&1 && unalias egrep
 pathmunge () { 
 	if ! echo $PATH | "$(which egrep)" -q "(^|:)$1($|:)" ; then
@@ -15,8 +21,9 @@ pathmunge () {
 }
 
 # Add paths to PATH here
-pathmunge "$HOME"'/.local/bin'
+pathmunge '/var/lib/snapd/snap/bin'
 pathmunge "$HOME"'/.local/share/npm/bin'
+pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
 unset pathmunge
@@ -31,6 +38,7 @@ fi
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
+export dotfiles="$HOME"'/Repositories/skielred/Dotfiles'
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
@@ -42,6 +50,8 @@ export MANWIDTH=80
 export LESSHISTFILE=-
 # Colors for ls(1)
 export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+# dotnet core telemetry optout
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
 

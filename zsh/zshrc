@@ -26,6 +26,7 @@ bindkey '^Z' _zsh_cli_fg
 
 # Aliases overrides
 alias refresh='source ~/.zshrc'
+alias which='whence -p'
 
 # Environment overrides
 export SHELL="$(which zsh)"

@@ -66,7 +66,7 @@ monitor = ${env:MONITOR:eDP-1}
 bottom = true
 height = 26
 modules-left = i3
-modules-right = volume backlight wlan eth temperature cpu memory battery battery2 date
+modules-right = volume backlight wlan eth usb-eth temperature cpu memory battery battery2 date
 module-margin = 1
 padding = 1
 
@@ -102,17 +102,24 @@ format-connected = <label-connected>
 format-connected-foreground = ${colors.good}
 format-disconnected = <label-disconnected>
 format-disconnected-foreground = ${colors.alert}
-label-connected = %essid:0:14:…% ↘%downspeed:% ↗%upspeed%
+prefix = Network
+label-connected = ↘%downspeed% ↗%upspeed%
 label-disconnected =
 
 [module/wlan]
 inherit = module/network
 interface = ${env:WLAN:wlan0}
-format-connected = <label-connected>
+label-connected = %essid:0:14:…:% ↘%downspeed% ↗%upspeed%
 
 [module/eth]
 inherit = module/network
 interface = ${env:ETH:eth0}
+format-connected = Ethernet <label-connected>
+
+[module/usb-eth]
+inherit = module/eth
+interface = ${env:ETHUSB:enp0s20u2}
+format-connected = USB Ethernet <label-connected>
 
 [module/temperature]
 type = internal/temperature
