@@ -21,6 +21,11 @@ cmd_exists() {
 	return 1
 }
 
+if cmd_exists vimpager; then
+	alias less=vimpager
+	alias cat=vimcat
+fi
+
 uu() {
 	if [ $(id -u) != 0 ] && cmd_exists sudo; then
 		prefix='sudo'
