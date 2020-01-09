@@ -26,8 +26,6 @@ pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
-unset pathmunge
-
 if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
 fi
