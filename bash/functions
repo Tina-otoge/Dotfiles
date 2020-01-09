@@ -14,6 +14,10 @@ vw()
 	vim `which "$1"`
 }
 
+lookup() {
+	locate -b --regex "^$1$"
+}
+
 fargs() {
 	cmd="$1"
 	shift
