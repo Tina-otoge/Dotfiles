@@ -23,6 +23,10 @@ gaps inner 12
 default_border pixel 1
 
 ### BINDINGS ###
+
+# bindsym $mod+m exec systemctl suspend
+bindsym $mod+Delete exec dm-tool switch-to-greeter
+
 # start a terminal
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec $term
@@ -33,7 +37,7 @@ bindsym $mod+b exec xdg-open http://
 
 bindsym Mod1+Tab exec rofi -show window
 
-bindsym $mod+space exec rofi -show drun
+bindsym $mod+space exec source ~/.bashrc && rofi -show drun
 
 bindsym $mod+dollar exec rofimoji -s neutral --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
