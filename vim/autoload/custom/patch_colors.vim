@@ -9,6 +9,11 @@ function custom#patch_colors#patch_molokai()
 	hi SignColumn  ctermbg=NONE
 
 	" Coc
-	hi CocWarningHighlight ctermfg=3
+	hi CocWarningHighlight ctermbg=3 ctermfg=7
 	hi CocErrorHighlight   ctermbg=1 ctermfg=0
+
+	" GitGutter
+	highlight GitGutterAdd    ctermfg=2 ctermbg=NONE
+	highlight GitGutterChange ctermfg=3 ctermbg=NONE
+	highlight GitGutterDelete ctermfg=1 ctermbg=NONE
 endfunction

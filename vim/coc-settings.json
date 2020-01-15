@@ -1,11 +1,17 @@
 {
+	"suggest.numberSelect": true,
+	"suggest.triggerAfterInsertEnter": true,
 	"diagnostic.checkCurrentLine": true,
+	"diagnostic.warningSign": ">>",
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",
 			"filetypes": ["c", "cpp", "objc", "objcpp"],
 			"rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
 			"initializationOptions": {
+				"diagnostics": {
+					"onChange": 200
+				},
 				"clang": {
 					"extraArgs": ["-Wall"]
 				},

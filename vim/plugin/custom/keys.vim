@@ -10,12 +10,15 @@ endfunction
 
 nmap <C-h> :0r !headergen %<CR>0kwv$h
 
+let mapleader = ','
+
 call NIMap('<F2>', ':nohlsearch<CR>')
-call NIMap('<F8>', ':YcmShowDetailedDiagnostic<CR>')
-call NIMap('<F7>', ':YcmCompleter FixIt<CR>')
+call NIMap('<F8>', ':CocList extensions<CR>')
+call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
+call NIMap('<F10>', ':FZF<CR>')
 call NIMap('<F11>', ':Goyo<CR>')
-call NIMap('<F12>', ':YcmCompleter GoToDefinition<CR>')
+call NIMap('<F12>', '<Plug>(coc-definition)<CR>')
 
 call NXMap('ga', '<Plug>(EasyAlign)')
 call NXMap('<C-t>', 'gt<CR>')

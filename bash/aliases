@@ -13,6 +13,7 @@ alias v='vim'
 alias w='which'
 
 # $OVERRIDES
+alias feh='feh --force-aliasing'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ssh='ssh -t'

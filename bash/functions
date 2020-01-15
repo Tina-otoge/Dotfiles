@@ -37,6 +37,7 @@ cmd_exists() {
 if cmd_exists vimpager; then
 	alias less=vimpager
 	alias cat=vimcat
+	export PAGER=vimpager
 fi
 
 uu() {
