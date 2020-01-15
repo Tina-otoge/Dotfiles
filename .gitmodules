@@ -68,3 +68,12 @@
 [submodule "vim/bundle/html5"]
 	path = vim/bundle/html5
 	url = https://github.com/othree/html5.vim
+[submodule "vim/bundle/coc"]
+	path = vim/bundle/coc
+	url = https://github.com/neoclide/coc.nvim
+[submodule "vim/bundle/lsp-cxx-highlight"]
+	path = vim/bundle/lsp-cxx-highlight
+	url = https://github.com/jackguo380/vim-lsp-cxx-highlight
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = https://github.com/airblade/vim-gitgutter

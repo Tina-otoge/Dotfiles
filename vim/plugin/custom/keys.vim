@@ -10,6 +10,7 @@ endfunction
 
 nmap <C-h> :0r !headergen %<CR>0kwv$h
 
+call NIMap('<F2>', ':nohlsearch<CR>')
 call NIMap('<F8>', ':YcmShowDetailedDiagnostic<CR>')
 call NIMap('<F7>', ':YcmCompleter FixIt<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
