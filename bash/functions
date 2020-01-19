@@ -40,6 +40,11 @@ if cmd_exists vimpager; then
 	export PAGER=vimpager
 fi
 
+if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
+	mkdir -p ~/.local/bin
+	(cd ~/.local/bin && ln -s "$(which chromium-browser)" google-chrome)
+fi
+
 uu() {
 	if [ $(id -u) != 0 ] && cmd_exists sudo; then
 		prefix='sudo'
