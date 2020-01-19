@@ -13,8 +13,8 @@ nmap <C-h> :0r !headergen %<CR>0kwv$h
 let mapleader = ','
 
 call NIMap('<F2>', ':nohlsearch<CR>')
-call NIMap('<F8>', ':CocList extensions<CR>')
 call NIMap('<F7>', '<Plug>(coc-fix-current)')
+call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
 call NIMap('<F10>', ':FZF<CR>')
 call NIMap('<F11>', ':Goyo<CR>')

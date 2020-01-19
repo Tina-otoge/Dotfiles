@@ -13,7 +13,7 @@
 					"onChange": 200
 				},
 				"clang": {
-					"extraArgs": ["-Wall"]
+					"extraArgs": ["-Wall", "-I..", "-Iinclude", "I../include"]
 				},
 				"cache": {
 					"directory": "/tmp/ccls"
