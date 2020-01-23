@@ -66,6 +66,9 @@ set mouse=a
 set number
 set numberwidth=1
 
+" Default splits and term to below instead of above
+set splitbelow
+
 " Display invisible characters. Tabs and trailing space.
 set list
 set listchars=tab:\·\ ,trail:.,extends:#,nbsp:.
@@ -78,6 +81,11 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
 
 syntax on
 autocmd FileType json syntax match Comment +\/\/.\+$+
