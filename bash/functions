@@ -14,6 +14,10 @@ vw()
 	vim `which "$1"`
 }
 
+lookup() {
+	locate -b --regex "^$1$"
+}
+
 fargs() {
 	cmd="$1"
 	shift
@@ -29,6 +33,17 @@ cmd_exists() {
 	fi
 	return 1
 }
+
+if cmd_exists vimpager; then
+	alias less=vimpager
+	alias cat=vimcat
+	export PAGER=vimpager
+fi
+
+if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
+	mkdir -p ~/.local/bin
+	(cd ~/.local/bin && ln -s "$(which chromium-browser)" google-chrome)
+fi
 
 uu() {
 	if [ $(id -u) != 0 ] && cmd_exists sudo; then

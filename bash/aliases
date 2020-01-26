@@ -13,6 +13,7 @@ alias v='vim'
 alias w='which'
 
 # $OVERRIDES
+alias feh='feh --force-aliasing'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ssh='ssh -t'
@@ -27,5 +28,5 @@ alias glog='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) %C
 alias gs='git status -u'
 alias l='ls -1'
 alias ld64='ld -dynamic-linker /lib64/ld-linux-x86-64.so.2'
-alias ll='ls -l'
+alias ll='ls -lh'
 alias refresh='source ~/.bashrc'

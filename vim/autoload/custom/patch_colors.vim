@@ -6,4 +6,14 @@ function custom#patch_colors#patch_molokai()
 	hi LineNr      ctermfg=8
 	hi LineNr      ctermbg=NONE
 	hi Visual      ctermbg=8
+	hi SignColumn  ctermbg=NONE
+
+	" Coc
+	hi CocWarningHighlight ctermbg=3 ctermfg=7
+	hi CocErrorHighlight   ctermbg=1 ctermfg=0
+
+	" GitGutter
+	highlight GitGutterAdd    ctermfg=2 ctermbg=NONE
+	highlight GitGutterChange ctermfg=3 ctermbg=NONE
+	highlight GitGutterDelete ctermfg=1 ctermbg=NONE
 endfunction

@@ -41,6 +41,9 @@ def Settings(**kwargs):
                 '-isystem', '/usr/local/include',
                 '-isystem', '/usr/local/include/eigen3',
             ]
+        },
+        'haskell' : {
+            'ls': {'languageServerHaskell': {}},
         }
     }
     result = settings.get(language)
