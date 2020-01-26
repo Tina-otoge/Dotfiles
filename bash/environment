@@ -32,6 +32,10 @@ if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; t
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
 fi
 
+export WINEDLLPATH="$HOME"'/.local/lib/wine/bin32:'"$HOME"'/.local/lib/wine/bin64:'$WINEDLLPATH
+export WINEDEBUG='fixme-all,'"$WINEDEBUG"
+
+
 
 # USER VARIABLES
 # Use lowercase here
