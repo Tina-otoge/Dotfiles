@@ -36,9 +36,8 @@ locale = en_US.UTF-8
 
 [bar/i3]
 inherit = bar/base
-override-redirect = false
-
-; wm-restack = i3
+override-redirect = true
+wm-restack = i3
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -53,22 +52,57 @@ border-top-size = 4
 border-top-color = ${colors.bg}
 height = 22
 
-tray-position = right
-tray-padding = 2
+padding = 1
+module-margin = 1
+modules-left = xkeyboard backlight volume battery battery2 temperature
 
-modules-center = xwindow
-modules-right = xkeyboard
+tray-position = right
+; tray-offset-x = -2
 
 [bar/bottom]
 inherit = bar/i3
-font-0 = "mononoki Nerd Font Mono:size=12"
+font-0 = "Hiragino Sans GB:size=11"
+; font-0 = "mononoki Nerd Font Mono:size=12"
 monitor = ${env:MONITOR:eDP-1}
 bottom = true
-height = 26
+height = 34
+width = 72%
+offset-x = 14%
+offset-y = 6
+radius = 8
 modules-left = i3
-modules-right = volume backlight wlan eth usb-eth temperature cpu memory battery battery2 date
+modules-center = xwindow
+modules-right = date
 module-margin = 1
-padding = 1
+padding = 2
+
+[bar/tray]
+inherit = bar/bottom
+bottom = true
+modules-left =
+modules-center = os-label
+modules-right =
+width = 11%
+offset-x = 87%
+tray-position = right
+tray-detached = true
+tray-offset-x = -10
+
+[bar/extra]
+inherit = bar/bottom
+; monitor = ${env:MONITOR:eDP-1}
+font-0 = mononoki Nerd Font Mono:size=10
+; bottom = true
+; height = 34
+width = 11%
+; padding = 1
+; radius = 8
+offset-x = 2%
+; offset-y = 6
+; module-margin = 1
+modules-left =
+modules-center = battery battery2 backlight volume xkeyboard
+modules-right =
 
 [module/xwindow]
 type = internal/xwindow
@@ -173,14 +207,14 @@ battery = BAT1
 
 [module/date]
 type = internal/date
-interval = 1
-date = "%Y-%m-%d (%a) %H:%M:%S"
+interval = ${timers.medium}
+date = "%m/%d (%a) - %H:%M"
 
 [module/i3]
 type = internal/i3
 
 format = <label-state> <label-mode>
-format-padding = 1
+format-padding = 0
 strip-wsnumber = true
 index-sort = true
 
@@ -188,15 +222,19 @@ label-mode-padding = 1
 
 label-focused-background = ${colors.bg-alt}
 label-urgent-background = ${colors.alert}
+label-mode-background = ${colors.good}
 
-label-focused = %name%
-label-visible = %name%
-label-unfocused = %name%
-label-urgent = %name%!!
+label-focused = " %name% "
+label-visible = " %name% "
+label-unfocused = " %name% "
+label-urgent = !%name%!
 
 label-focused-padding = ${self.label-mode-padding}
 label-visible-padding = ${self.label-mode-padding}
 label-unfocused-padding = ${self.label-mode-padding}
 label-urgent-padding = ${self.label-mode-padding}
 
+[module/os-label]
+type = custom/text
+content = " "
 ; vim:ft=dosini

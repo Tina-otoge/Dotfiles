@@ -17,6 +17,8 @@ font pango:Hack 10
 
 # Gaps
 gaps outer 12
+gaps top 0
+gaps bottom 34
 gaps inner 12
 
 # Windows style
@@ -30,6 +32,8 @@ bindsym $mod+Delete exec dm-tool switch-to-greeter
 # start a terminal
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec $term
+
+bindsym $mod+Shift+p exec source ~/.bashrc && turbopaste
 
 bindsym $mod+p exec $term -e htop
 
