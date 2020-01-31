@@ -19,10 +19,10 @@ lookup() {
 }
 
 fargs() {
-	cmd="$1"
+	cmd=$1
 	shift
 	while (( $# )); do
-		"$cmd" "$1"
+		$cmd "$1"
 		shift
 	done
 }
