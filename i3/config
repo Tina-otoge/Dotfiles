@@ -3,8 +3,8 @@
 # - https://i3wm.org/docs/userguide.html
 
 # Startup script (an executable named "startup" must exist)
-exec --no-startup-id startup
-exec_always --no-startup-id eachstart
+exec --no-startup-id source ~/.bashrc && startup
+exec_always --no-startup-id source ~/.bashrc && eachstart
 # Set Windows key as the main mod key
 set $mod Mod4
 # Set terminal
@@ -17,22 +17,36 @@ font pango:Hack 10
 
 # Gaps
 gaps outer 12
+gaps top 0
+gaps bottom 34
 gaps inner 12
 
 # Windows style
 default_border pixel 1
 
 ### BINDINGS ###
+
+# bindsym $mod+m exec systemctl suspend
+bindsym $mod+Delete exec dm-tool switch-to-greeter
+
 # start a terminal
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec $term
+
+bindsym $mod+Shift+p exec source ~/.bashrc && turbopaste
 
 bindsym $mod+p exec $term -e htop
 
-bindsym $mod+space exec rofi -show drun
+bindsym $mod+b exec xdg-open http://
 
-bindsym $mod+dollar exec rofimoji
+bindsym Mod1+Tab exec rofi -show window
+
+bindsym $mod+space exec source ~/.bashrc && rofi -show drun
+
+bindsym $mod+dollar exec rofimoji -s neutral --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
 bindsym Print exec eval $(xdotool getmouselocation --shell) && maim -x $DISPLAY.$SCREEN | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
+bindsym $mod+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
 bindsym --release Control+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
 
 # kill focused window
@@ -45,6 +59,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # start file explorer
 bindsym $mod+e exec $explorer
+bindsym $mod+Shift+e exec xdg-open "$(xcwd)"
 
 bindsym XF86AudioLowerVolume exec volume decrease
 bindsym XF86AudioRaiseVolume exec volume increase
@@ -209,6 +224,6 @@ bindsym $mod+g mode "gaps"
 bindsym $mod+Shift+b bar mode toggle
 
 # bar {
-	# tray_output none
-	# status_command i3blocks
+# 	tray_output none
+# 	status_command i3status
 # }

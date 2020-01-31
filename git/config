@@ -1,6 +1,6 @@
 [include]
-	path = custom
 	path = identity
+	path = custom
 
 [alias]
 	news    = log -p @{1}..
@@ -22,5 +22,5 @@
 	tool = vimdiff
 
 [merge]
-	ff = false
+	ff = true
 # vim: ft=gitconfig

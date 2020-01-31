@@ -4,11 +4,13 @@
 let g:lightline = {
 \ 'active': {
 \	'left': [['mode'],
-\	         ['readonly', 'filename', 'gitbranch']]
+\	         ['cocstatus', 'currentfunction', 'readonly', 'filename', 'gitbranch']]
 \ },
 \ 'component_function': {
 \	'filename': 'LightlineFilename',
-\	'gitbranch': 'gitbranch#name'
+\	'gitbranch': 'gitbranch#name',
+\	'cocstatus': 'coc#status',
+\	'currentfunction': 'CocCurrentFunction'
 \ },
 \ }
 " Replace default filename component with a combined filename + modified
@@ -17,4 +19,8 @@ function! LightlineFilename()
 	let filename = expand('%:t') !=# '' ? expand('%:t') : '[No name]'
 	let modified = &modified ? '*' : ''
 	return filename . modified
+endfunction
+
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
 endfunction

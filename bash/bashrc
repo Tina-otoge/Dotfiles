@@ -18,3 +18,5 @@ unset cfg init_files
 
 # Disable history file
 unset HISTFILE
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

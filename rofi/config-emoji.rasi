@@ -1,16 +1,11 @@
 // vim: ft=css
 configuration {
-	display-combi: "";
-	display-drun: "";
-	display-run: "$ ";
-	display-window: "win: ";
-	font: "Raleway Light 13";
-	lines: 7;
-	max-history-size: 300;
-	modi: "drun,run,window";
+	font: "Noto Emoji Color 11";
+	lines: 9;
 	show-icons: true;
 	theme: "tina-monokai";
-	width: 600;
+	width: 900;
+	columns: 3;
 /*	auto-select: false;*/
 /*	case-sensitive: false;*/
 /*	click-to-exit: true;*/

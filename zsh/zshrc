@@ -14,7 +14,9 @@ init_files=(
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	"$HOME"'/.fzf.zsh'
 )
+
 for file in "${init_files[@]}"; do
 	include "$file"
 done
@@ -26,6 +28,7 @@ bindkey '^Z' _zsh_cli_fg
 
 # Aliases overrides
 alias refresh='source ~/.zshrc'
+alias which='whence -p'
 
 # Environment overrides
 export SHELL="$(which zsh)"

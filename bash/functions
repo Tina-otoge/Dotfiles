@@ -9,6 +9,91 @@ mkcd()
 	cd "$*"
 }
 
+vw()
+{
+	vim `which "$1"`
+}
+
+lookup() {
+	locate -b --regex "^$1$"
+}
+
+fargs() {
+	cmd=$1
+	shift
+	while (( $# )); do
+		$cmd "$1"
+		shift
+	done
+}
+
+cmd_exists() {
+	if command -v $1 >/dev/null 2>&1; then
+		return 0
+	fi
+	return 1
+}
+
+if cmd_exists vimpager; then
+	alias less=vimpager
+	alias cat=vimcat
+	export PAGER=vimpager
+fi
+
+if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
+	mkdir -p ~/.local/bin
+	(cd ~/.local/bin && ln -s "$(which chromium-browser)" google-chrome)
+fi
+
+uu() {
+	if [ $(id -u) != 0 ] && cmd_exists sudo; then
+		prefix='sudo'
+	else
+		prefix=''
+	fi
+	cmd_exists apt && $prefix apt update && $prefix apt upgrade $* && return 0
+	cmd_exists  apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
+	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
+	cmd_exists pacman && $prefix pacman -Syu $* && return 0
+
+	echo No known package manager found. Aborting. >2
+	return 1
+}
+
+ud() {
+	(cd "$dotfiles" && git pull --ff)
+}
+
+copy() {
+	if cmd_exists termux-clipboard-set; then
+		echo "$1" | termux-clipboard-set
+	else
+		echo "$1" | xclip -sel p -f | xclip -sel c
+	fi
+}
+
+streamable() {
+	code=$(curl -# https://api.streamable.com/upload -u "$STREAMABLEUSER":"$STREAMABLEPASSWORD" -F file=@"$1")
+	link='https://streamable.com/'$code
+	echo "$link"
+	copy "$link"
+}
+
+transfer() {
+	ext="${1##*.}"
+	name="$(date +%s)".$ext
+	link="$(curl -# --upload-file "$1" 'https://transfer.sh/'"$name")"
+	echo "$link"
+	copy "$link"
+}
+
+uguu() {
+	name="$(basename "$1")"
+	link="$(curl -# -i -F name="$name" -F file=@"$1" 'https://uguu.se/api.php?d=upload-tool' | grep 'https://a.uguu.se/')"
+	echo "$link"
+	copy "$link"
+}
+
 casm()
 {
 	nasm -f elf64 "$1" -o /tmp/casm.o
