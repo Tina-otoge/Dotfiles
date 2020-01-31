@@ -8,10 +8,15 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+set updatetime=300
+autocmd CursorHold * sil call CocActionAsync('highlight')
+autocmd CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Use <C-Space> to display completion
+inoremap <silent><expr> <C-Space> coc#refresh()
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

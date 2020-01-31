@@ -85,6 +85,7 @@ set signcolumn=yes
 augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+  autocmd BufRead,BufNewFile *.lzz set filetype=cpp
 augroup END
 
 syntax on
