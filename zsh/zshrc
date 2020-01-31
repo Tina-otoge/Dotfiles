@@ -14,8 +14,9 @@ init_files=(
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/fzf/shell/key-bindings.zsh'
+	"$HOME"'/.fzf.zsh'
 )
+
 for file in "${init_files[@]}"; do
 	include "$file"
 done
