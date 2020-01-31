@@ -278,7 +278,7 @@
 
 [discord]
 	appname = discord
-	new_icon = /usr/lib64/discord/discord.png
+	# new_icon = /usr/lib64/discord/discord.png
 	format = "Discord\n<b>%s</b>\n%b"
 
 #[espeak]

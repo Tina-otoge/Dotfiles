@@ -1,4 +1,5 @@
 {
+	"python.jediEnabled": false,
 	"suggest.numberSelect": true,
 	"suggest.triggerAfterInsertEnter": true,
 	"diagnostic.checkCurrentLine": true,
