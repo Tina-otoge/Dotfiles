@@ -109,6 +109,8 @@ type = internal/xwindow
 
 [module/xkeyboard]
 type = internal/xkeyboard
+label-indicator-on-capslock = CL
+label-indicator-on-numlock = NL
 
 [module/volume]
 type = internal/volume
