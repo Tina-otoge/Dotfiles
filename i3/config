@@ -3,8 +3,8 @@
 # - https://i3wm.org/docs/userguide.html
 
 # Startup script (an executable named "startup" must exist)
-exec --no-startup-id source ~/.bashrc && startup
-exec_always --no-startup-id source ~/.bashrc && eachstart
+exec --no-startup-id exec startup
+exec_always --no-startup-id exec eachstart
 # Set Windows key as the main mod key
 set $mod Mod4
 # Set terminal
