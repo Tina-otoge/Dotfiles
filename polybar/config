@@ -210,7 +210,7 @@ battery = BAT1
 [module/date]
 type = internal/date
 interval = ${timers.medium}
-date = "%m/%d (%a) - %H:%M"
+date = "%d %b (%a) - %H:%M"
 
 [module/i3]
 type = internal/i3
