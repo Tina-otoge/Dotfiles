@@ -41,7 +41,7 @@ bindsym $mod+b exec xdg-open http://
 
 bindsym Mod1+Tab exec rofi -show window
 
-bindsym $mod+space exec source ~/.bashrc && rofi -show drun
+bindsym $mod+space exec rofi -show drun
 
 bindsym $mod+dollar exec rofimoji -s neutral --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
