@@ -83,3 +83,6 @@
 [submodule "vim/bundle/eunuch"]
 	path = vim/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "vim/bundle/loupe"]
+	path = vim/bundle/loupe
+	url = https://github.com/wincent/loupe
