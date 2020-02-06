@@ -43,7 +43,7 @@ bindsym Mod1+Tab exec rofi -show window
 
 bindsym $mod+space exec rofi -show drun
 
-bindsym $mod+dollar exec rofimoji -s neutral --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
+bindsym $mod+dollar exec rofimoji -s neutral -p --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
 bindsym Print exec eval $(xdotool getmouselocation --shell) && maim -x $DISPLAY.$SCREEN | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
 bindsym $mod+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
