@@ -109,6 +109,8 @@ type = internal/xwindow
 
 [module/xkeyboard]
 type = internal/xkeyboard
+label-indicator-on-capslock = CL
+label-indicator-on-numlock = NL
 
 [module/volume]
 type = internal/volume
@@ -208,7 +210,7 @@ battery = BAT1
 [module/date]
 type = internal/date
 interval = ${timers.medium}
-date = "%m/%d (%a) - %H:%M"
+date = "%d %b (%a) - %H:%M"
 
 [module/i3]
 type = internal/i3

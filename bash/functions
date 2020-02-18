@@ -27,6 +27,10 @@ fargs() {
 	done
 }
 
+chfix() {
+	find ~/.local/bin -type f -exec chmod +x {} \;
+}
+
 cmd_exists() {
 	if command -v $1 >/dev/null 2>&1; then
 		return 0
