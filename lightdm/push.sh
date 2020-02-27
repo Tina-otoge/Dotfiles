@@ -8,6 +8,7 @@ fi
 files='
 lightdm.conf
 lightdm-gtk-greeter.conf
+lightdm-webkit2-greeter.conf
 '
 
 backup() {
