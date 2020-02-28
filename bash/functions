@@ -78,7 +78,7 @@ uu() {
 }
 
 ud() {
-	(cd "$dotfiles" && git pull --ff)
+	(cd "$dotfiles" && git pull --ff && git submodule update --init)
 }
 
 copy() {
