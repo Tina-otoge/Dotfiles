@@ -27,6 +27,19 @@ fargs() {
 	done
 }
 
+autoclick() {
+	echo Initiating autoclick in 1s...
+	sleep 1
+	while true; do
+		xdotool mousedown 1;
+		sleep 1e-03;
+		xdotool mouseup 1;
+		sleep 1e-03;
+	done
+	xdotool mouseup 1;
+	echo Mouse released
+}
+
 chfix() {
 	find ~/.local/bin -type f -exec chmod +x {} \;
 }
@@ -65,7 +78,7 @@ uu() {
 }
 
 ud() {
-	(cd "$dotfiles" && git pull --ff)
+	(cd "$dotfiles" && git pull --ff && git submodule update --init)
 }
 
 copy() {
