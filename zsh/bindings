@@ -10,6 +10,10 @@ backward-kill-dir () {
 zle -N backward-kill-dir
 bindkey '^H' backward-kill-dir
 
+# Allow backspacing over the start of insert
+# Equivalent to vim's backspace=start, see :help 'backspace'
+bindkey -v "^?" backward-delete-char
+
 # force set kitty keys
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
