@@ -86,3 +86,6 @@
 [submodule "vim/bundle/loupe"]
 	path = vim/bundle/loupe
 	url = https://github.com/wincent/loupe
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive

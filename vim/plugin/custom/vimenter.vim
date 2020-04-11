@@ -3,23 +3,30 @@
 
 autocmd StdinReadPre * let g:std_in=1
 
+autocmd VimEnter * nested call VimEnterNestedCommands()
 autocmd VimEnter * call VimEnterCommands()
-function VimEnterCommands()
 
-	if exists('g:loaded_nerd_tree')
-		if argc() == 1 && isdirectory(argv()[0]) && !exists('g:std_in')
+function VimEnterNestedCommands()
+	if !exists('g:std_in')
+		if argc() == 0
+			exe 'edit #<1'
+		endif
+	endif
+endfunction
+
+function VimEnterCommands()
+	if !exists('g:std_in')
+		if exists('g:loaded_nerd_tree') && argc() == 1 && isdirectory(argv()[0])
 			" Open an empty buffer
 			exe 'enew'
 			exe 'NERDTree' argv()[0]
 		endif
+		if exists('g:loaded_lightline')
+			" Always display statusline
+			set laststatus=2
+			" Don't display mode under statusline (lightline already
+			" displays mode)
+			set noshowmode
+		endif
 	endif
-
-	if exists('g:loaded_lightline')
-		" Always display statusline
-		set laststatus=2
-		" Don't display mode under statusline (lightline already
-		" displays mode)
-		set noshowmode
-	endif
-
 endfunction
