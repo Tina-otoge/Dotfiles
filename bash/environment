@@ -24,6 +24,7 @@ pathmunge () {
 pathmunge '/var/lib/snapd/snap/bin'
 pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
+pathmunge "$HOME"'/.opam/default/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
 
 if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
@@ -50,8 +51,6 @@ export EDITOR=vim
 export MANWIDTH=80
 # Avoid creating an history file when using less(1)
 export LESSHISTFILE=-
-# Colors for ls(1)
-export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
 # dotnet core telemetry optout
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
@@ -60,6 +59,14 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 if [ "$ANDROID" ]; then
 	export PREFIX="$(sh -c 'echo $PREFIX')"
 fi
+
+if cmd_exists fd; then
+	export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude ".git/*"'
+fi
+
+# Colors for ls(1)
+eval $(dircolors)
+export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
 
 
 settitle()

@@ -5,8 +5,8 @@ include() {
 cfg="$HOME"'/.config'
 init_files=(
 	'/etc/skel/.bashrc'
-	"$cfg"'/bash/environment'
 	"$cfg"'/bash/functions'
+	"$cfg"'/bash/environment'
 	"$cfg"'/bash/prompt'
 	"$cfg"'/bash/aliases'
 	"$cfg"'/bash/custom'
