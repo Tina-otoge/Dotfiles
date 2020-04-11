@@ -20,6 +20,7 @@ alias ssh='ssh -t'
 alias sudo='sudo '
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
+alias df='df -h --output=source,fstype,size,used,avail,pcent,target -x tmpfs -x devtmpfs'
 alias g++='g++ -Wall -Wextra -W -std=c++14'
 alias gcc='gcc -Wall -Wextra -W'
 alias gd='git diff'
