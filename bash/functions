@@ -105,10 +105,21 @@ transfer() {
 }
 
 uguu() {
-	name="$(basename "$1")"
+	rem=false
+	if [[ "$1" == '-c' ]]; then
+		xclip -selection c -o > .screen.png;
+		1=.screen.png;
+		rem=true
+		name=screenshot.png
+	else
+		name="$(basename "$1")"
+	fi
 	link="$(curl -# -i -F name="$name" -F file=@"$1" 'https://uguu.se/api.php?d=upload-tool' | grep 'https://a.uguu.se/')"
 	echo "$link"
 	copy "$link"
+	if $rem; then
+		rm -f "$1"
+	fi
 }
 
 casm()
