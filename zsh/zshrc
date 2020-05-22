@@ -5,9 +5,9 @@ include () {
 cfg="$HOME"'/.config'
 
 init_files=(
+	"$cfg"'/bash/functions'
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
-	"$cfg"'/bash/functions'
 	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/bindings'
