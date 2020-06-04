@@ -17,6 +17,7 @@ alias feh='feh --force-aliasing'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ssh='ssh -t'
+alias dd='dd status=progress'
 alias sudo='sudo '
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
