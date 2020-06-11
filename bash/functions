@@ -52,9 +52,9 @@ cmd_exists() {
 }
 
 if cmd_exists vimpager; then
-	alias less=vimpager
+	# alias less=vimpager
 	alias cat=vimcat
-	export PAGER=vimpager
+# 	export PAGER=vimpager
 fi
 
 if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
@@ -69,11 +69,11 @@ uu() {
 		prefix=''
 	fi
 	cmd_exists apt && $prefix apt update && $prefix apt upgrade $* && return 0
-	cmd_exists  apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
+	cmd_exists apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
 	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
 	cmd_exists pacman && $prefix pacman -Syu $* && return 0
 
-	echo No known package manager found. Aborting. >2
+	echo No known package manager found. Aborting. >&2
 	return 1
 }
 
