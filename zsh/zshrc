@@ -5,9 +5,9 @@ include () {
 cfg="$HOME"'/.config'
 
 init_files=(
+	"$cfg"'/bash/functions'
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
-	"$cfg"'/bash/functions'
 	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/bindings'
@@ -16,6 +16,7 @@ init_files=(
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	"$HOME"'/.fzf.zsh'
+	"$HOME"'/.opam/opam-init/init/init.zsh'
 )
 
 for file in "${init_files[@]}"; do
