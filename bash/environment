@@ -10,15 +10,6 @@ if [ -d ~/.secrets ]; then
 fi
 
 alias egrep >/dev/null 2>&1 && unalias egrep
-pathmunge () { 
-	if ! echo $PATH | "$(which egrep)" -q "(^|:)$1($|:)" ; then
-		if [ "$2" = "after" ] ; then
-			PATH=$PATH:$1
-		else
-			PATH=$1:$PATH
-		fi
-	fi
-}
 
 # Add paths to PATH here
 pathmunge '/var/lib/snapd/snap/bin'
