@@ -3,23 +3,8 @@
 	"suggest.triggerAfterInsertEnter": true,
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.warningSign": ">>",
+	"clangd.semanticHighlighting": true,
 	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": ["c", "cpp", "objc", "objcpp"],
-			"rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-			"initializationOptions": {
-				"diagnostics": {
-					"onChange": 200
-				},
-				"clang": {
-					"extraArgs": ["-Wall", "-I.", "-I..", "-I./include", "-I../include", "-Isrc", "-I../src"]
-				},
-				"cache": {
-					"directory": "/tmp/ccls"
-				}
-			}
-		},
 		"python" : {
 			"command": "/usr/bin/python",
 			"args": ["-mpyls"],
@@ -39,7 +24,7 @@
 						},
 						"mccabe": { "enabled": true, "threshold": 15 },
 						"preload": { "enabled": true },
-						"pycodestyle": { "enabled": true },
+						"pycodestyle": { "enabled": false },
 						"pydocstyle": { "enabled": false, "match": "(?!test_).*\\.py", "matchDir": "[^\\.].*" },
 						"pyflakes": { "enabled": true },
 						"rope_completion": { "enabled": true },
