@@ -20,7 +20,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "360x5-30+30"
+    geometry = "500x1+710+10"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -120,7 +120,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Show age of message if message is older than show_age_threshold
     # seconds.

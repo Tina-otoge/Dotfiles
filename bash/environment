@@ -46,6 +46,8 @@ export MANWIDTH=80
 export LESSHISTFILE=-
 # dotnet core telemetry optout
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+# CMake compilation database
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
 

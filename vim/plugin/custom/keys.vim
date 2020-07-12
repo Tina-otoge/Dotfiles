@@ -23,6 +23,9 @@ nnoremap q :quit<CR>
 nnoremap Q :quitall<CR>
 nnoremap s :split<CR>
 nnoremap S :vsplit<CR>
+nnoremap <leader>a :Git add %<CR>
+nnoremap <leader>c :Git commit<CR>
+nnoremap <leader>g :Git add %<bar>Git commit<CR>
 call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')

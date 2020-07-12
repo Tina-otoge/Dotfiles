@@ -82,7 +82,7 @@ bottom = true
 modules-left =
 modules-center = os-label
 modules-right =
-width = 11%
+width = 12%
 offset-x = 87%
 tray-position = right
 tray-detached = true
@@ -94,10 +94,10 @@ inherit = bar/bottom
 font-0 = mononoki Nerd Font Mono:size=8
 ; bottom = true
 ; height = 34
-width = 11%
+width = 11.9%
 ; padding = 1
 ; radius = 8
-offset-x = 2%
+offset-x = 1.1%
 ; offset-y = 6
 ; module-margin = 1
 modules-left =
@@ -106,6 +106,7 @@ modules-right =
 
 [module/xwindow]
 type = internal/xwindow
+label-maxlen = 150
 
 [module/xkeyboard]
 type = internal/xkeyboard
