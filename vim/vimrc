@@ -28,6 +28,9 @@ execute pathogen#infect()
 " cf. https://vi.stackexchange.com/a/10125
 filetype plugin indent on
 
+" Load the man plugin, see :help ft-man-plugin
+runtime ftplugin/man.vim
+
 " Enable modelines
 " cf. http://vim.wikia.com/wiki/Modeline_magic
 set modeline
@@ -44,6 +47,8 @@ set spelllang=en
 " Store custom spell checking dictionary in vim folder
 set spellfile=~/.vim/dictionary.utf-8.add
 
+" Disable any cursor customization (notably from neovim)
+set guicursor=
 " Persistent undo
 if has('persistent_undo')
 	let undo_path = $HOME . '/.local/share/vim/undo'

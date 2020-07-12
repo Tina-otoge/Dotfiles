@@ -10,6 +10,7 @@ alias cls='clear'
 alias flex='clear && neofetch --backend off | lolcat && read'
 alias open='xdg-open'
 alias v='vim'
+alias n='nvim'
 alias w='which'
 
 # $OVERRIDES
@@ -17,6 +18,7 @@ alias feh='feh --force-aliasing'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ssh='ssh -t'
+alias dd='dd status=progress'
 alias sudo='sudo '
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS

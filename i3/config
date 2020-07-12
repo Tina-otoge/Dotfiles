@@ -16,10 +16,10 @@ set $explorer xdg-open "$HOME"
 font pango:Hack 10
 
 # Gaps
-gaps outer 12
+gaps outer 11
 gaps top 0
 gaps bottom 34
-gaps inner 12
+gaps inner 11
 
 # Windows style
 default_border pixel 1
@@ -43,11 +43,15 @@ bindsym Mod1+Tab exec rofi -show window
 
 bindsym $mod+space exec rofi -show drun
 
+bindsym $mod+o exec open-clipboard
+bindsym $mod+colon exec langswitcher
+bindsym $mod+period exec langswitcher
+
 bindsym $mod+dollar exec rofimoji -s neutral -p --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
 bindsym Print exec eval $(xdotool getmouselocation --shell) && maim -x $DISPLAY.$SCREEN | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
-bindsym $mod+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
-bindsym --release Control+Print exec maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
+bindsym $mod+Print exec maim -s -u | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
+bindsym --release Control+Print exec maim -s -u | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
 
 # kill focused window
 # bindsym $mod+Shift+a kill
@@ -222,6 +226,16 @@ bindsym $mod+g mode "gaps"
 
 # Toggle hiding bar
 bindsym $mod+Shift+b bar mode toggle
+
+# Float overwrites
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_type="notification"] floating enable
+for_window [class="bms.player.beatoraja.MainLoader"] floating enable
 
 # bar {
 # 	tray_output none
