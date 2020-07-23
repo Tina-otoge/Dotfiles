@@ -37,6 +37,8 @@ export dotfiles="$HOME"'/Repositories/skielred/Dotfiles'
 ## SYSTEM VARIABLES
 ## Use uppercase here
 
+export HISTFILE=~/.history
+
 export EDITOR=vim
 # Page format for man(1)
 export MANWIDTH=80
