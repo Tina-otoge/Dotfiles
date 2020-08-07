@@ -1,3 +1,6 @@
+compile_commands.json
+.clangd
 *~
 *.swp
 *.swo
+vgcore.*
