@@ -91,10 +91,10 @@ augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
   autocmd BufRead,BufNewFile *.lzz set filetype=cpp
+  autocmd BufRead,BufNewFile *.vs,*.fs set filetype=glsl
 augroup END
 
 syntax on
 autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd! ColorScheme molokai call custom#patch_colors#patch_molokai()
 colorscheme molokai
-

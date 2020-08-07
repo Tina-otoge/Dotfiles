@@ -89,3 +89,9 @@
 [submodule "vim/bundle/gruvbox"]
 	path = vim/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "vim/bundle/lua"]
+	path = vim/bundle/lua
+	url = https://github.com/tbastos/vim-lua
+[submodule "vim/bundle/glsl"]
+	path = vim/bundle/glsl
+	url = https://github.com/tikhomirov/vim-glsl
