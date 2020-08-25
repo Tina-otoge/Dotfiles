@@ -25,6 +25,8 @@ fi
 export WINEDLLPATH="$HOME"'/.local/lib/wine/bin32:'"$HOME"'/.local/lib/wine/bin64:'$WINEDLLPATH
 export WINEDEBUG='fixme-all,'"$WINEDEBUG"
 
+export PIPENV_VENV_IN_PROJECT=1
+
 
 
 # USER VARIABLES
