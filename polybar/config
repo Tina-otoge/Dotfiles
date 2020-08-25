@@ -76,6 +76,13 @@ modules-right = date
 module-margin = 1
 padding = 2
 
+[bar/bottom2]
+inherit = bar/bottom
+font-0 = "Hiragino Sans GB:size=11"
+monitor = ${env:MONITOR:HDMI-1}
+width = 96%
+offset-x = 2%
+
 [bar/tray]
 inherit = bar/bottom
 bottom = true
