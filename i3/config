@@ -37,7 +37,7 @@ bindsym $mod+Shift+p exec source ~/.bashrc && turbopaste
 
 bindsym $mod+p exec $term -e htop
 
-bindsym $mod+b exec xdg-open http://
+bindsym $mod+b exec firefox --new-instance --new-window
 
 bindsym Mod1+Tab exec rofi -show window
 

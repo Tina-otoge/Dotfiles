@@ -9,6 +9,7 @@ init_files=(
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/prompt'
 	"$cfg"'/bash/aliases'
+	"$cfg"'/bash/completion'
 	"$cfg"'/bash/custom'
 )
 for file in "${init_files[@]}"; do
