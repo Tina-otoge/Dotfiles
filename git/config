@@ -3,11 +3,11 @@
 	path = custom
 
 [alias]
-	news    = log -p @{1}..
 	oops    = reset HEAD~
 	uu      = submodule foreach 'git reset HEAD && git checkout . && git pull origin master --ff'
 	unstage = reset --
-	unadd   = reset
+	unadd   = reset --
+	news    = log -p @{1}..
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
