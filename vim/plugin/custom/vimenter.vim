@@ -3,9 +3,6 @@
 
 autocmd StdinReadPre * let g:std_in=1
 
-autocmd VimEnter * nested call VimEnterNestedCommands()
-autocmd VimEnter * call VimEnterCommands()
-
 function VimEnterNestedCommands()
 	if !exists('g:std_in')
 		if argc() == 0
@@ -30,3 +27,6 @@ function VimEnterCommands()
 		endif
 	endif
 endfunction
+
+autocmd VimEnter * nested call VimEnterNestedCommands()
+autocmd VimEnter * call VimEnterCommands()
