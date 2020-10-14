@@ -29,6 +29,7 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 export PIPENV_VENV_IN_PROJECT=1
+export PF_INFO="title os host kernel shell editor palette"
 
 
 # USER VARIABLES
