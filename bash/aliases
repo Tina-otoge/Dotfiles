@@ -7,7 +7,7 @@
 # $SHORTCUTS
 alias ch='chmod'
 alias cls='clear'
-alias flex='clear && neofetch --backend off && read'
+alias flex='clear && pfetch && read'
 alias open='xdg-open'
 alias v='vim'
 alias n='nvim'
