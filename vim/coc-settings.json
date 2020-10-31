@@ -20,8 +20,7 @@
 						"jedi_hover": { "enabled": true },
 						"jedi_references": { "enabled": true },
 						"jedi_signature_help": { "enabled": true },
-						"jedi_symbols": { "enabled": true, "all_scopes": true
-						},
+						"jedi_symbols": { "enabled": true, "all_scopes": true },
 						"mccabe": { "enabled": true, "threshold": 15 },
 						"preload": { "enabled": true },
 						"pycodestyle": { "enabled": false },
