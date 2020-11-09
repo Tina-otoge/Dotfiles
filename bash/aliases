@@ -21,10 +21,12 @@ alias feh='feh --force-aliasing'
 alias g++='g++ -Wall -Wextra -W'
 alias gcc='gcc -Wall -Wextra -W'
 alias grep='grep --color=auto'
+alias less='less -r'
 alias ls='ls --color=auto'
 alias openvpn='openvpn  --up /usr/share/openvpn/contrib/pull-resolv-conf/client.up --down /usr/share/openvpn/contrib/pull-resolv-conf/client.down'
 alias ssh='ssh -t'
 alias sudo='sudo '
+alias tree='tree -C'
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
 alias gd='git diff'
