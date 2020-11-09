@@ -44,6 +44,7 @@ bindsym Mod1+Tab exec rofi -show window
 bindsym $mod+space exec rofi -show drun
 
 bindsym $mod+o exec open-clipboard
+bindsym $mod+Shift+v exec up-last-screen
 bindsym $mod+colon exec langswitcher
 bindsym $mod+period exec langswitcher
 
