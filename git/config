@@ -22,5 +22,5 @@
 	tool = vimdiff
 
 [merge]
-	ff = true
+	ff = false
 # vim: ft=gitconfig
