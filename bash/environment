@@ -17,6 +17,7 @@ pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/.opam/default/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
+pathmunge "$HOME/.local/opt/android-sdk/cmdline-tools/tools/bin"
 
 if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
@@ -30,6 +31,11 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 export PIPENV_VENV_IN_PROJECT=1
 export PF_INFO="title os host kernel shell editor palette"
+
+if [ "$WAYLAND_DISPLAY" ]; then
+	export MOZ_ENABLE_WAYLAND=1
+	export GDK_BACKEND=wayland
+fi
 
 
 # USER VARIABLES
@@ -78,6 +84,6 @@ settitle()
 	printf "\033]0;%s\007" "$1"
 }
 
-settitle "$TERM"
+# settitle "$TERM"
 
 unset settitle

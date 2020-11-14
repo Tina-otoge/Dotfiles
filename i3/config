@@ -31,13 +31,13 @@ bindsym $mod+Delete exec dm-tool switch-to-greeter
 
 # start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec $term
+bindsym $mod+Shift+Return exec cd "$(xcwd)"; exec $term
 
-bindsym $mod+Shift+p exec source ~/.bashrc && turbopaste
+bindsym $mod+Shift+p exec "source ~/.bashrc; turbopaste"
 
 bindsym $mod+p exec $term -e htop
 
-bindsym $mod+b exec firefox --new-instance --new-window
+bindsym $mod+b exec "source ~/.bashrc; firefox --new-window"
 
 bindsym Mod1+Tab exec rofi -show window
 
@@ -138,6 +138,17 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+bindsym $mod+ampersand workspace 1
+bindsym $mod+eacute workspace 2
+bindsym $mod+quotedbl workspace 3
+bindsym $mod+apostrophe workspace 4
+bindsym $mod+parenleft workspace 5
+bindsym $mod+egrave workspace 6
+bindsym $mod+minus workspace 7
+bindsym $mod+underscore workspace 8
+bindsym $mod+ccedilla workspace 9
+bindsym $mod+agrave workspace 10
+
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+eacute move container to workspace $ws2; workspace $ws2
@@ -236,6 +247,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_type="notification"] floating enable
 for_window [class="bms.player.beatoraja.MainLoader"] floating enable
+no_focus [class="Discord"]
 
 # bar {
 # 	tray_output none
