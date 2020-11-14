@@ -35,6 +35,11 @@ export ANDROID_SDK_ROOT="$HOME/.local/opt/android_sdk"
 export ANDROID_HOME="$ANDROID_SDK_ROOT"
 export ANDROID_AVD_HOME="$HOME/.android/avd"
 
+if [ "$WAYLAND_DISPLAY" ]; then
+	export MOZ_ENABLE_WAYLAND=1
+	export GDK_BACKEND=wayland
+fi
+
 
 # USER VARIABLES
 # Use lowercase here
@@ -82,6 +87,6 @@ settitle()
 	printf "\033]0;%s\007" "$1"
 }
 
-settitle "$TERM"
+# settitle "$TERM"
 
 unset settitle

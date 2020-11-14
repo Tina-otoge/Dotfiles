@@ -1,0 +1,23 @@
+include ../i3/config
+include /etc/sway/config.d/*
+
+exec mako --default-timeout 10000
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+
+output * bg /usr/share/backgrounds/default.png fill
+
+input * {
+	xkb_layout "fr,us"
+	xkb_options caps:swapescape
+}
+
+seat * hide_cursor 2000
+
+gaps bottom 0
+
+bar {
+	swaybar_command waybar
+}
