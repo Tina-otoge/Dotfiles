@@ -22,7 +22,7 @@
 	tool = vimdiff
 
 [merge]
-	ff = true
+	ff = false
 [pull]
 	rebase = true
 # vim: ft=gitconfig

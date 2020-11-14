@@ -17,7 +17,7 @@ pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/.opam/default/bin'
 pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
-pathmunge "$HOME/.local/opt/android-sdk/cmdline-tools/tools/bin"
+pathmunge "$HOME/.local/opt/android_sdk/cmdline-tools/latest/bin"
 
 if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
@@ -31,6 +31,14 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 export PIPENV_VENV_IN_PROJECT=1
 export PF_INFO="title os host kernel shell editor palette"
+export ANDROID_SDK_ROOT="$HOME/.local/opt/android_sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+export ANDROID_AVD_HOME="$HOME/.android/avd"
+
+if [ "$WAYLAND_DISPLAY" ]; then
+	export MOZ_ENABLE_WAYLAND=1
+	export GDK_BACKEND=wayland
+fi
 
 if [ "$WAYLAND_DISPLAY" ]; then
 	export MOZ_ENABLE_WAYLAND=1

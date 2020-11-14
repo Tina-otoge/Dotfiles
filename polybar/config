@@ -61,7 +61,7 @@ tray-position = right
 
 [bar/bottom]
 inherit = bar/i3
-font-0 = "Hiragino Sans GB:size=11"
+font-0 = "Noto Sans CJK JP:size=11"
 ; font-0 = "mononoki Nerd Font Mono:size=12"
 monitor = ${env:MONITOR:eDP-1}
 bottom = true
