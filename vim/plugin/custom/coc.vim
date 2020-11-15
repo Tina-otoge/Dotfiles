@@ -1,5 +1,5 @@
 " Plugins
-let g:coc_global_extensions = ['coc-json']
+let g:coc_global_extensions = []
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
