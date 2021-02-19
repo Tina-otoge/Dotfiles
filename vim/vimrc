@@ -93,6 +93,8 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 
+set fillchars+=vert:\▏
+
 augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
