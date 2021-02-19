@@ -29,7 +29,8 @@ nnoremap <leader>g :Git add %<bar>Git commit<CR>
 call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
-call NIMap('<F10>', ':FZF<CR>')
+call NIMap('<C-F10>', ':Rg<CR>')
+call NIMap('<F10>', ':Files<CR>')
 call NIMap('<F11>', ':Goyo<CR>')
 call NIMap('<F12>', '<Plug>(coc-definition)<CR>')
 
