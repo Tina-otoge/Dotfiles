@@ -17,7 +17,6 @@ alias w='which'
 # $OVERRIDES
 alias dd='dd status=progress'
 alias df='df -h --output=source,fstype,size,used,avail,pcent,target -x tmpfs -x devtmpfs'
-alias feh='feh --force-aliasing'
 alias g++='g++ -Wall -Wextra -W'
 alias gcc='gcc -Wall -Wextra -W'
 alias grep='grep --color=auto'
