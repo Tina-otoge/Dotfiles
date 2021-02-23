@@ -98,3 +98,6 @@
 [submodule "vim/bundle/vue"]
 	path = vim/bundle/vue
 	url = https://github.com/posva/vim-vue
+[submodule "vim/bundle/godot"]
+	path = vim/bundle/godot
+	url = https://github.com/habamax/vim-godot
