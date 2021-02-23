@@ -6,7 +6,7 @@ function custom#patch_colors#patch_molokai()
 	hi LineNr      ctermfg=8
 	hi LineNr      ctermbg=NONE
 	hi Visual      ctermbg=8
-	hi SignColumn  ctermbg=NONE
+	hi SignColumn  ctermbg=NONE guibg=NONE
 	hi VertSplit   ctermbg=NONE
 
 	" Coc
