@@ -24,6 +24,4 @@
 [merge]
 	ff = true
 
-[pull]
-	rebase = true
 # vim: ft=gitconfig
