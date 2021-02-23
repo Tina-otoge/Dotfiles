@@ -33,11 +33,11 @@ bindsym $mod+Delete exec dm-tool switch-to-greeter
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec cd "$(xcwd)"; exec $term
 
-bindsym $mod+Shift+p exec "source ~/.bashrc; turbopaste"
+bindsym $mod+Shift+p exec "turbopaste"
 
 bindsym $mod+p exec $term -e htop
 
-bindsym $mod+b exec "source ~/.bashrc; firefox --new-window"
+bindsym $mod+b exec "firefox --new-window"
 
 bindsym Mod1+Tab exec rofi -show window
 
