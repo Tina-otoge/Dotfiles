@@ -10,18 +10,22 @@ bindsym $mod+l exec swaylock --screenshots --fade-in 3 --effect-blur 10x3 --effe
 
 output * bg /usr/share/backgrounds/default.png fill
 
-output eDP-1 pos 0 1080
-output HDMI-A-2 pos 0 0
+output eDP-1 pos 1920 1080
+output HDMI-A-2 pos 1920 0
+output DP-1 pos 0 1080
 
 input * {
-	xkb_layout "fr,us"
+	xkb_layout "us,fr"
+	xkb_variant "altgr-intl,azerty"
 }
 
-input "1:1:AT_Translated_Set_2_keyboard" xkb_options caps:swapescape
+input "1:1:AT_Translated_Set_2_keyboard" {
+	xkb_layout "fr"
+	xkb_options caps:swapescape
+}
 
 input "1452:591:Keychron_K3_Keyboard" {
 	xkb_layout "us"
-	xkb_variant "altgr-intl"
 }
 
 seat * hide_cursor 2000
