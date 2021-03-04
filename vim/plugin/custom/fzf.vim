@@ -1,1 +1,1 @@
-command! -bang -nargs=* Ag call fzf#vim#rg(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+let g:fzf_preview_window = ['up:40%:hidden', 'f10']
