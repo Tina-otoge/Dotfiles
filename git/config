@@ -24,4 +24,10 @@
 [merge]
 	ff = true
 
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = master
+
 # vim: ft=gitconfig
