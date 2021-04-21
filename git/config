@@ -25,3 +25,5 @@
 	ff = true
 
 # vim: ft=gitconfig
+[pull]
+	rebase = false
