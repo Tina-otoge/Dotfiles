@@ -4,7 +4,8 @@
 let g:lightline = {
 \ 'active': {
 \	'left': [['mode'],
-\	         ['cocstatus', 'currentfunction', 'readonly', 'filename', 'gitbranch']]
+\	         ['readonly', 'filename', 'cocstatus', 'currentfunction', 'gitbranch']],
+\	'right': [['lineinfo'], ['percent']]
 \ },
 \ 'component_function': {
 \	'filename': 'LightlineFilename',
