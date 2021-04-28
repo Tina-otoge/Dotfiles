@@ -33,6 +33,7 @@ call NIMap('<C-F10>', ':Rg<CR>')
 call NIMap('<F10>', ':Files<CR>')
 call NIMap('<F11>', ':Goyo<CR>')
 call NIMap('<F12>', '<Plug>(coc-definition)<CR>')
-call NIMap('<C-t>', 'tabnew<CR>')
+call NIMap('<C-t>', ':tabnew<CR>')
+call NIMap('<C-h>', ':Buffers<CR>')
 
 call NXMap('ga', '<Plug>(EasyAlign)')
