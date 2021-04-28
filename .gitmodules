@@ -101,3 +101,6 @@
 [submodule "vim/bundle/godot"]
 	path = vim/bundle/godot
 	url = https://github.com/habamax/vim-godot
+[submodule "vim/bundle/ale"]
+	path = vim/bundle/ale
+	url = https://github.com/dense-analysis/ale
