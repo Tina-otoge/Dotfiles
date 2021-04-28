@@ -37,7 +37,7 @@ bindsym $mod+Shift+p exec "turbopaste"
 
 bindsym $mod+p exec $term -e htop
 
-bindsym $mod+b exec "firefox --new-window"
+bindsym $mod+b exec "firefox --new-window || flatpak run org.mozilla.firefox"
 
 bindsym Mod1+Tab exec rofi -show window
 
