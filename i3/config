@@ -48,7 +48,7 @@ bindsym $mod+Shift+v exec up-last-screen
 bindsym $mod+colon exec langswitcher
 bindsym $mod+period exec langswitcher
 
-bindsym $mod+dollar exec rofimoji -s neutral -p --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
+bindsym $mod+semicolon exec rofimoji -s neutral -p --rofi-args="-config ~/.config/rofi/config-emoji.rasi"
 # screenshots
 bindsym Print exec screenshot
 bindsym $mod+Print exec maim -s -u | xclip -selection clipboard -t image/png && xclip -selection clipboard -o > "$HOME/Pictures/Screenshots/$(date +'%F-%H%M%S')_maim.png"
