@@ -18,6 +18,8 @@ inoremap <C-l> <Esc>
 nnoremap <C-l> i
 tnoremap <C-l> <C-w>N
 tnoremap <C-j> <C-d>
+tnoremap <C-PageDown> <C-w>Ngt
+tnoremap <C-PageUp> <C-w>NgT
 
 nnoremap q :quit<CR>
 nnoremap Q :quitall<CR>
@@ -30,6 +32,8 @@ call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
 call NIMap('<C-F10>', ':Rg<CR>')
+" neovim doesn't handle C/S-Fkeys
+call NIMap('<F34>', ':Rg<CR>')
 call NIMap('<F10>', ':Files<CR>')
 call NIMap('<F11>', ':Goyo<CR>')
 call NIMap('<F12>', '<Plug>(coc-definition)<CR>')
