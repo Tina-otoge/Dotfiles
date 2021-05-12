@@ -19,6 +19,7 @@ init_files=(
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
+	"$cfg"'/zsh/plugins/'*/*.zsh
 )
 
 for file in "${init_files[@]}"; do

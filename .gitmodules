@@ -101,3 +101,6 @@
 [submodule "vim/bundle/godot"]
 	path = vim/bundle/godot
 	url = https://github.com/habamax/vim-godot
+[submodule "zsh/plugins/fzf-tab"]
+	path = zsh/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
