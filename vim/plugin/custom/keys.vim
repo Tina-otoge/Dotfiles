@@ -26,13 +26,16 @@ nnoremap Q :quitall<CR>
 nnoremap s :split<CR>
 nnoremap S :vsplit<CR>
 nnoremap <leader>a :Git add %<CR>
+nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>c :Git commit<CR>
 nnoremap <leader>g :Git add %<bar>Git commit<CR>
 call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')
+call NIMap('<C-F9>', ':NERDTreeFind<CR>')
 call NIMap('<C-F10>', ':Rg<CR>')
 " neovim doesn't handle C/S-Fkeys
+call NIMap('<F33>', ':NERDTreeFind<CR>')
 call NIMap('<F34>', ':Rg<CR>')
 call NIMap('<F10>', ':Files<CR>')
 call NIMap('<F11>', ':Goyo<CR>')
