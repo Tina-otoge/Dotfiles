@@ -3,6 +3,10 @@
 # SH FUNCTIONS #
 ################
 
+psrc() {
+	[ -d .venv ] && source ./.venv/bin/activate
+}
+
 mkcd()
 {
 	mkdir -p "$*"
