@@ -4,7 +4,7 @@
 ##############
 
 alias flex='clear && pfetch && read'
-alias refresh='source ~/.bashrc'
+alias refresh='exec $SHELL'
 
 # $SHORTCUTS
 alias ch='chmod'
