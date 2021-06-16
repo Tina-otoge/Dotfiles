@@ -32,10 +32,13 @@ zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
 # Aliases overrides
-alias refresh='source ~/.zshrc'
 alias which='whence -p'
 
 # Environment overrides
 export SHELL="$(which zsh)"
 
 unset cfg
+
+if cmd_exists thefuck; then
+	eval $(thefuck --alias)
+fi

@@ -12,3 +12,5 @@ rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
 zstyle ':completion:*' menu select
 
 setopt appendhistory
+
+unsetopt correct_all
