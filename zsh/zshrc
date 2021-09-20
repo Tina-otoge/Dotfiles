@@ -23,6 +23,10 @@ init_files=(
 )
 
 for file in "${init_files[@]}"; do
+	if [ "$DEBUG_START" != '' ]; then
+		date '+%M:%S.%N'
+		echo $file
+	fi
 	include "$file"
 done
 unset init_files

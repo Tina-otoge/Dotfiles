@@ -1,5 +1,2 @@
 #!/bin/bash
 
-if cmd_exists pipenv; then
-	eval "$(pipenv --completion)"
-fi
