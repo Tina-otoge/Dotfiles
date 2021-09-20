@@ -9,8 +9,10 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Highlight symbol under cursor on CursorHold
 set updatetime=300
-autocmd CursorHold * sil call CocActionAsync('highlight')
-autocmd CursorHoldI * sil call CocActionAsync('showSignatureHelp')
+if exists('g:coc_did_loaded')
+	autocmd CursorHold * sil call CocActionAsync('highlight')
+	autocmd CursorHoldI * sil call CocActionAsync('showSignatureHelp')
+endif
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

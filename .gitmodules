@@ -29,9 +29,6 @@
 [submodule "vim/bundle/easy-align"]
 	path = vim/bundle/easy-align
 	url = https://github.com/junegunn/vim-easy-align
-[submodule "urxvt/bundle/tabbedex"]
-	path = urxvt/bundle/tabbedex
-	url = https://github.com/shaggytwodope/tabbedex-urxvt
 [submodule "urxvt/bundle/resize-font"]
 	path = urxvt/bundle/resize-font
 	url = https://github.com/simmel/urxvt-resize-font
