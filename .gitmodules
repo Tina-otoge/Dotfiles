@@ -107,3 +107,6 @@
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = https://github.com/lifepillar/vim-solarized8
+[submodule "vim/bundle/jsonc"]
+	path = vim/bundle/jsonc
+	url = https://github.com/neoclide/jsonc.vim
