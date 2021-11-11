@@ -4,7 +4,15 @@
 ################
 
 psrc() {
-	[ -d .venv ] && source ./.venv/bin/activate
+	if ! [ -d .venv ]; then
+		python -m venv .venv
+		fi
+	source ./.venv/bin/activate
+}
+
+prun() {
+	psrc
+	python "$@"
 }
 
 mkcd()
