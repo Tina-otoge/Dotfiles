@@ -53,3 +53,6 @@
 [submodule "vim/bundle/jsonc"]
 	path = vim/bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
+[submodule "vim/bundle/jinja"]
+	path = vim/bundle/jinja
+	url = https://github.com/lepture/vim-jinja
