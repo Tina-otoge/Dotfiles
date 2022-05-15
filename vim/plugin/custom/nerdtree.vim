@@ -1,1 +1,1 @@
-let NERDTreeIgnore = ['__pycache__$', '\.pyc$']
+let NERDTreeIgnore = ['__pycache__$', '\.pyc$', '\.egg-info$']

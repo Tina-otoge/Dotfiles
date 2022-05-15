@@ -21,3 +21,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 pip install --user thefuck
 gsettings set org.gnome.shell.app-switcher current-workspace-only false
 gsettings set org.gnome.shell.window-switcher current-workspace-only false
+echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
