@@ -16,6 +16,7 @@ init_files=(
 	"$cfg"'/bash/completion'
 	'/usr/share/zsh/site-functions/fzf'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
