@@ -14,14 +14,17 @@ init_files=(
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	"$cfg"'/bash/completion'
-	'/usr/share/zsh/site-functions/fzf'
-	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/fzf/shell/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/completion.zsh'
+	"$cfg"'/zsh/plugins/'*/*.zsh
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
-	"$cfg"'/zsh/plugins/'*/*.zsh
+	'/usr/share/doc/fzf/examples/completion.zsh'
+	'/usr/share/doc/fzf/examples/key-bindings.zsh'
+	'/usr/share/fzf/key-bindings.zsh'
+	'/usr/share/fzf/shell/key-bindings.zsh'
+	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/zsh/site-functions/fzf'
+	'/usr/share/zsh/plugins/'*/*.zsh
+	/etc/profile.d/vte.sh
 )
 
 for file in "${init_files[@]}"; do

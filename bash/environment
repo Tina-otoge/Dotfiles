@@ -16,7 +16,7 @@ pathmunge '/var/lib/snapd/snap/bin'
 pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/.opam/default/bin'
-pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
+pathmunge "$HOME"'/Repositories/Tina/Dotfiles-scripts/bin'
 pathmunge "$HOME/.local/opt/android-sdk/cmdline-tools/latest/bin"
 pathmunge "$HOME/.local/opt/flutter-sdk/bin"
 
@@ -42,18 +42,13 @@ if [ "$WAYLAND_DISPLAY" ]; then
 	export GDK_BACKEND=wayland
 fi
 
-if [ "$WAYLAND_DISPLAY" ]; then
-	export MOZ_ENABLE_WAYLAND=1
-	export GDK_BACKEND=wayland
-fi
-
 
 # USER VARIABLES
 # Use lowercase here
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
-export dotfiles="$HOME"'/Repositories/skielred/Dotfiles'
+export dotfiles="$HOME"'/Repositories/Tina/Dotfiles'
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
