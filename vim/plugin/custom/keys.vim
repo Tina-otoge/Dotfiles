@@ -29,6 +29,8 @@ nnoremap <leader>a :Git add %<CR>
 nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>c :Git commit<CR>
 nnoremap <leader>g :Git add %<bar>Git commit<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>F :Rg<CR>
 call NIMap('<F7>', '<Plug>(coc-fix-current)')
 call NIMap('<F8>', ':CocList diagnostics<CR>')
 call NIMap('<F9>', ':NERDTreeToggle<CR>')

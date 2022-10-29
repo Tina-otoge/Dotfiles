@@ -11,6 +11,7 @@ init_files=(
 	"$cfg"'/bash/aliases'
 	"$cfg"'/bash/completion'
 	"$cfg"'/bash/custom'
+	'/usr/lib/sdk/dotnet6/enable.sh'
 )
 for file in "${init_files[@]}"; do
 	include "$file"

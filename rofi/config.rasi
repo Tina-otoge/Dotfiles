@@ -9,7 +9,6 @@ configuration {
 	max-history-size: 300;
 	modi: "drun,run,window";
 	show-icons: true;
-	theme: "tina-monokai";
 	width: 600;
 /*	auto-select: false;*/
 /*	case-sensitive: false;*/
@@ -124,3 +123,5 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	window-match-fields: "all";*/
 }
+
+@theme "tina-monokai"

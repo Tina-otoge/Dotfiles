@@ -4,3 +4,6 @@ compile_commands.json
 *.swp
 *.swo
 vgcore.*
+/.vim/
+/.venv/
+/venv/
