@@ -6,5 +6,5 @@
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.warningSign": ">>",
 	"clangd.semanticHighlighting": true,
-	"html.filetypes": ["html", "html-jinja", "jinja.html"],
+	"html.filetypes": ["html", "html-jinja", "jinja.html"]
 }
