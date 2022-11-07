@@ -1,13 +1,13 @@
 function custom#patch_colors#patch_molokai()
 	hi SpellBad    cterm=underline ctermbg=NONE ctermfg=red
-	hi Normal      ctermbg=NONE
+	hi Normal      ctermbg=NONE guibg=NONE
 	hi Identifier  ctermfg=7
 	hi ColorColumn ctermbg=1
 	hi LineNr      ctermfg=8
-	hi LineNr      ctermbg=NONE
+	hi LineNr      ctermbg=NONE guibg=NONE
 	hi Visual      ctermbg=8
 	hi SignColumn  ctermbg=NONE guibg=NONE
-	hi VertSplit   ctermbg=NONE
+	hi VertSplit   ctermbg=NONE guibg=NONE
 
 	" Coc
 	hi CocWarningHighlight ctermbg=3 ctermfg=7

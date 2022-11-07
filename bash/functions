@@ -6,6 +6,9 @@
 psrc() {
 	if ! [ -d .venv ]; then
 		python -m venv .venv
+		if [ -f requirements.txt ]; then
+			./.venv/bin/pip install -r requirements.txt
+		fi
 	fi
 	source ./.venv/bin/activate
 }
@@ -65,8 +68,7 @@ cmd_exists() {
 
 
 if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
-	mkdir -p ~/.local/bin
-	(cd ~/.local/bin && ln -s "$(which chromium-browser)" google-chrome)
+	(mkcd ~/.local/bin && ln -sf "$(which chromium-browser)" google-chrome)
 fi
 
 uu() {
@@ -75,9 +77,11 @@ uu() {
 	else
 		prefix=''
 	fi
+	cmd_exists flatpak && flatpak update
 	cmd_exists apt && $prefix apt update && $prefix apt upgrade $* && return 0
 	cmd_exists apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
 	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
+	cmd_exists yay && yay $* && return 0
 	cmd_exists pacman && $prefix pacman -Syu $* && return 0
 
 	echo No known package manager found. Aborting. >&2

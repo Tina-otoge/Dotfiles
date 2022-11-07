@@ -10,7 +10,7 @@ endfunction
 
 nmap <C-h> :0r !headergen %<CR>0kwv$h
 
-let mapleader = ','
+let mapleader = ' '
 
 " Terminal sexyness
 call NIMap('<C-j>', ':terminal<CR>')
