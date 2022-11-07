@@ -23,9 +23,14 @@ init_files=(
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
-	'/usr/share/zsh/plugins/'*/*.zsh
 	/etc/profile.d/vte.sh
 )
+
+if [ -d /usr/share/zsh/plugins ]; then
+	for d in /usr/share/zsh/plugins/*/; do
+		include "$d"/*.zsh
+	done
+fi
 
 for file in "${init_files[@]}"; do
 	if [ "$DEBUG_START" != '' ]; then
