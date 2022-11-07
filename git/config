@@ -25,11 +25,9 @@
 	ff = true
 
 [pull]
-	rebase = true
+	rebase = false
 
 [init]
 	defaultBranch = master
 
 # vim: ft=gitconfig
-[pull]
-	rebase = false
