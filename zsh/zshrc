@@ -22,6 +22,7 @@ init_files=(
 	'/usr/share/fzf/key-bindings.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
 	/etc/profile.d/vte.sh
 )
