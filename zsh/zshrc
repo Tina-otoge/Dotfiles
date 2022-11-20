@@ -14,16 +14,24 @@ init_files=(
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	"$cfg"'/bash/completion'
-	'/usr/share/zsh/site-functions/fzf'
-	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/fzf/shell/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/completion.zsh'
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
-	"$cfg"'/zsh/plugins/'*/*.zsh
+	'/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/doc/fzf/examples/completion.zsh'
+	'/usr/share/doc/fzf/examples/key-bindings.zsh'
+	'/usr/share/fzf/key-bindings.zsh'
+	'/usr/share/fzf/shell/key-bindings.zsh'
+	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/zsh/site-functions/fzf'
+	/etc/profile.d/vte.sh
 )
+
+if [ -d /usr/share/zsh/plugins ]; then
+	for d in /usr/share/zsh/plugins/*/; do
+		include "$d"/*.zsh
+	done
+fi
 
 for file in "${init_files[@]}"; do
 	if [ "$DEBUG_START" != '' ]; then

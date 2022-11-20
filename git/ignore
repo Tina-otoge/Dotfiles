@@ -4,6 +4,6 @@ compile_commands.json
 *.swp
 *.swo
 vgcore.*
-/.vim/
-/.venv/
-/venv/
+venv/
+.venv/
+__pycache__/
