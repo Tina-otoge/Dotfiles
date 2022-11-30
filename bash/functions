@@ -29,6 +29,28 @@ vw()
 	vim `which "$1"`
 }
 
+git-shallow()
+{
+	default_branch="$(git config init.defaultbranch)"
+	usage="USAGE:\n$0 <Git URL> [commit/tag/branch/... (default: $default_branch)] [dir (default: .)]"
+	if [ -z "$1" ]; then
+		echo Missing Git URL >&2
+		echo >&2
+		echo $usage >&2
+		return 1
+	fi
+
+	if [ "$1" == '-h'] || [ "$1" == '--help' ]; then
+		echo $usage
+		return 0
+	fi
+
+	git init ${3:-.}
+	git remote add origin "$1"
+	git fetch --depth 1 origin ${2:-$deault_branch}
+	git checkout FETCH_HEAD
+}
+
 lookup() {
 	locate -b --regex "^$1$"
 }
