@@ -9,6 +9,7 @@ alias refresh='exec $SHELL'
 # $SHORTCUTS
 alias ch='chmod'
 alias cls='clear'
+alias hx='helix'
 alias n='nvim'
 alias open='xdg-open'
 alias v='vim'

@@ -4,7 +4,18 @@
 ################
 
 psrc() {
-	[ -d .venv ] && source ./.venv/bin/activate
+	if ! [ -d .venv ]; then
+		python -m venv .venv
+		if [ -f requirements.txt ]; then
+			./.venv/bin/pip install -r requirements.txt
+		fi
+	fi
+	source ./.venv/bin/activate
+}
+
+prun() {
+	psrc
+	python "$@"
 }
 
 mkcd()
@@ -16,6 +27,28 @@ mkcd()
 vw()
 {
 	vim `which "$1"`
+}
+
+git-shallow()
+{
+	default_branch="$(git config init.defaultbranch)"
+	usage="USAGE:\n$0 <Git URL> [commit/tag/branch/... (default: $default_branch)] [dir (default: .)]"
+	if [ -z "$1" ]; then
+		echo Missing Git URL >&2
+		echo >&2
+		echo $usage >&2
+		return 1
+	fi
+
+	if [ "$1" == '-h'] || [ "$1" == '--help' ]; then
+		echo $usage
+		return 0
+	fi
+
+	git init ${3:-.}
+	git remote add origin "$1"
+	git fetch --depth 1 origin ${2:-$deault_branch}
+	git checkout FETCH_HEAD
 }
 
 lookup() {
@@ -57,8 +90,7 @@ cmd_exists() {
 
 
 if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
-	mkdir -p ~/.local/bin
-	(cd ~/.local/bin && ln -s "$(which chromium-browser)" google-chrome)
+	(mkcd ~/.local/bin && ln -sf "$(which chromium-browser)" google-chrome)
 fi
 
 uu() {
@@ -67,9 +99,11 @@ uu() {
 	else
 		prefix=''
 	fi
+	cmd_exists flatpak && flatpak update
 	cmd_exists apt && $prefix apt update && $prefix apt upgrade $* && return 0
 	cmd_exists apt-get && $prefix apt-get update && $prefix apt-get upgrade $* && return 0
 	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
+	cmd_exists yay && yay $* && return 0
 	cmd_exists pacman && $prefix pacman -Syu $* && return 0
 
 	echo No known package manager found. Aborting. >&2

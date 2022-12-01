@@ -1,12 +1,9 @@
 [submodule "vim/autoload/pathogen"]
 	path = vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/bundle/commentaru"]
+[submodule "vim/bundle/commentary"]
 	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "vim/bundle/hardmode"]
-	path = vim/bundle/hardmode
-	url = https://github.com/wikitopian/hardmode
 [submodule "vim/bundle/lightline"]
 	path = vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
@@ -17,18 +14,12 @@
 [submodule "vim/bundle/molokai"]
 	path = vim/bundle/molokai
 	url = https://github.com/tomasr/molokai
-[submodule "vim/bundle/YouCompleteMe"]
-	path = vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "vim/bundle/NERDTree"]
 	path = vim/bundle/NERDTree
 	url = https://github.com/scrooloose/nerdtree
 [submodule "vim/bundle/goyo"]
 	path = vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim
-[submodule "vim/bundle/easy-align"]
-	path = vim/bundle/easy-align
-	url = https://github.com/junegunn/vim-easy-align
 [submodule "urxvt/bundle/resize-font"]
 	path = urxvt/bundle/resize-font
 	url = https://github.com/simmel/urxvt-resize-font
@@ -38,36 +29,9 @@
 [submodule "vim/bundle/editorconfig"]
 	path = vim/bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
-[submodule "vim/bundle/hilinks"]
-	path = vim/bundle/hilinks
-	url = https://github.com/kergoth/vim-hilinks
-[submodule "vim/bundle/go"]
-	path = vim/bundle/go
-	url = https://github.com/fatih/vim-go
-[submodule "vim/bundle/phpcomplete"]
-	path = vim/bundle/phpcomplete
-	url = https://github.com/shawncplus/phpcomplete.vim
-[submodule "vim/bundle/pep8-indent"]
-	path = vim/bundle/pep8-indent
-	url = https://github.com/Vimjas/vim-python-pep8-indent
-[submodule "vim/bundle/jinja2"]
-	path = vim/bundle/jinja2
-	url = https://github.com/Glench/Vim-Jinja2-Syntax
-[submodule "vim/bundle/python-syntax"]
-	path = vim/bundle/python-syntax
-	url = https://github.com/vim-python/python-syntax
-[submodule "vim/bundle/closetag"]
-	path = vim/bundle/closetag
-	url = https://github.com/alvan/vim-closetag
-[submodule "vim/bundle/html5"]
-	path = vim/bundle/html5
-	url = https://github.com/othree/html5.vim
 [submodule "vim/bundle/coc"]
 	path = vim/bundle/coc
 	url = https://github.com/neoclide/coc.nvim
-[submodule "vim/bundle/lsp-cxx-highlight"]
-	path = vim/bundle/lsp-cxx-highlight
-	url = https://github.com/jackguo380/vim-lsp-cxx-highlight
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
@@ -83,24 +47,15 @@
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/bundle/gruvbox"]
-	path = vim/bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox
-[submodule "vim/bundle/lua"]
-	path = vim/bundle/lua
-	url = https://github.com/tbastos/vim-lua
-[submodule "vim/bundle/glsl"]
-	path = vim/bundle/glsl
-	url = https://github.com/tikhomirov/vim-glsl
-[submodule "vim/bundle/vue"]
-	path = vim/bundle/vue
-	url = https://github.com/posva/vim-vue
-[submodule "vim/bundle/godot"]
-	path = vim/bundle/godot
-	url = https://github.com/habamax/vim-godot
 [submodule "zsh/plugins/fzf-tab"]
 	path = zsh/plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab
-[submodule "vim/bundle/solarized"]
-	path = vim/bundle/solarized
-	url = https://github.com/lifepillar/vim-solarized8
+[submodule "vim/bundle/jsonc"]
+	path = vim/bundle/jsonc
+	url = https://github.com/neoclide/jsonc.vim
+[submodule "vim/bundle/jinja"]
+	path = vim/bundle/jinja
+	url = https://github.com/lepture/vim-jinja
+[submodule "vim/bundle/python-syntax"]
+	path = vim/bundle/python-syntax
+	url = https://github.com/vim-python/python-syntax

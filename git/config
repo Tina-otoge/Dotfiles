@@ -25,11 +25,12 @@
 	ff = true
 
 [pull]
-	rebase = true
+	rebase = false
 
 [init]
 	defaultBranch = master
 
+[diff "sopsdiffer"]
+	textconv = sops -d
+
 # vim: ft=gitconfig
-[pull]
-	rebase = false

@@ -21,11 +21,14 @@ input * {
 
 input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout "fr"
-	xkb_options caps:swapescape
 }
 
 input "1452:591:Keychron_K3_Keyboard" {
 	xkb_layout "us"
+}
+
+input type:touchpad {
+	natural_scroll enabled
 }
 
 seat * hide_cursor 2000

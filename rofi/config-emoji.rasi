@@ -3,7 +3,6 @@ configuration {
 	font: "Noto Emoji Color 11";
 	lines: 9;
 	show-icons: true;
-	theme: "tina-monokai";
 	width: 900;
 	columns: 3;
 /*	auto-select: false;*/
@@ -119,3 +118,5 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	window-match-fields: "all";*/
 }
+
+@theme "tina-monokai"
