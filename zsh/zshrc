@@ -40,5 +40,5 @@ export SHELL="$(which zsh)"
 unset cfg
 
 if cmd_exists thefuck; then
-	eval $(thefuck --alias)
+	eval $(thefuck --alias 2>/dev/null)
 fi
