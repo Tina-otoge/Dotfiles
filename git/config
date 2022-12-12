@@ -30,4 +30,7 @@
 [init]
 	defaultBranch = master
 
+[diff "sopsdiffer"]
+	textconv = sops -d
+
 # vim: ft=gitconfig
