@@ -27,6 +27,7 @@ alias openvpn='openvpn  --up /usr/share/openvpn/contrib/pull-resolv-conf/client.
 alias ssh='ssh -t'
 alias sudo='sudo '
 alias tree='tree -C'
+alias tget='webtorrent download'
 
 # $OPTIONS AND ARGUMENTS SHORTCUTS
 alias gd='git diff'
