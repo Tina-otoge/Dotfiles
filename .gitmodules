@@ -1,64 +1,88 @@
-[submodule "vim/autoload/pathogen"]
-	path = vim/bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen
 [submodule "vim/bundle/commentary"]
 	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary
+	branch = master
 [submodule "vim/bundle/lightline"]
 	path = vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
+	branch = master
 [submodule "vim/bundle/gitbranch"]
 	path = vim/bundle/gitbranch
 	url = https://github.com/itchyny/vim-gitbranch
-	ignore = untracked
+	branch = master
 [submodule "vim/bundle/molokai"]
 	path = vim/bundle/molokai
 	url = https://github.com/tomasr/molokai
+	branch = master
 [submodule "vim/bundle/NERDTree"]
 	path = vim/bundle/NERDTree
 	url = https://github.com/scrooloose/nerdtree
+	branch = master
 [submodule "vim/bundle/goyo"]
 	path = vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim
+	branch = master
 [submodule "urxvt/bundle/resize-font"]
 	path = urxvt/bundle/resize-font
 	url = https://github.com/simmel/urxvt-resize-font
+	branch = master
 [submodule "urxvt/bundle/matcher-linelimit"]
 	path = urxvt/bundle/matcher-linelimit
 	url = https://github.com/skielred/urxvt-matcher-linelimit
+	branch = master
 [submodule "vim/bundle/editorconfig"]
 	path = vim/bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
+	branch = master
 [submodule "vim/bundle/coc"]
 	path = vim/bundle/coc
 	url = https://github.com/neoclide/coc.nvim
+	branch = master
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+	branch = master
 [submodule "vim/bundle/fzf"]
 	path = vim/bundle/fzf
 	url = https://github.com/junegunn/fzf.vim
+	branch = master
 [submodule "vim/bundle/eunuch"]
 	path = vim/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch
+	branch = master
 [submodule "vim/bundle/loupe"]
 	path = vim/bundle/loupe
 	url = https://github.com/wincent/loupe
+	branch = main
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
+	branch = master
 [submodule "zsh/plugins/fzf-tab"]
 	path = zsh/plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab
+	branch = master
 [submodule "vim/bundle/jsonc"]
 	path = vim/bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
+	branch = master
 [submodule "vim/bundle/jinja"]
 	path = vim/bundle/jinja
 	url = https://github.com/lepture/vim-jinja
+	branch = master
 [submodule "vim/bundle/python-syntax"]
 	path = vim/bundle/python-syntax
 	url = https://github.com/vim-python/python-syntax
+	branch = master
 [submodule "vim/bundle/copilot"]
 	path = vim/bundle/copilot
 	url = https://github.com/github/copilot.vim
+	branch = release
+[submodule "vim/bundle/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen
+	branch = master
+[submodule "vim/bundle/dispatch"]
+	path = vim/bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch
+	branch = master
