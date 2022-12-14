@@ -29,6 +29,12 @@ vw()
 	vim `which "$1"`
 }
 
+vim()
+{
+	mkdir -p "$(dirname "$1")"
+	command vim "$@"
+}
+
 git-shallow()
 {
 	default_branch="$(git config init.defaultbranch)"
