@@ -1,10 +1,12 @@
 {
+	"clangd.semanticHighlighting": true,
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
+	"coc.preferences.formatOnSaveFiletypes": ["*" ],
+	"diagnostic.checkCurrentLine": true,
 	"diagnostic.enable": true,
+	"diagnostic.warningSign": ">>",
+	"html.filetypes": ["html", "html-jinja", "jinja.html"],
+	"python.formatting.provider": "black",
 	"suggest.numberSelect": true,
 	"suggest.triggerAfterInsertEnter": true,
-	"diagnostic.checkCurrentLine": true,
-	"diagnostic.warningSign": ">>",
-	"clangd.semanticHighlighting": true,
-	"html.filetypes": ["html", "html-jinja", "jinja.html"]
 }
