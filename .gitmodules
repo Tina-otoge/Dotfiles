@@ -86,3 +86,6 @@
 	path = vim/bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch
 	branch = master
+[submodule "vim/bundle/jenkinsfile-syntax"]
+	path = vim/bundle/jenkinsfile-syntax
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
