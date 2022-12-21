@@ -13,6 +13,18 @@ psrc() {
 	source ./.venv/bin/activate
 }
 
+dbx() {
+	default_box=arch
+	boxes=$(distrobox list | cut -d '|' -f 2 | tail -n +2 | head -n -1 | xargs)
+	for box in $boxes; do
+		if [[ "$box" == "$default_box" ]]; then
+			exec distrobox enter "$box"
+			return
+		fi
+	done
+	echo "No distrobox $default_box found" >&2
+}
+
 prun() {
 	psrc
 	python "$@"
@@ -94,10 +106,6 @@ cmd_exists() {
 	return 1
 }
 
-
-if ! cmd_exists google-chrome && cmd_exists chromium-browser; then
-	(mkcd ~/.local/bin && ln -sf "$(which chromium-browser)" google-chrome)
-fi
 
 uu() {
 	if [ $(id -u) != 0 ] && cmd_exists sudo; then
