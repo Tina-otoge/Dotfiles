@@ -1,9 +1,11 @@
 include () {
-	if [ -n "$DEBUG_START" ]; then
-		date '+%M:%S.%N'
-		echo $file
+	if [ -f "$1" ]; then
+		if [ -n "$DEBUG_START" ]; then
+			date '+%M:%S.%N'
+			echo $file
+		fi
+ 	       source "$1"
 	fi
-	[ -f "$1" ] && source "$1"
 }
 
 cfg="$HOME"'/.config'
@@ -21,27 +23,14 @@ init_files=(
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
 	'/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/doc/fzf/examples/key-bindings.zsh'
 	'/usr/share/doc/fzf/examples/completion.zsh'
+	'/usr/share/doc/fzf/examples/key-bindings.zsh'
 	'/usr/share/fzf/key-bindings.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
 	/etc/profile.d/vte.sh
 )
-
-if [ -d /usr/share/zsh/plugins ]; then
-	for d in /usr/share/zsh/plugins/*/; do
-		include "$d"/*.zsh
-	done
-fi
-
-for d in "$HOME/.config/zsh/plugins/"*/; do
-	for f in "$d"/*.plugin.zsh; do
-		include "$f"
-	done
-done
 
 
 for file in "${init_files[@]}"; do
@@ -49,6 +38,17 @@ for file in "${init_files[@]}"; do
 done
 unset init_files
 
+if [ -d /usr/share/zsh/plugins ]; then
+	for d in /usr/share/zsh/plugins/*/; do
+		include "$d"/*.plugin.zsh
+	done
+fi
+
+for d in "$HOME/.config/zsh/plugins/"*/; do
+	include "$d"/*.plugin.zsh
+done
+
+# Bind ctrl+z to resume (fg)
 _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
