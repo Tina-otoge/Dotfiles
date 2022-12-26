@@ -14,7 +14,7 @@ psrc() {
 }
 
 dbx() {
-	default_box=arch
+	default_box=${1:-arch}
 	boxes=$(distrobox list | cut -d '|' -f 2 | tail -n +2 | head -n -1 | xargs)
 	for box in $boxes; do
 		if [[ "$box" == "$default_box" ]]; then
