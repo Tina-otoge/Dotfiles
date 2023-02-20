@@ -1,7 +1,7 @@
 {
 	"clangd.semanticHighlighting": true,
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
-	"coc.preferences.formatOnSaveFiletypes": ["*" ],
+	"coc.preferences.formatOnSaveFiletypes": ["*"],
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.enable": true,
 	"diagnostic.warningSign": ">>",
