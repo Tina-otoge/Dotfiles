@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=WebTorrent CLI
+Icon=io.webtorrent.WebTorrent
+Exec=/usr/bin/webtorrent --mpv %U
+Terminal=true
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;x-scheme-handler/stream-magnet;
+Categories=Network;FileTransfer;P2P;

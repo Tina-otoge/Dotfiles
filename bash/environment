@@ -55,6 +55,7 @@ export GEM_HOME=$HOME/.local/lib/ruby/gem
 export GEM_PATH=$HOME/.local/lib/ruby/gem:/usr/local/share/gems:/usr/share/rubygems:/usr/share/gems
 
 export HISTFILE=~/.history
+export HISTSIZE=2000
 export SAVEHIST=1000
 export HISTSIZE=10000
 
