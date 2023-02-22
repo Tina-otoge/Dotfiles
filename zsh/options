@@ -14,3 +14,6 @@ zstyle ':completion:*' menu select
 setopt inc_append_history
 
 unsetopt correct_all
+
+# Allow commands in PS1
+setopt PROMPT_SUBST
