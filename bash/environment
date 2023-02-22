@@ -56,6 +56,7 @@ export GEM_PATH=$HOME/.local/lib/ruby/gem:/usr/local/share/gems:/usr/share/rubyg
 
 export HISTFILE=~/.history
 export SAVEHIST=1000
+export HISTSIZE=10000
 
 export EDITOR=vim
 # Page format for man(1)
