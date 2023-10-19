@@ -7,6 +7,7 @@ zstyle :compinstall filename "$cfg"'/zsh/zshrc'
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 autoload -Uz compinit
+compinit
 # rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
 
 zstyle ':completion:*' menu select
