@@ -4,13 +4,22 @@
 ################
 
 psrc() {
-	if ! [ -d .venv ]; then
+	if [ -d .virtualenv ]; then
+		dir=.virtualenv
+	else
+		dir=.venv
+	fi
+	if ! [ -d $dir/bin ]; then
+		bin_dir=$(find $dir -type d -name bin | head -n 1)
+		dir=$(dirname $bin_dir)
+	fi
+	if ! [ -d $dir ]; then
 		python -m venv .venv
 		if [ -f requirements.txt ]; then
-			./.venv/bin/pip install -r requirements.txt
+			./$dir/bin/pip install -r requirements.txt
 		fi
 	fi
-	source ./.venv/bin/activate
+	source ./$dir/bin/activate
 }
 
 dbx() {
