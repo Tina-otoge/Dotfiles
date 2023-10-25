@@ -24,6 +24,9 @@ endif
 
 execute pathogen#infect()
 
+set encoding=utf-8
+set fileencoding=utf-8
+
 " Load ./ftplugin/*, ./indent/* and tries to detect filetype
 " cf. https://vi.stackexchange.com/a/10125
 filetype plugin indent on
@@ -86,7 +89,8 @@ set listchars=tab:\·\ ,trail:.,extends:#,nbsp:.
 
 " Change vertical split character
 " See https://stackoverflow.com/questions/9001337/vim-split-bar-styling
-set fillchars+=vert:\▏
+set fillchars+=vert:\|
+" set fillchars+=vert:\▏
 
 " Coc
 set hidden
@@ -96,8 +100,6 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
-
-set fillchars+=vert:\▏
 
 augroup project
   autocmd!

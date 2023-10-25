@@ -1,5 +1,11 @@
 include () {
-	[ -f "$1" ] && source "$1"
+	if [ -f "$1" ]; then
+		if [ -n "$DEBUG_START" ]; then
+			date '+%M:%S.%N'
+			echo $file
+		fi
+ 	       source "$1"
+	fi
 }
 
 cfg="$HOME"'/.config'
@@ -8,31 +14,41 @@ init_files=(
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
-	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/bindings'
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
 	"$cfg"'/bash/completion'
-	'/usr/share/zsh/site-functions/fzf'
-	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-	'/usr/share/fzf/shell/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/key-bindings.zsh'
-	'/usr/share/doc/fzf/examples/completion.zsh'
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
-	"$cfg"'/zsh/plugins/'*/*.zsh
+	'/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/doc/fzf/examples/completion.zsh'
+	'/usr/share/doc/fzf/examples/key-bindings.zsh'
+	'/usr/share/fzf/key-bindings.zsh'
+	'/usr/share/fzf/shell/key-bindings.zsh'
+	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/usr/share/zsh/site-functions/fzf'
+	/etc/profile.d/vte.sh
+	"$cfg"'/bash/custom'
 )
 
+
 for file in "${init_files[@]}"; do
-	if [ "$DEBUG_START" != '' ]; then
-		date '+%M:%S.%N'
-		echo $file
-	fi
 	include "$file"
 done
 unset init_files
 
+if [ -d /usr/share/zsh/plugins ]; then
+	for d in /usr/share/zsh/plugins/*/; do
+		include "$d"/*.plugin.zsh
+	done
+fi
+
+for d in "$HOME/.config/zsh/plugins/"*/; do
+	include "$d"/*.plugin.zsh
+done
+
+# Bind ctrl+z to resume (fg)
 _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
@@ -46,5 +62,5 @@ export SHELL="$(which zsh)"
 unset cfg
 
 if cmd_exists thefuck; then
-	eval $(thefuck --alias)
+	eval $(thefuck --alias 2>/dev/null)
 fi

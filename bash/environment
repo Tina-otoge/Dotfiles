@@ -9,18 +9,16 @@ if [ -d ~/.secrets ]; then
 	done
 fi
 
-alias egrep >/dev/null 2>&1 && unalias egrep
-
 # Add paths to PATH here
 pathmunge '/var/lib/snapd/snap/bin'
 pathmunge "$HOME"'/.local/share/npm/bin'
 pathmunge "$HOME"'/.local/bin'
 pathmunge "$HOME"'/.opam/default/bin'
-pathmunge "$HOME"'/Repositories/skielred/Dotfiles-scripts/bin'
+pathmunge "$HOME"'/Repositories/Tina/Dotfiles-scripts/bin'
 pathmunge "$HOME/.local/opt/android-sdk/cmdline-tools/latest/bin"
 pathmunge "$HOME/.local/opt/flutter-sdk/bin"
 
-if ! echo $XDG_DATA_DIRS | "$(which egrep)" -q "(^|:)$HOME/.local/share($|:)"; then
+if ! echo $XDG_DATA_DIRS | grep -E -q "(^|:)$HOME/.local/share($|:)"; then
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS
 fi
 
@@ -42,18 +40,13 @@ if [ "$WAYLAND_DISPLAY" ]; then
 	export GDK_BACKEND=wayland
 fi
 
-if [ "$WAYLAND_DISPLAY" ]; then
-	export MOZ_ENABLE_WAYLAND=1
-	export GDK_BACKEND=wayland
-fi
-
 
 # USER VARIABLES
 # Use lowercase here
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
-export dotfiles="$HOME"'/Repositories/skielred/Dotfiles'
+export dotfiles="$HOME"'/Repositories/Tina/Dotfiles'
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
@@ -62,7 +55,9 @@ export GEM_HOME=$HOME/.local/lib/ruby/gem
 export GEM_PATH=$HOME/.local/lib/ruby/gem:/usr/local/share/gems:/usr/share/rubygems:/usr/share/gems
 
 export HISTFILE=~/.history
+export HISTSIZE=2000
 export SAVEHIST=1000
+export HISTSIZE=10000
 
 export EDITOR=vim
 # Page format for man(1)
@@ -75,6 +70,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
+[ -n "$TERMUX_VERSION" ] && export ANDROID=1
 
 if [ "$ANDROID" ]; then
 	export PREFIX="$(sh -c 'echo $PREFIX')"
