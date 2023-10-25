@@ -7,3 +7,4 @@ vgcore.*
 /.vim/
 /.venv/
 /venv/
+*.pyc
