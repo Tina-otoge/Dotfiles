@@ -85,11 +85,17 @@ fargs() {
 autoclick() {
 	echo Initiating autoclick in 1s...
 	sleep 1
+	start=$(date +%s)
+	limit=${1:-60}
 	while true; do
 		xdotool mousedown 1;
-		sleep 1e-03;
+		sleep 3e-02;
 		xdotool mouseup 1;
-		sleep 1e-03;
+		sleep 3e-02;
+		now=$(date +%s)
+		if (( now - start > limit )); then
+			break
+		fi
 	done
 	xdotool mouseup 1;
 	echo Mouse released
