@@ -1,9 +1,11 @@
-compile_commands.json
-.clangd
-*~
-*.swp
+*.pyc
 *.swo
-vgcore.*
-venv/
+*.swp
+*~
+.clangd
 .venv/
+/.vim/
 __pycache__/
+compile_commands.json
+venv/
+vgcore.*

@@ -14,7 +14,6 @@ init_files=(
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
-	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/bindings'
 	"$cfg"'/zsh/options'
@@ -30,6 +29,7 @@ init_files=(
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
 	/etc/profile.d/vte.sh
+	"$cfg"'/bash/custom'
 )
 
 
