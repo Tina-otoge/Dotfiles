@@ -34,6 +34,10 @@ dbx() {
 	echo "No distrobox $default_box found" >&2
 }
 
+sandbox() {
+	podman run -v .:/work -w /work --rm -it ubuntu bash
+}
+
 prun() {
 	psrc
 	python "$@"
