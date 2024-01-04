@@ -206,3 +206,7 @@ casm()
 	ld -dynamic-linker /lib64/ld-linux-x86-64.so.2 /tmp/casm.o \
 		-o ${2:-a.out} -lc
 }
+
+commit() {
+	git commit -m "$*"
+}
