@@ -172,7 +172,7 @@ transfer() {
 	copy "$link"
 }
 
-pathmunge () { 
+pathmunge () {
 	if ! echo $PATH | grep -E -q "(^|:)$1($|:)" ; then
 		if [ "$2" = "after" ] ; then
 			PATH=$PATH:$1
@@ -209,4 +209,10 @@ casm()
 
 commit() {
 	git commit -m "$*"
+}
+
+cask() {
+	cmd="$1"
+	shift
+	brew "$cmd" --cask "$@"
 }

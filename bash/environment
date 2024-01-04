@@ -69,6 +69,8 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # CMake compilation database
 export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
+export NVM_DIR="$HOME/.local/opt/nvm"
+
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
 [ -n "$TERMUX_VERSION" ] && export ANDROID=1
 
@@ -81,8 +83,10 @@ if cmd_exists fd; then
 fi
 
 # Colors for ls(1)
-eval $(dircolors)
-export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+if cmd_exists dircolors; then
+	eval $(dircolors)
+	export LS_COLORS="$LS_COLORS"'tw=01;34;40:ow=01;34;40:st=01;34;40:'
+fi
 
 
 settitle()

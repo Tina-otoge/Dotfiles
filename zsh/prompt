@@ -5,7 +5,7 @@
 
 curpath="%F{green}%~%f"
 user="%F{cyan}%n%f"
-host="%F{blue}%m%f"
+host="%F{blue}${HOSTNAME_DISPLAY:-%m}%f"
 char="%f%# "
 
 export PS1="%f"$'\n\e[90m'"[%f$user"$'\e[90m'"@%f$host"$'\e[90m'"]%f$char%f"
