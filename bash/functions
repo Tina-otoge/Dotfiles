@@ -172,7 +172,7 @@ transfer() {
 	copy "$link"
 }
 
-pathmunge () { 
+pathmunge () {
 	if ! echo $PATH | grep -E -q "(^|:)$1($|:)" ; then
 		if [ "$2" = "after" ] ; then
 			PATH=$PATH:$1
@@ -205,4 +205,14 @@ casm()
 	nasm -f elf64 "$1" -o /tmp/casm.o
 	ld -dynamic-linker /lib64/ld-linux-x86-64.so.2 /tmp/casm.o \
 		-o ${2:-a.out} -lc
+}
+
+commit() {
+	git commit -m "$*"
+}
+
+cask() {
+	cmd="$1"
+	shift
+	brew "$cmd" --cask "$@"
 }
