@@ -28,6 +28,8 @@ init_files=(
 	'/usr/share/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
+	/data/data/com.termux/files/usr/share/fzf/completion.zsh
+	/data/data/com.termux/files/usr/share/fzf/key-bindings.zsh
 	/etc/profile.d/vte.sh
 	"$cfg"'/bash/custom'
 )
