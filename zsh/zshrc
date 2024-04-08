@@ -26,11 +26,15 @@ init_files=(
 	'/usr/share/doc/fzf/examples/key-bindings.zsh'
 	'/usr/share/fzf/key-bindings.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
+	'/usr/local/share/fzf/key-bindings.zsh'
+	'/usr/local/share/fzf/shell/key-bindings.zsh'
 	'/opt/homebrew/opt/fzf/shell/completion.zsh'
 	'/opt/homebrew/opt/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
+	/data/data/com.termux/files/usr/share/fzf/completion.zsh
+	/data/data/com.termux/files/usr/share/fzf/key-bindings.zsh
 	/etc/profile.d/vte.sh
 	'/opt/homebrew/opt/nvm/nvm.sh'
 	'/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm'

@@ -216,3 +216,14 @@ cask() {
 	shift
 	brew "$cmd" --cask "$@"
 }
+
+logs() {
+	systemctl --user --no-pager status $1
+	if [ $? -ne 4 ]; then
+		flags='--user-unit'
+	else
+		flags=''
+	fi
+	journalctl -fe $flags $1
+}
+
