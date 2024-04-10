@@ -221,9 +221,11 @@ logs() {
 	systemctl --user --no-pager status $1
 	if [ $? -ne 4 ]; then
 		flags='--user-unit'
+		pre=''
 	else
-		flags=''
+		flags='-u'
+		pre='sudo'
 	fi
-	journalctl -fe $flags $1
+	$pre journalctl -fe $flags $1
 }
 
