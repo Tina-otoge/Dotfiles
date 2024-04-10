@@ -9,7 +9,7 @@ psrc() {
 	else
 		dir=.venv
 	fi
-	if ! [ -d $dir/bin ]; then
+	if ! [ -d $dir/bin ] && [ -d $dir ]; then
 		bin_dir=$(find $dir -type d -name bin | head -n 1)
 		dir=$(dirname $bin_dir)
 	fi
