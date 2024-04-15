@@ -1,14 +1,14 @@
 {
 	"clangd.semanticHighlighting": true,
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
-	"coc.preferences.formatOnSaveFiletypes": ["*" ],
+	"coc.preferences.formatOnSaveFiletypes": ["*"],
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.enable": true,
 	"diagnostic.warningSign": ">>",
 	"html.filetypes": ["html", "html-jinja", "jinja.html"],
 	"pyright.disableDiagnostics": true,
 	"python.formatting.provider": "black",
-	"python.linting.ruffEnabled": true,
+	/* "python.linting.ruffEnabled": true, */
 	"suggest.numberSelect": true,
 	"suggest.triggerAfterInsertEnter": true,
 }
