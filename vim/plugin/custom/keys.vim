@@ -46,3 +46,7 @@ call NIMap('<C-t>', ':tabnew<CR>')
 call NIMap('<C-h>', ':Buffers<CR>')
 
 call NXMap('ga', '<Plug>(EasyAlign)')
+
+" Ctrl+N selects first entry instead of second one
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'

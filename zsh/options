@@ -7,10 +7,14 @@ zstyle :compinstall filename "$cfg"'/zsh/zshrc'
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 autoload -Uz compinit
-rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
+compinit
+# rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
 
 zstyle ':completion:*' menu select
 
 setopt inc_append_history
 
 unsetopt correct_all
+
+# Allow commands in PS1
+setopt PROMPT_SUBST

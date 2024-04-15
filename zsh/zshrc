@@ -14,7 +14,6 @@ init_files=(
 	"$cfg"'/bash/functions'
 	"$cfg"'/bash/environment'
 	"$cfg"'/bash/aliases'
-	"$cfg"'/bash/custom'
 	"$cfg"'/zsh/prompt'
 	"$cfg"'/zsh/bindings'
 	"$cfg"'/zsh/options'
@@ -27,9 +26,19 @@ init_files=(
 	'/usr/share/doc/fzf/examples/key-bindings.zsh'
 	'/usr/share/fzf/key-bindings.zsh'
 	'/usr/share/fzf/shell/key-bindings.zsh'
+	'/usr/local/share/fzf/key-bindings.zsh'
+	'/usr/local/share/fzf/shell/key-bindings.zsh'
+	'/opt/homebrew/opt/fzf/shell/completion.zsh'
+	'/opt/homebrew/opt/fzf/shell/key-bindings.zsh'
 	'/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+	'/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 	'/usr/share/zsh/site-functions/fzf'
+	/data/data/com.termux/files/usr/share/fzf/completion.zsh
+	/data/data/com.termux/files/usr/share/fzf/key-bindings.zsh
 	/etc/profile.d/vte.sh
+	'/opt/homebrew/opt/nvm/nvm.sh'
+	'/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm'
+	"$cfg"'/bash/custom'
 )
 
 
@@ -63,4 +72,8 @@ unset cfg
 
 if cmd_exists thefuck; then
 	eval $(thefuck --alias 2>/dev/null)
+fi
+
+if [ -f ~/.nvm/alias/default ]; then
+	nvm use default --silent
 fi

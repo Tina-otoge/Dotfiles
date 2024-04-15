@@ -4,13 +4,22 @@
 ################
 
 psrc() {
-	if ! [ -d .venv ]; then
+	if [ -d .virtualenv ]; then
+		dir=.virtualenv
+	else
+		dir=.venv
+	fi
+	if ! [ -d $dir/bin ] && [ -d $dir ]; then
+		bin_dir=$(find $dir -type d -name bin | head -n 1)
+		dir=$(dirname $bin_dir)
+	fi
+	if ! [ -d $dir ]; then
 		python -m venv .venv
 		if [ -f requirements.txt ]; then
-			./.venv/bin/pip install -r requirements.txt
+			./$dir/bin/pip install -r requirements.txt
 		fi
 	fi
-	source ./.venv/bin/activate
+	source ./$dir/bin/activate
 }
 
 dbx() {
@@ -23,6 +32,10 @@ dbx() {
 		fi
 	done
 	echo "No distrobox $default_box found" >&2
+}
+
+sandbox() {
+	podman run -v .:/work -w /work --rm -it ubuntu bash
 }
 
 prun() {
@@ -58,12 +71,14 @@ git-shallow()
 		return 1
 	fi
 
-	if [ "$1" == '-h'] || [ "$1" == '--help' ]; then
+	if [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
 		echo $usage
 		return 0
 	fi
 
-	git init ${3:-.}
+	dir=${3:-.}
+	git init "$dir"
+	cd "$dir"
 	git remote add origin "$1"
 	git fetch --depth 1 origin ${2:-$deault_branch}
 	git checkout FETCH_HEAD
@@ -85,11 +100,17 @@ fargs() {
 autoclick() {
 	echo Initiating autoclick in 1s...
 	sleep 1
+	start=$(date +%s)
+	limit=${1:-60}
 	while true; do
 		xdotool mousedown 1;
-		sleep 1e-03;
+		sleep 3e-02;
 		xdotool mouseup 1;
-		sleep 1e-03;
+		sleep 3e-02;
+		now=$(date +%s)
+		if (( now - start > limit )); then
+			break
+		fi
 	done
 	xdotool mouseup 1;
 	echo Mouse released
@@ -151,7 +172,7 @@ transfer() {
 	copy "$link"
 }
 
-pathmunge () { 
+pathmunge () {
 	if ! echo $PATH | grep -E -q "(^|:)$1($|:)" ; then
 		if [ "$2" = "after" ] ; then
 			PATH=$PATH:$1
@@ -185,3 +206,24 @@ casm()
 	ld -dynamic-linker /lib64/ld-linux-x86-64.so.2 /tmp/casm.o \
 		-o ${2:-a.out} -lc
 }
+
+commit() {
+	git commit -m "$*"
+}
+
+cask() {
+	cmd="$1"
+	shift
+	brew "$cmd" --cask "$@"
+}
+
+logs() {
+	systemctl --user --no-pager status $1
+	if [ $? -ne 4 ]; then
+		flags='--user-unit'
+	else
+		flags=''
+	fi
+	journalctl -fe $flags $1
+}
+
