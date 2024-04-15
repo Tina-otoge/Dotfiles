@@ -12,6 +12,8 @@ alias cls='clear'
 alias hx='helix'
 alias n='nvim'
 alias open='xdg-open'
+alias sy='systemctl '
+alias syu='systemctl --user '
 alias v='vim'
 alias w='which'
 
