@@ -229,3 +229,13 @@ logs() {
 	$pre journalctl -fe $flags $1
 }
 
+if [ -n $WSL_DISTRO_NAME ]; then
+	open() {
+		target=$(wslpath -w $1)
+		if [ -d "$1" ]; then
+			explorer.exe "$target"
+		else
+			cmd.exe /C start "$target"
+		fi
+	}
+fi

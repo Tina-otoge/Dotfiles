@@ -11,7 +11,9 @@ alias ch='chmod'
 alias cls='clear'
 alias hx='helix'
 alias n='nvim'
-alias open='xdg-open'
+if [ -z $WSL_DISTRO_NAME ]; then
+    alias open='xdg-open'
+fi
 alias sy='sudo systemctl '
 alias syu='systemctl --user '
 alias v='vim'
