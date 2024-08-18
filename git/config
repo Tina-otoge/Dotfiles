@@ -4,7 +4,7 @@
 
 [alias]
 	oops    = reset HEAD~
-	uu      = submodule foreach 'git reset HEAD && git checkout . && git pull origin master --ff'
+	uu      = !git submodule foreach 'git reset HEAD && git checkout .' && git submodule update --recursive --remote -N
 	unstage = reset --
 	unadd   = reset --
 	news    = log -p @{1}..
