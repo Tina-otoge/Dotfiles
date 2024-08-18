@@ -22,6 +22,8 @@ if has('win32') || has('win64')
 	call extend(g:pathogen_disabled, ['cursorword'])
 endif
 
+let g:coc_disable_startup_warning = 1
+
 execute pathogen#infect()
 
 set encoding=utf-8
