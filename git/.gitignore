@@ -1,2 +1,4 @@
 /identity
 /custom*
+/identity.*
+!/identity.default

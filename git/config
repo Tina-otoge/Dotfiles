@@ -2,6 +2,9 @@
 	path = identity
 	path = custom
 
+[includeIf "gitdir:~/Work/"]
+	path = identity.work
+
 [alias]
 	oops    = reset HEAD~
 	uu      = !git submodule foreach 'git reset HEAD && git checkout .' && git submodule update --recursive --remote -N
