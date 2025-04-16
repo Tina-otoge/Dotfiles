@@ -10,7 +10,8 @@ autoload -Uz compinit
 compinit
 # rm -f "$HOME"'/.zcompdump'; compinit -d "$cfg"'/zsh/zcompdump'
 
-zstyle ':completion:*' menu select
+# yes is needed for ssh completion
+zstyle ':completion:*' menu yes select
 
 setopt inc_append_history
 
