@@ -74,6 +74,19 @@ if cmd_exists thefuck; then
 	eval $(thefuck --alias 2>/dev/null)
 fi
 
+if cmd_exists aws_completer; then
+	complete -C "$(which aws_completer)" aws
+fi
+
+if cmd_exists bw; then
+	# bw completion is slow to run, so we cache it
+	if [ ! -f /tmp/bw-zsh-completion ]; then
+		bw completion --shell zsh > /tmp/bw-zsh-completion
+	fi
+	source /tmp/bw-zsh-completion
+	compdef _bw bw
+fi
+
 if [ -f ~/.nvm/alias/default ]; then
 	nvm use default --silent
 fi
