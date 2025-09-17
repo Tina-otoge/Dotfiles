@@ -1,0 +1,6 @@
+ <dead_acute> <C> : "Ç" "Ccedilla"
+ <dead_acute> <c> : "ç" "ccedilla"
+ <dead_acute> <space> : "'"
+ <dead_acute> <dead_acute> : "'"
+ <dead_diaeresis> <space> : "\""
+ <dead_diaeresis> <dead_diaeresis> : "\""
