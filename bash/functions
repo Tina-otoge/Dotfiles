@@ -140,6 +140,7 @@ uu() {
 	cmd_exists dnf && $prefix dnf upgrade --refresh $* && return 0
 	cmd_exists yay && yay $* && return 0
 	cmd_exists pacman && $prefix pacman -Syu $* && return 0
+	cmd_exists brew && brew update && brew upgrade $* && return 0
 
 	echo No known package manager found. Aborting. >&2
 	return 1
