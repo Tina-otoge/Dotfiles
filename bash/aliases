@@ -10,6 +10,8 @@ alias refresh='exec $SHELL'
 alias ch='chmod'
 alias cls='clear'
 alias hx='helix'
+alias k='kubectl'
+alias kx='kubectx'
 alias n='nvim'
 if [ -z $WSL_DISTRO_NAME ] && [ -f /etc/os-release ]; then
     alias open='xdg-open'

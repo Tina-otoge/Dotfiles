@@ -17,6 +17,7 @@ pathmunge "$HOME"'/.opam/default/bin'
 pathmunge "$HOME"'/Repositories/Tina/Dotfiles-scripts/bin'
 pathmunge "$HOME/.local/opt/android-sdk/cmdline-tools/latest/bin"
 pathmunge "$HOME/.local/opt/flutter-sdk/bin"
+pathmunge "$HOME/.rd/bin"
 
 if ! echo $XDG_DATA_DIRS | grep -E -q "(^|:)$HOME/.local/share($|:)"; then
 	XDG_DATA_DIRS="$HOME"'/.local/share:'$XDG_DATA_DIRS

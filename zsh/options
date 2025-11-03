@@ -8,6 +8,7 @@
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+autoload -U +X bashcompinit && bashcompinit
 autoload -Uz compinit
 compinit
 

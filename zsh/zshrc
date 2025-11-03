@@ -87,6 +87,10 @@ if cmd_exists bw; then
 	compdef _bw bw
 fi
 
+if cmd_exists kubectl; then
+	source <(kubectl completion zsh)
+fi
+
 if [ -f ~/.nvm/alias/default ]; then
 	nvm use default --silent
 fi
