@@ -33,6 +33,7 @@ alias ncdu='ncdu --color off'
 alias openvpn='openvpn  --up /usr/share/openvpn/contrib/pull-resolv-conf/client.up --down /usr/share/openvpn/contrib/pull-resolv-conf/client.down'
 alias ssh='ssh -t'
 alias sudo='sudo '
+alias tf='terraform'
 alias tget='webtorrent download'
 alias tree='tree -C'
 
