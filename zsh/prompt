@@ -3,17 +3,24 @@
 # ZSH PROMPT #
 ##############
 
-curpath="%F{green}%~%f"
-user="%F{cyan}%n%f"
-host="%F{blue}${HOSTNAME_DISPLAY:-%m}%f"
-char="%f%# "
+precmd() {
+	curpath="%F{green}%~%f"
+	user="%F{cyan}%n%f"
+	host="%F{blue}${HOSTNAME_DISPLAY:-%m}%f"
+	char="%f%# "
 
-export PS1="%f"$'\n\e[90m'"[%f$user"$'\e[90m'"@%f$host"$'\e[90m'"]%f$char%f"
-export PS1="%f"$'\n'"[%f$user@%f$host]%f$char%f"
-export RPROMPT="$curpath"
+	export PS1="%f"
+    if [ -f "$KUBECONFIG" ]; then
+		kubectx=$(grep 'current-context:' "$KUBECONFIG" | awk '{print $2}')
+		if [[ -n "$kubectx" && $kubectx != '""' ]]; then
+			if [[ "$kubectx" == *"/"* ]]; then
+				kubectx=${kubectx##*/}
+			fi
+			PS1+="%F{yellow}(kube: $kubectx)%f "
+		fi
+	fi
 
-if [ "$ANDROID" ]; then
-	export PS1="$char"
-fi
+	PS1+=$'\n'"[%f$user@%f$host]%f$char%f"
 
-unset curpath user host char
+	export RPROMPT="$curpath"
+}
