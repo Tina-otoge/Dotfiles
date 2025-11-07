@@ -10,6 +10,7 @@ precmd() {
 	char="%f%# "
 
 	export PS1="%f"
+	KUBECONFIG="${KUBECONFIG:-"$HOME/.kube/config"}"
     if [ -f "$KUBECONFIG" ]; then
 		kubectx=$(grep 'current-context:' "$KUBECONFIG" | awk '{print $2}')
 		if [[ -n "$kubectx" && $kubectx != '""' ]]; then
