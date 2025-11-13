@@ -1,3 +1,7 @@
+# Added by ibus "necessary to add your own Compose sequences"
+
+include "%L"
+
  <dead_acute> <C> : "Ç" "Ccedilla"
  <dead_acute> <c> : "ç" "ccedilla"
  <dead_acute> <space> : "'"
