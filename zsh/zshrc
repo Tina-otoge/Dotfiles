@@ -97,3 +97,7 @@ fi
 if [ -f ~/.nvm/alias/default ]; then
 	nvm use default --silent
 fi
+
+if cmd_exists terraform; then
+	complete -o nospace -C $(which terraform) terraform
+fi
