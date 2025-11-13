@@ -17,8 +17,15 @@ precmd() {
 			if [[ "$kubectx" == *"/"* ]]; then
 				kubectx=${kubectx##*/}
 			fi
-			PS1+="%F{yellow}(kube: $kubectx)%f "
+			PS1+="%F{cyan}(kube: $kubectx)%f "
 		fi
+	fi
+	if [ -n "$VIRTUAL_ENV" ]; then
+		venv_name=$(basename "$(dirname "$VIRTUAL_ENV")")
+		PS1+="%F{green}(venv: $venv_name)%f "
+	fi
+	if [ -n "$AWS_PROFILE" ]; then
+		PS1+="%F{yellow}(aws: $AWS_PROFILE)%f "
 	fi
 
 	PS1+=$'\n'"[%f$user@%f$host]%f$char%f"
