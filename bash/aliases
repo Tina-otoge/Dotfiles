@@ -3,7 +3,7 @@
 # SH ALIASES #
 ##############
 
-alias flex='clear && pfetch && read'
+alias flex='clear && fastfetch && read'
 alias refresh='exec $SHELL'
 
 # $SHORTCUTS
