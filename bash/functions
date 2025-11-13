@@ -240,3 +240,29 @@ if [ -f /etc/os-release ] && [ -n $WSL_DISTRO_NAME ]; then
 		fi
 	}
 fi
+
+ax() {
+	echo <<EOF
+	Usage: ax            open fzf selector for all AWS profiles
+	       ax <profile>  apply given profile to AWS_PROFILE
+		   ax -u	     unset AWS_PROFILE
+EOF
+	if [[ "$1" == '-u' ]]; then
+		unset AWS_PROFILE
+		return
+	fi
+
+	if [ -z "$1" ]; then
+		profile=$(grep '\[profile ' ~/.aws/config | sed 's/\[profile \(.*\)\]/\1/' | fzf --prompt='AWS Profile> ')
+		if [ -z "$profile" ]; then
+			echo "No profile selected, aborting"
+			return
+		fi
+	else
+		profile="$1"
+	fi
+	export AWS_PROFILE="$profile"
+	echo AWS_PROFILE set to $AWS_PROFILE
+	eval "$(aws configure export-credentials --profile "$AWS_PROFILE" --format env)"             
+	echo AWS credentials exported to environment variables
+}
