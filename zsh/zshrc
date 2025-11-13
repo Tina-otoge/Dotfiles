@@ -1,10 +1,14 @@
 include () {
 	if [ -f "$1" ]; then
 		if [ -n "$DEBUG_START" ]; then
-			date '+%M:%S.%N'
-			echo $file
+			before=$(date +%s%N)
+			echo sourcing $file...
 		fi
- 	       source "$1"
+		source "$1"
+		if [ -n "$DEBUG_START" ]; then
+			after=$(date +%s%N)
+			echo took $(($(($after - $before)) / 1000))
+		fi
 	fi
 }
 
@@ -18,7 +22,6 @@ init_files=(
 	"$cfg"'/zsh/bindings'
 	"$cfg"'/zsh/options'
 	"$cfg"'/zsh/custom'
-	"$cfg"'/bash/completion'
 	"$HOME"'/.fzf.zsh'
 	"$HOME"'/.opam/opam-init/init/init.zsh'
 	'/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
