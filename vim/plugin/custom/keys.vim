@@ -40,6 +40,8 @@ call NIMap('<C-F10>', ':Rg<CR>')
 call NIMap('<F33>', ':NERDTreeFind<CR>')
 call NIMap('<F34>', ':Rg<CR>')
 call NIMap('<F10>', ':Files<CR>')
+call NIMap('<C-p>', ':Files<CR>')
+call NIMap('<D-p>', ':Files<CR>') " Cmd+p, only for MacVim
 call NIMap('<F11>', ':Goyo<CR>')
 call NIMap('<F12>', '<Plug>(coc-definition)<CR>')
 call NIMap('<C-t>', ':tabnew<CR>')
