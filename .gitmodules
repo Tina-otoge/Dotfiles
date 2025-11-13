@@ -89,3 +89,6 @@
 [submodule "vim/bundle/jenkinsfile-syntax"]
 	path = vim/bundle/jenkinsfile-syntax
 	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "vim/bundle/ansible"]
+	path = vim/bundle/ansible
+	url = https://github.com/pearofducks/ansible-vim
