@@ -272,7 +272,7 @@ EOF
 		        # Build list with profile names and account IDs from config
         selection=$(awk '
             /^\[profile / {
-                if (profile) print profile "|" account_id
+                if (profile) print profile (account_id) "|" account_id
                 profile = $0
                 sub(/^\[profile /, "", profile)
                 sub(/\]$/, "", profile)
@@ -282,7 +282,7 @@ EOF
                 account_id = $NF
             }
             END {
-                if (profile) print profile "|" account_id
+                if (profile) print profile (account_id) "|" account_id
             }
         ' ~/.aws/config)
         
