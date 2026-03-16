@@ -22,6 +22,17 @@ psrc() {
 	source ./$dir/bin/activate
 }
 
+bsrc() {
+	src=".env"
+	if [ ! -f $src ]; then
+		echo "No $src file found" >&2
+		exit 1
+	fi
+	set -a
+	source $src
+	set +a
+}
+
 dbx() {
 	default_box=${1:-arch}
 	boxes=$(distrobox list | cut -d '|' -f 2 | tail -n +2 | head -n -1 | xargs)
@@ -253,16 +264,41 @@ EOF
 	fi
 
 	if [ -z "$1" ]; then
-		profile=$(grep '\[profile ' ~/.aws/config | sed 's/\[profile \(.*\)\]/\1/' | fzf --prompt='AWS Profile> ')
-		if [ -z "$profile" ]; then
-			echo "No profile selected, aborting"
-			return
-		fi
+		# profile=$(grep '\[profile ' ~/.aws/config | sed 's/\[profile \(.*\)\]/\1/' | fzf --prompt='AWS Profile> ')
+		# if [ -z "$profile" ]; then
+		# 	echo "No profile selected, aborting"
+		# 	return
+		# fi
+		        # Build list with profile names and account IDs from config
+        selection=$(awk '
+            /^\[profile / {
+                if (profile) print profile "|" account_id
+                profile = $0
+                sub(/^\[profile /, "", profile)
+                sub(/\]$/, "", profile)
+                account_id = ""
+            }
+            /^sso_account_id/ {
+                account_id = $NF
+            }
+            END {
+                if (profile) print profile "|" account_id
+            }
+        ' ~/.aws/config)
+        
+        # Display in fzf with account ID, extract only profile name
+        profile=$(echo "$selection" | column -t -s '|' | fzf --prompt='AWS Profile> ' | awk '{print $1}')
+        if [ -z "$profile" ]; then
+            echo "No profile selected, aborting"
+            return
+        fi
 	else
 		profile="$1"
 	fi
 	export AWS_PROFILE="$profile"
 	echo AWS_PROFILE set to $AWS_PROFILE
+	# non-sso profiles do not set AWS_SESSION_TOKEN
+	unset AWS_SESSION_TOKEN
 	eval "$(aws configure export-credentials --profile "$AWS_PROFILE" --format env)"             
 	echo AWS credentials exported to environment variables
 }
