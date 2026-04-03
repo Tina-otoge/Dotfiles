@@ -41,7 +41,12 @@ fi
 
 export config="$HOME"'/.config'
 export vimhome="$config"'/vim'
-export dotfiles="$HOME"'/Repositories/Tina/Dotfiles'
+if [ -n "$BASH_VERSION" ]; then
+	dotfiles="$(dirname "$(dirname "$(realpath "${BASH_SOURCE[0]}")")")"
+elif [ -n "$ZSH_VERSION" ]; then
+	dotfiles="$(dirname "$(dirname "$(realpath "${(%):-%x}")")")"
+fi
+export dotfiles
 
 ## SYSTEM VARIABLES
 ## Use uppercase here
