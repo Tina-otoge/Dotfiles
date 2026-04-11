@@ -71,6 +71,8 @@ export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 export NVM_DIR="$HOME/.local/opt/nvm"
 
+export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
+
 [[ -d "/system/app/" && -d "/system/priv-app" ]] && export ANDROID=1
 [ -n "$TERMUX_VERSION" ] && export ANDROID=1
 
