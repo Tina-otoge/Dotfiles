@@ -20,9 +20,9 @@ fi
 export WINEDLLPATH="$HOME"'/.local/lib/wine/bin32:'"$HOME"'/.local/lib/wine/bin64:'$WINEDLLPATH
 export WINEDEBUG='fixme-all,'"$WINEDEBUG"
 
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS="@im=ibus"
+# export GTK_IM_MODULE=ibus
+# export QT_IM_MODULE=ibus
+# export XMODIFIERS="@im=ibus"
 export PIPENV_VENV_IN_PROJECT=1
 export PF_INFO="title os host kernel shell editor de palette"
 export ANDROID_SDK_ROOT="$HOME/.local/opt/android-sdk"
